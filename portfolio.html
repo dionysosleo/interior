@@ -30,6 +30,7 @@
         background:
           radial-gradient(circle at top, rgba(214, 190, 158, 0.24), transparent 28%),
           linear-gradient(180deg, #f8f3eb 0%, #f6f1e8 100%);
+        padding-bottom: 116px;
       }
 
       a {
@@ -361,6 +362,322 @@
         word-break: keep-all;
       }
 
+      .estimate-card {
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: var(--surface);
+        overflow: hidden;
+      }
+
+      .estimate-card__head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 28px 28px 20px;
+      }
+
+      .estimate-card__title {
+        margin: 0;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+      }
+
+      .estimate-card__desc {
+        max-width: 540px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .estimate-table-wrap {
+        overflow-x: auto;
+        border-top: 1px solid var(--line);
+      }
+
+      .estimate-table {
+        width: 100%;
+        min-width: 760px;
+        border-collapse: collapse;
+      }
+
+      .estimate-table th,
+      .estimate-table td {
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        font-size: 15px;
+      }
+
+      .estimate-table th {
+        background: rgba(248, 243, 235, 0.9);
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .estimate-table td {
+        font-weight: 600;
+        color: #2c241d;
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .estimate-table td:nth-child(2),
+      .estimate-table td:nth-child(3),
+      .estimate-table td:nth-child(4) {
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .estimate-table__summary td {
+        background: rgba(248, 243, 235, 0.78);
+        font-weight: 800;
+      }
+
+      .estimate-table__total td {
+        background: rgba(166, 124, 82, 0.14);
+        font-weight: 900;
+        color: var(--text);
+      }
+
+      .floating-bar {
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        z-index: 40;
+        transform: translateX(-50%);
+        width: min(980px, calc(100% - 24px));
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 18px 18px 18px 26px;
+        border-radius: 999px;
+        border: 1px solid rgba(232, 223, 210, 0.96);
+        background: rgba(255, 253, 248, 0.96);
+        box-shadow: 0 18px 36px rgba(32, 26, 21, 0.14);
+        backdrop-filter: blur(14px);
+      }
+
+      .floating-bar.is-visible {
+        display: flex;
+      }
+
+      .floating-bar__copy {
+        display: flex;
+        align-items: end;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .floating-bar__label {
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .floating-bar__amount {
+        font-size: clamp(26px, 2.5vw, 40px);
+        font-weight: 900;
+        letter-spacing: -0.04em;
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 16px;
+        background: rgba(20, 17, 14, 0.48);
+        backdrop-filter: blur(10px);
+      }
+
+      .modal.is-open {
+        display: flex;
+      }
+
+      .modal__dialog {
+        position: relative;
+        width: min(880px, 100%);
+        max-height: calc(100vh - 56px);
+        overflow-y: auto;
+        padding: 28px;
+        border-radius: 30px;
+        border: 1px solid rgba(232, 223, 210, 0.96);
+        background: rgba(255, 253, 248, 0.98);
+        box-shadow: 0 28px 70px rgba(32, 26, 21, 0.2);
+      }
+
+      .modal__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--text);
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .modal__title {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 3vw, 42px);
+        letter-spacing: -0.04em;
+      }
+
+      .modal__subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .modal__intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .modal__image-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .modal__image-grid img {
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: var(--surface-strong);
+      }
+
+      .modal__intro-copy {
+        padding: 24px;
+        border-radius: 22px;
+        border: 1px solid var(--line);
+        background: rgba(248, 243, 235, 0.72);
+      }
+
+      .modal__intro-copy p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.9;
+        word-break: keep-all;
+      }
+
+      .modal__highlight {
+        margin-top: 18px;
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(166, 124, 82, 0.16);
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .modal__form {
+        margin-top: 24px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .form-group {
+        display: grid;
+        gap: 10px;
+      }
+
+      .form-label {
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .form-label .required {
+        color: #e26565;
+      }
+
+      .form-input,
+      .form-textarea {
+        width: 100%;
+        padding: 16px 18px;
+        border: 1px solid #cfc3b4;
+        border-radius: 16px;
+        background: #fff;
+        color: var(--text);
+        font: inherit;
+      }
+
+      .form-input:focus,
+      .form-textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(166, 124, 82, 0.12);
+      }
+
+      .phone-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        align-items: center;
+      }
+
+      .privacy-box {
+        max-height: 230px;
+        overflow-y: auto;
+        padding: 20px;
+        border: 1px solid #cfc3b4;
+        border-radius: 18px;
+        background: #fff;
+        color: #3a3028;
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .form-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .form-check input {
+        width: 22px;
+        height: 22px;
+        margin-top: 1px;
+      }
+
+      .form-actions {
+        display: flex;
+        justify-content: center;
+        padding-top: 6px;
+      }
+
+      .success-box {
+        text-align: center;
+        padding: 24px 0 6px;
+      }
+
+      .success-box h3 {
+        margin: 0 0 10px;
+        font-size: 30px;
+        letter-spacing: -0.04em;
+      }
+
+      .success-box p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
       .cta {
         display: flex;
         align-items: center;
@@ -445,7 +762,8 @@
         .gallery,
         .story,
         .point-grid,
-        .cta {
+        .cta,
+        .modal__intro {
           grid-template-columns: 1fr;
         }
 
@@ -481,6 +799,10 @@
           padding: 24px;
         }
 
+        .estimate-card__head {
+          padding: 24px 24px 18px;
+        }
+
         .stats,
         .meta {
           grid-template-columns: 1fr;
@@ -493,6 +815,31 @@
         .cta__actions {
           width: 100%;
           flex-direction: column;
+        }
+
+        .phone-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .floating-bar {
+          width: calc(100% - 20px);
+          border-radius: 26px;
+          bottom: 10px;
+          padding: 18px;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .floating-bar__copy {
+          justify-content: center;
+        }
+
+        .modal__dialog {
+          padding: 22px 18px;
+        }
+
+        .modal__image-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .button {
@@ -515,7 +862,139 @@
 
     <main class="shell" id="app"></main>
 
+    <div class="floating-bar" id="floatingBar" aria-hidden="true">
+      <div class="floating-bar__copy">
+        <span class="floating-bar__label">원가견적</span>
+        <strong class="floating-bar__amount" id="floatingAmount">0원</strong>
+      </div>
+      <button class="button button--primary" type="button" id="openInquiryButton">현재 디자인으로 문의하기</button>
+    </div>
+
+    <div class="modal" id="inquiryModal" aria-hidden="true">
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="inquiryTitle">
+        <button class="modal__close" type="button" data-close-modal aria-label="닫기">&times;</button>
+        <h2 class="modal__title" id="inquiryTitle">현재 디자인으로 문의하기</h2>
+        <p class="modal__subtitle" id="inquirySubtitle">원하시는 현장 정보를 남겨주시면 검토 후 빠르게 안내해드립니다.</p>
+
+        <div class="modal__intro">
+          <div class="modal__image-grid">
+            <img src="./assets/images/director-kim-black.png" alt="주거공간 담당 김진환 소장" />
+            <img src="./assets/images/director-lee-green.png" alt="상업공간 담당 이준혁 소장" />
+            <img src="./assets/images/director-han-pink.png" alt="현장관리 담당 한아름 소장" />
+            <img src="./assets/images/director-park-red.png" alt="부분공사 담당 박미진 소장" />
+          </div>
+          <div class="modal__intro-copy">
+            <p>상담 단계에서부터 공정과 일정, 예산 구조를 함께 검토해 과하게 잡힌 영역은 줄이고 꼭 필요한 범위부터 정리하는 방식으로 안내합니다. 현재 보고 계신 포트폴리오와 비슷한 방향으로 진행하고 싶다면 현장 이름과 내용을 남겨주세요.</p>
+            <div class="modal__highlight">인건비, 자재비 원가 기준과 9.9% 마진 구조를 상담 단계에서 함께 안내합니다.</div>
+          </div>
+        </div>
+
+        <form class="modal__form" id="inquiryForm">
+          <div class="form-group">
+            <label class="form-label" for="inquiryName">성함 <span class="required">*</span></label>
+            <input class="form-input" id="inquiryName" name="name" type="text" placeholder="성함을 입력해 주세요." required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">연락처 <span class="required">*</span></label>
+            <div class="phone-grid">
+              <input class="form-input" id="phone1" name="phone1" type="tel" inputmode="numeric" placeholder="010" maxlength="3" required />
+              <input class="form-input" id="phone2" name="phone2" type="tel" inputmode="numeric" placeholder="1234" maxlength="4" required />
+              <input class="form-input" id="phone3" name="phone3" type="tel" inputmode="numeric" placeholder="5678" maxlength="4" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inquiryTarget">견적 원하는 현장 이름 &amp; 링크</label>
+            <input class="form-input" id="inquiryTarget" name="target" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inquiryContent">내용</label>
+            <textarea class="form-textarea" id="inquiryContent" name="content" rows="6" placeholder="상담 원하는 범위, 일정, 예산, 참고 내용 등을 적어주세요."></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label">개인정보 수집 및 이용 동의 <span class="required">*</span></div>
+            <div class="privacy-box">
+              회사는 인테리어 상담 및 견적 안내를 위해 이름, 연락처, 문의 내용을 수집합니다. 수집된 정보는 상담 검토와 회신 목적에만 사용되며, 상담 종료 후 일정 기간 내 안전하게 파기합니다.
+              <br /><br />
+              수집 항목: 성함, 연락처, 문의 현장명 및 상담 내용
+              <br />
+              이용 목적: 인테리어 상담, 견적 검토, 공사 가능 범위 안내
+              <br />
+              보유 기간: 상담 종료 후 1개월
+              <br /><br />
+              동의를 거부할 수 있으나 상담 접수가 제한될 수 있습니다.
+            </div>
+          </div>
+
+          <label class="form-check">
+            <input id="privacyAgree" name="privacy" type="checkbox" required />
+            <span>개인정보 수집 및 이용에 동의합니다.</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">바로 접수하기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="successModal" aria-hidden="true">
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+        <button class="modal__close" type="button" data-close-success aria-label="닫기">&times;</button>
+        <div class="success-box">
+          <h3 id="successTitle">신청이 완료되었습니다</h3>
+          <p>남겨주신 내용을 확인한 뒤 가능한 일정과 상담 방향으로 빠르게 안내드리겠습니다.</p>
+          <div class="form-actions" style="margin-top: 24px;">
+            <button class="button button--primary" type="button" data-close-success>확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
+      const estimateTemplates = {
+        residential: {
+          rows: [
+            ["철거", 0.06, 0.03],
+            ["목공", 0.18, 0.19],
+            ["전기", 0.11, 0.08],
+            ["설비", 0.08, 0.07],
+            ["타일", 0.09, 0.1],
+            ["금속", 0.04, 0.06],
+            ["도장", 0.08, 0.05],
+            ["마루", 0.05, 0.09],
+            ["장판", 0.03, 0.02],
+            ["필름", 0.04, 0.03],
+            ["가구", 0.05, 0.11],
+            ["유리", 0.03, 0.08],
+            ["폐기물", 0.02, 0.04]
+          ],
+          laborRatio: 0.43,
+          materialRatio: 0.48
+        },
+        commercial: {
+          rows: [
+            ["철거", 0.07, 0.03],
+            ["목공", 0.17, 0.16],
+            ["전기", 0.12, 0.08],
+            ["설비", 0.07, 0.08],
+            ["타일", 0.07, 0.09],
+            ["금속", 0.05, 0.08],
+            ["페인트", 0.11, 0.06],
+            ["마감", 0.06, 0.09],
+            ["가구", 0.05, 0.1],
+            ["유리", 0.03, 0.08],
+            ["사인물", 0.02, 0.05],
+            ["폐기물", 0.02, 0.04]
+          ],
+          laborRatio: 0.4,
+          materialRatio: 0.5
+        }
+      };
+
       const portfolioMap = {
         "residential-1111": {
           category: "주거공간",
@@ -528,6 +1007,7 @@
           duration: "4주",
           cost: "총 공사비 3,480만원",
           scope: "거실, 주방, 벽체 정리, 조명, 가구 마감",
+          estimateKey: "residential",
           description:
             "기존 공간은 채광이 좋았지만 가구 배치가 무겁고 시선이 분산돼 전체 인상이 답답하게 느껴졌습니다. 이번 프로젝트는 과한 장식 대신 밝은 톤과 정돈된 라인을 중심으로 구성해 생활감은 남기고 공간 밀도는 가볍게 만드는 데 집중했습니다.",
           points: [
@@ -552,6 +1032,7 @@
           duration: "3주",
           cost: "총 공사비 2,360만원",
           scope: "창호 포인트, 마감 정리, 조명, 벽체 개선",
+          estimateKey: "residential",
           description:
             "이 프로젝트는 구조 변경보다 분위기 개선에 초점을 맞춘 리뉴얼입니다. 창 주변 라인을 살리고 불필요한 시각 요소를 덜어내면서 공간이 더 넓고 편안하게 느껴지도록 균형을 맞췄습니다.",
           points: [
@@ -576,6 +1057,7 @@
           duration: "4주",
           cost: "총 공사비 2,980만원",
           scope: "홈오피스, 수납, 바닥, 창가 벤치, 조명",
+          estimateKey: "residential",
           description:
             "거주자의 생활 패턴상 집 안에서 작업하는 시간이 길어, 단순한 책상 배치보다 집중도와 휴식 전환이 모두 가능한 구성을 원했습니다. 자연광과 우드 톤을 중심으로 작업 환경이 과하게 긴장되지 않도록 완급을 조절했습니다.",
           points: [
@@ -600,6 +1082,7 @@
           duration: "3주",
           cost: "총 공사비 2,140만원",
           scope: "거실 마감, 수납장, 조명, 가구 배치",
+          estimateKey: "residential",
           description:
             "소형 평형일수록 공간을 채우는 방식보다 비우는 방식이 더 크게 느껴질 때가 있습니다. 이번 프로젝트는 짧은 공사 기간 안에서 가장 체감이 큰 영역에만 집중해 단순한 구조를 더 고급스럽게 정리했습니다.",
           points: [
@@ -624,6 +1107,7 @@
           duration: "10일",
           cost: "총 공사비 620만원",
           scope: "욕실 전체, 수전, 조명, 벽체, 바닥",
+          estimateKey: "residential",
           description:
             "욕실은 자재 선택에 따라 체감 인상이 크게 달라지는 공간입니다. 밝은 톤 일변도로 가지 않고, 질감이 느껴지는 중성 톤을 활용해 안정감과 고급스러움을 함께 살렸습니다.",
           points: [
@@ -648,6 +1132,7 @@
           duration: "5주",
           cost: "총 공사비 4,320만원",
           scope: "다이닝, 계단부, 가구 마감, 조명, 창호 정리",
+          estimateKey: "residential",
           description:
             "층고가 높은 구조는 시원한 장점이 있지만 자칫 텅 빈 느낌이 날 수 있습니다. 이 프로젝트는 펜던트 조명과 가구 스케일을 활용해 시선을 적절히 묶어주고, 가족이 함께 쓰는 공간의 중심성을 더 강하게 만들었습니다.",
           points: [
@@ -672,6 +1157,7 @@
           duration: "4주",
           cost: "총 공사비 3,160만원",
           scope: "거실, 수납 선반, 계단, 바닥, 가구 재배치",
+          estimateKey: "residential",
           description:
             "생활 가구와 책, 소품이 많은 집일수록 수납 구조와 여백 설계가 중요합니다. 이번 프로젝트는 가족의 물건을 숨기기보다 보기 좋게 정리하는 쪽으로 방향을 잡아 실용성과 분위기를 함께 맞췄습니다.",
           points: [
@@ -696,6 +1182,7 @@
           duration: "4주",
           cost: "총 공사비 2,880만원",
           scope: "서재, 라운지, 창가 테이블, 수납, 바닥",
+          estimateKey: "residential",
           description:
             "하루 중 가장 오래 머무는 자리의 시선과 빛을 잘 잡는 것이 핵심이었습니다. 넓은 창과 테이블 배치를 중심으로 집중과 대화가 모두 가능한 공간으로 재구성했습니다.",
           points: [
@@ -720,6 +1207,7 @@
           duration: "5주",
           cost: "총 공사비 4,980만원",
           scope: "현관, 거실, 아트월, 조명, 계단부 정리",
+          estimateKey: "residential",
           description:
             "천장고와 조명 포인트가 살아 있는 공간이라면 강약 조절이 중요합니다. 이 프로젝트는 과한 장식 대신 한두 개의 시선 포인트를 중심으로 공간의 인상을 정리하고, 입구에서부터 고급스러운 흐름이 느껴지도록 계획했습니다.",
           points: [
@@ -744,6 +1232,7 @@
           duration: "3주",
           cost: "총 공사비 2,920만원",
           scope: "메인홀, 좌석 배치, 조명, 바닥, 가구",
+          estimateKey: "commercial",
           description:
             "브랜드를 처음 접하는 손님이 머무는 첫 공간이기 때문에, 좌석 배치와 주방 노출 정도, 이동 동선이 모두 중요했습니다. 과하게 복잡한 구성 대신 브랜드 정체성이 분명하게 드러나는 메인홀 구조에 집중했습니다.",
           points: [
@@ -768,6 +1257,7 @@
           duration: "2주",
           cost: "총 공사비 1,860만원",
           scope: "상담존, 대기존, 벽체 포인트, 조명, 가구",
+          estimateKey: "commercial",
           description:
             "짧게 머무는 공간이지만 브랜드 인상을 결정하는 중요한 구간이라, 소재와 동선 설계에 더 집중했습니다. 벽체와 좌석의 곡선을 활용해 편안한 체류감을 만들고, 시선이 머무는 요소는 최소화했습니다.",
           points: [
@@ -792,6 +1282,7 @@
           duration: "4주",
           cost: "총 공사비 4,260만원",
           scope: "워크존, 유리 파티션, 조명, 천장 마감, 동선",
+          estimateKey: "commercial",
           description:
             "공간이 넓을수록 오히려 집중 포인트가 분산되기 쉽습니다. 이번 프로젝트는 파티션 투명도와 책상 배열, 천장 라인을 이용해 시야를 확보하면서도 업무 존의 밀도를 유지하는 데 집중했습니다.",
           points: [
@@ -816,6 +1307,7 @@
           duration: "2주",
           cost: "총 공사비 1,720만원",
           scope: "쇼룸 전면부, 포인트 창호, 벽체, 조명",
+          estimateKey: "commercial",
           description:
             "작은 면적의 공간일수록 강한 첫 장면이 필요합니다. 아치형 요소와 채광을 적극 활용해 첫 진입 순간에 브랜드 이미지가 정확히 전달되도록 설계했습니다.",
           points: [
@@ -840,6 +1332,7 @@
           duration: "3주",
           cost: "총 공사비 3,140만원",
           scope: "좌석 구성, 파티션, 조명, 마감, 진입 동선",
+          estimateKey: "commercial",
           description:
             "외식 공간은 예쁜 장면보다 동선의 자연스러움이 훨씬 중요할 때가 많습니다. 이 프로젝트는 주방 접근성과 좌석 운영 효율을 유지하면서, 브랜드가 원하는 차분한 인상이 전달되도록 조율했습니다.",
           points: [
@@ -864,6 +1357,7 @@
           duration: "5주",
           cost: "총 공사비 5,760만원",
           scope: "로비, 라운지, 천장 조명, 벽체, 바닥",
+          estimateKey: "commercial",
           description:
             "로비는 단순히 넓기만 해서는 좋은 인상이 남지 않습니다. 조명 높이와 가구 밀도, 재료의 반사율까지 조정해 체류감과 고급감이 동시에 느껴지도록 균형을 맞췄습니다.",
           points: [
@@ -888,6 +1382,7 @@
           duration: "3주",
           cost: "총 공사비 2,740만원",
           scope: "쇼룸, 욕실 존, 조명, 제품 배치, 마감",
+          estimateKey: "commercial",
           description:
             "제품군이 많은 쇼룸은 자칫 모든 요소가 경쟁하게 됩니다. 이번 프로젝트는 벽체 톤과 조명 확산 범위를 조절해 제품이 가장 잘 보이는 방식으로 배경을 정리했습니다.",
           points: [
@@ -912,6 +1407,7 @@
           duration: "4주",
           cost: "총 공사비 4,180만원",
           scope: "오픈 키친, 바석, 메인홀, 수납, 조명",
+          estimateKey: "commercial",
           description:
             "오픈 키친은 운영 효율과 연출 효과를 동시에 요구합니다. 이번 프로젝트는 목재 톤을 중심으로 따뜻한 인상을 유지하면서, 주방 내부와 손님 영역이 자연스럽게 나뉘도록 디테일을 다듬었습니다.",
           points: [
@@ -936,6 +1432,7 @@
           duration: "3주",
           cost: "총 공사비 3,260만원",
           scope: "라운지, 창가 좌석, 조경 뷰, 조명, 가구",
+          estimateKey: "commercial",
           description:
             "정적인 좌석 배치만으로는 라운지 경험이 살아나지 않을 수 있습니다. 이 프로젝트는 창 너머 보이는 풍경과 실내 좌석의 거리를 조절해 공간에 머무는 경험 자체가 더 편안하게 느껴지도록 만들었습니다.",
           points: [
@@ -961,8 +1458,113 @@
         `;
       }
 
+      function parseKoreanCost(costText) {
+        const match = costText.match(/([\d,]+)\s*만원/);
+        if (!match) return 0;
+        return Number(match[1].replace(/,/g, "")) * 10000;
+      }
+
+      function formatWon(value) {
+        return `${Math.round(value).toLocaleString("ko-KR")}원`;
+      }
+
+      function buildEstimate(item) {
+        const total = parseKoreanCost(item.cost);
+        const template = estimateTemplates[item.estimateKey || "residential"];
+        const costBeforeMargin = Math.round(total / 1.099);
+        const margin = total - costBeforeMargin;
+        const laborTotal = Math.round(costBeforeMargin * template.laborRatio);
+        const materialBaseTotal = Math.round(costBeforeMargin * template.materialRatio);
+        const miscTotal = Math.max(costBeforeMargin - laborTotal - materialBaseTotal, 0);
+
+        const rows = template.rows.map(([name, laborWeight, materialWeight]) => ({
+          name,
+          labor: Math.round(laborTotal * laborWeight),
+          material: Math.round(materialBaseTotal * materialWeight)
+        }));
+
+        return {
+          rows,
+          laborTotal,
+          materialBaseTotal,
+          miscTotal,
+          costBeforeMargin,
+          margin,
+          total
+        };
+      }
+
+      function buildEstimateTable(item) {
+        const estimate = buildEstimate(item);
+        const rowsHtml = estimate.rows
+          .map(
+            (row) => `
+              <tr>
+                <td>${row.name}</td>
+                <td>${formatWon(row.labor)}</td>
+                <td>${formatWon(row.material)}</td>
+                <td>${formatWon(row.labor + row.material)}</td>
+              </tr>
+            `
+          )
+          .join("");
+
+        return `
+          <section class="section">
+            <div class="estimate-card">
+              <div class="estimate-card__head">
+                <div>
+                  <div class="eyebrow">COST BREAKDOWN</div>
+                  <h2 class="estimate-card__title">원가 견적 기준을 함께 확인해보세요</h2>
+                </div>
+                <div class="estimate-card__desc">인건비 원가와 자재비 원가를 공정별로 나눠 보여주고, 기타 잡비와 9.9% 기준 마진까지 한 흐름으로 확인할 수 있게 구성했습니다.</div>
+              </div>
+              <div class="estimate-table-wrap">
+                <table class="estimate-table">
+                  <thead>
+                    <tr>
+                      <th>공정</th>
+                      <th>인건비 원가</th>
+                      <th>자재비 원가</th>
+                      <th>합계</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${rowsHtml}
+                    <tr class="estimate-table__summary">
+                      <td>기타 잡비</td>
+                      <td>-</td>
+                      <td>${formatWon(estimate.miscTotal)}</td>
+                      <td>${formatWon(estimate.miscTotal)}</td>
+                    </tr>
+                    <tr class="estimate-table__summary">
+                      <td>공사 원가</td>
+                      <td>${formatWon(estimate.laborTotal)}</td>
+                      <td>${formatWon(estimate.materialBaseTotal + estimate.miscTotal)}</td>
+                      <td>${formatWon(estimate.costBeforeMargin)}</td>
+                    </tr>
+                    <tr class="estimate-table__summary">
+                      <td>이윤(9.9%)</td>
+                      <td>-</td>
+                      <td>${formatWon(estimate.margin)}</td>
+                      <td>${formatWon(estimate.margin)}</td>
+                    </tr>
+                    <tr class="estimate-table__total">
+                      <td>현재 원가견적</td>
+                      <td colspan="2">${item.label}</td>
+                      <td>${formatWon(estimate.total)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
       function renderPortfolio(app, item) {
         document.title = `${item.title} | 포트폴리오`;
+        const estimate = buildEstimate(item);
 
         app.innerHTML = `
           <section class="hero">
@@ -999,6 +1601,8 @@
               </div>
             </div>
           </section>
+
+          ${buildEstimateTable(item)}
 
           <section class="section">
             <div class="section__head">
@@ -1072,15 +1676,52 @@
                 <p>주거 리모델링부터 상업 공간, 부분 시공까지 현재 상황과 예산에 맞는 방식으로 연결해드립니다.</p>
               </div>
               <div class="cta__actions">
-                <a class="button button--primary" href="./index.html#contact">상담 신청하기</a>
+                <button class="button button--primary" type="button" data-open-inquiry>현재 디자인으로 문의하기</button>
                 <a class="button button--ghost" href="./index.html#cases">목록으로 돌아가기</a>
               </div>
             </div>
           </section>
         `;
+
+        const floatingBar = document.getElementById("floatingBar");
+        const floatingAmount = document.getElementById("floatingAmount");
+        floatingAmount.textContent = formatWon(estimate.total);
+        floatingBar.classList.add("is-visible");
+        floatingBar.setAttribute("aria-hidden", "false");
+
+        const targetInput = document.getElementById("inquiryTarget");
+        const contentInput = document.getElementById("inquiryContent");
+        const subtitle = document.getElementById("inquirySubtitle");
+        if (targetInput) {
+          targetInput.value = `${item.title} | ${window.location.href}`;
+        }
+        if (contentInput) {
+          contentInput.value = `${item.label}와 비슷한 방향으로 상담 원합니다.\n공간 유형: ${item.category}\n예상 범위: ${item.scope}\n현재 보고 있는 견적 기준: ${formatWon(estimate.total)}`;
+        }
+        if (subtitle) {
+          subtitle.textContent = `${item.label} 기준으로 상담을 남겨주시면 현재 보고 계신 디자인 방향과 원가견적을 함께 검토해드립니다.`;
+        }
+      }
+
+      function openModal(modal) {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal(modal) {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        if (!document.querySelector(".modal.is-open")) {
+          document.body.style.overflow = "";
+        }
       }
 
       const app = document.getElementById("app");
+      const inquiryModal = document.getElementById("inquiryModal");
+      const successModal = document.getElementById("successModal");
+      const inquiryForm = document.getElementById("inquiryForm");
+      const openInquiryButton = document.getElementById("openInquiryButton");
       const slug = new URLSearchParams(window.location.search).get("slug");
       const item = slug ? portfolioMap[slug] : null;
 
@@ -1089,6 +1730,45 @@
       } else {
         renderPortfolio(app, item);
       }
+
+      document.addEventListener("click", (event) => {
+        if (event.target.matches("[data-open-inquiry]") || event.target === openInquiryButton) {
+          openModal(inquiryModal);
+        }
+
+        if (event.target.matches("[data-close-modal]") || event.target === inquiryModal) {
+          closeModal(inquiryModal);
+        }
+
+        if (event.target.matches("[data-close-success]") || event.target === successModal) {
+          closeModal(successModal);
+        }
+      });
+
+      inquiryForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("inquiryName").value.trim();
+        const phone1 = document.getElementById("phone1").value.trim();
+        const phone2 = document.getElementById("phone2").value.trim();
+        const phone3 = document.getElementById("phone3").value.trim();
+        const agreed = document.getElementById("privacyAgree").checked;
+
+        if (!name || !phone1 || !phone2 || !phone3 || !agreed) {
+          window.alert("성함, 연락처, 개인정보 동의를 확인해 주세요.");
+          return;
+        }
+
+        closeModal(inquiryModal);
+        inquiryForm.reset();
+        openModal(successModal);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          if (inquiryModal.classList.contains("is-open")) closeModal(inquiryModal);
+          if (successModal.classList.contains("is-open")) closeModal(successModal);
+        }
+      });
     </script>
   </body>
 </html>
