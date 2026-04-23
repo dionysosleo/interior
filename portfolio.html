@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오 상세</title>
+    <style>
+      :root {
+        --bg: #f6f1e8;
+        --surface: #fffdf8;
+        --surface-strong: #f8f3eb;
+        --line: #e8dfd2;
+        --text: #201a15;
+        --muted: #7b6f64;
+        --accent: #a67c52;
+        --shadow: 0 22px 60px rgba(113, 92, 70, 0.12);
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --radius-md: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(214, 190, 158, 0.24), transparent 28%),
+          linear-gradient(180deg, #f8f3eb 0%, #f6f1e8 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .shell {
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(14px);
+        background: rgba(248, 243, 235, 0.84);
+        border-bottom: 1px solid rgba(232, 223, 210, 0.8);
+      }
+
+      .topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 76px;
+      }
+
+      .brand {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .topbar__links {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .topbar__links a {
+        padding: 10px 14px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        transition: 0.2s ease;
+      }
+
+      .topbar__links a:hover {
+        color: var(--text);
+        border-color: var(--line);
+        background: rgba(255, 255, 255, 0.76);
+      }
+
+      main {
+        padding: 42px 0 96px;
+      }
+
+      .hero {
+        background: rgba(255, 253, 248, 0.92);
+        border: 1px solid rgba(232, 223, 210, 0.92);
+        border-radius: calc(var(--radius-xl) + 6px);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+        min-height: 650px;
+      }
+
+      .hero__visual {
+        position: relative;
+        min-height: 650px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero__visual::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(20, 17, 14, 0.08), rgba(20, 17, 14, 0.3));
+      }
+
+      .hero__badge {
+        position: absolute;
+        left: 28px;
+        top: 28px;
+        z-index: 1;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.88);
+        color: var(--text);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .hero__copy {
+        padding: 42px 42px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .hero__title {
+        margin: 0;
+        font-size: clamp(38px, 4vw, 62px);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      .hero__subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.8;
+        word-break: keep-all;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .stat {
+        padding: 20px 20px 18px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line);
+        background: var(--surface-strong);
+      }
+
+      .stat__label {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .stat__value {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .meta__item {
+        padding: 18px 18px 16px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.66);
+      }
+
+      .meta__label {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .meta__value {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.55;
+        word-break: keep-all;
+      }
+
+      .section {
+        margin-top: 34px;
+        padding: 38px;
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(232, 223, 210, 0.92);
+        background: rgba(255, 253, 248, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .section__head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .section__title {
+        margin: 0;
+        font-size: clamp(28px, 3vw, 42px);
+        line-height: 1.14;
+        letter-spacing: -0.04em;
+      }
+
+      .section__desc {
+        max-width: 580px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+        word-break: keep-all;
+      }
+
+      .point-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .point-card {
+        padding: 24px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      .point-card__num {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        margin-bottom: 14px;
+      }
+
+      .point-card__text {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.7;
+        word-break: keep-all;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+      }
+
+      .gallery__lead,
+      .gallery__stack img,
+      .gallery__lead img {
+        border-radius: calc(var(--radius-lg) + 4px);
+      }
+
+      .gallery__lead {
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+
+      .gallery__lead img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .gallery__stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .gallery__stack img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border: 1px solid var(--line);
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+        gap: 24px;
+      }
+
+      .story__panel {
+        padding: 28px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      .story__panel h3 {
+        margin: 0 0 16px;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+
+      .story__panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.9;
+        word-break: keep-all;
+      }
+
+      .story__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 12px;
+      }
+
+      .story__list li {
+        padding: 18px 18px 17px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: rgba(248, 243, 235, 0.88);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.7;
+        word-break: keep-all;
+      }
+
+      .cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .cta__copy h2 {
+        margin: 0 0 12px;
+        font-size: clamp(30px, 3vw, 44px);
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+      }
+
+      .cta__copy p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .cta__actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 58px;
+        padding: 0 28px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-size: 16px;
+        font-weight: 800;
+        transition: 0.2s ease;
+      }
+
+      .button--primary {
+        background: #201a15;
+        color: #fff;
+      }
+
+      .button--primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 16px 30px rgba(32, 26, 21, 0.18);
+      }
+
+      .button--ghost {
+        background: rgba(255, 255, 255, 0.8);
+        border-color: var(--line);
+        color: var(--text);
+      }
+
+      .button--ghost:hover {
+        background: #fff;
+      }
+
+      .empty {
+        padding: 100px 24px;
+        text-align: center;
+      }
+
+      .empty h1 {
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 56px);
+        letter-spacing: -0.04em;
+      }
+
+      .empty p {
+        margin: 0 auto 24px;
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 1080px) {
+        .hero__grid,
+        .gallery,
+        .story,
+        .point-grid,
+        .cta {
+          grid-template-columns: 1fr;
+        }
+
+        .hero__visual {
+          min-height: 440px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .shell {
+          width: min(100% - 24px, 1240px);
+        }
+
+        .topbar__inner {
+          min-height: 70px;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 14px 0;
+        }
+
+        .topbar__links {
+          width: 100%;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        main {
+          padding-top: 24px;
+        }
+
+        .hero__copy,
+        .section {
+          padding: 24px;
+        }
+
+        .stats,
+        .meta {
+          grid-template-columns: 1fr;
+        }
+
+        .hero__title {
+          font-size: 38px;
+        }
+
+        .cta__actions {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell topbar__inner">
+        <a class="brand" href="./index.html">INTERIOR CONNECT</a>
+        <nav class="topbar__links">
+          <a href="./index.html#cases-residential">주거공간 모아보기</a>
+          <a href="./index.html#cases-commercial">상업공간 모아보기</a>
+          <a href="./index.html#contact">상담 신청</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell" id="app"></main>
+
+    <script>
+      const portfolioMap = {
+        "residential-1111": {
+          category: "주거공간",
+          label: "아파트 거실 리뉴얼",
+          title: "밝고 단정한 무드로 정리한 주거 리모델링",
+          subtitle:
+            "거실과 주방의 연결감을 살리면서도 일상 동선이 편안하게 이어지도록 정리한 주거 공간 사례입니다.",
+          hero: "./assets/images/residential-1111.jpg",
+          area: "주거 34평",
+          duration: "4주",
+          cost: "총 공사비 3,480만원",
+          scope: "거실, 주방, 벽체 정리, 조명, 가구 마감",
+          description:
+            "기존 공간은 채광이 좋았지만 가구 배치가 무겁고 시선이 분산돼 전체 인상이 답답하게 느껴졌습니다. 이번 프로젝트는 과한 장식 대신 밝은 톤과 정돈된 라인을 중심으로 구성해 생활감은 남기고 공간 밀도는 가볍게 만드는 데 집중했습니다.",
+          points: [
+            "거실 중심 시야를 방해하던 요소를 줄이고 좌석 배치를 더 여유 있게 조정했습니다.",
+            "주방과 거실 사이 재료 톤을 통일해 공간이 자연스럽게 이어지도록 만들었습니다.",
+            "은은한 간접 조명으로 저녁 시간에도 차분한 분위기가 유지되도록 설계했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-1111.jpg",
+            "./assets/images/residential-2222.png",
+            "./assets/images/residential-3333.png"
+          ]
+        },
+        "residential-2222": {
+          category: "주거공간",
+          label: "주거 아치 포인트",
+          title: "부드러운 곡선과 채광을 살린 주거 공간",
+          subtitle:
+            "아치 창과 벽체의 곡선을 강조해 집 전체의 인상을 더 부드럽고 안정적으로 정리한 사례입니다.",
+          hero: "./assets/images/residential-2222.png",
+          area: "주거 29평",
+          duration: "3주",
+          cost: "총 공사비 2,360만원",
+          scope: "창호 포인트, 마감 정리, 조명, 벽체 개선",
+          description:
+            "이 프로젝트는 구조 변경보다 분위기 개선에 초점을 맞춘 리뉴얼입니다. 창 주변 라인을 살리고 불필요한 시각 요소를 덜어내면서 공간이 더 넓고 편안하게 느껴지도록 균형을 맞췄습니다.",
+          points: [
+            "창을 중심으로 빛이 퍼지는 방향을 고려해 마감 톤을 정리했습니다.",
+            "곡선이 강조되는 요소를 반복해 전체 무드가 자연스럽게 통일되도록 했습니다.",
+            "큰 공사 없이도 분위기 차이가 느껴질 수 있도록 포인트를 압축했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-2222.png",
+            "./assets/images/residential-4444.jpg",
+            "./assets/images/residential-5555.jpg"
+          ]
+        },
+        "residential-3333": {
+          category: "주거공간",
+          label: "내추럴 우드 홈오피스",
+          title: "채광과 작업 동선을 함께 잡은 홈오피스형 주거",
+          subtitle:
+            "집 안에서 일과 휴식을 함께 풀어낼 수 있도록 책상, 수납, 창가 영역을 유기적으로 연결한 사례입니다.",
+          hero: "./assets/images/residential-3333.png",
+          area: "주거 31평",
+          duration: "4주",
+          cost: "총 공사비 2,980만원",
+          scope: "홈오피스, 수납, 바닥, 창가 벤치, 조명",
+          description:
+            "거주자의 생활 패턴상 집 안에서 작업하는 시간이 길어, 단순한 책상 배치보다 집중도와 휴식 전환이 모두 가능한 구성을 원했습니다. 자연광과 우드 톤을 중심으로 작업 환경이 과하게 긴장되지 않도록 완급을 조절했습니다.",
+          points: [
+            "창가 벤치와 책상 라인을 이어 작업과 휴식의 전환이 자연스럽게 되도록 했습니다.",
+            "수납 볼륨을 벽면으로 정리해 작업 공간 자체는 더 가볍게 느껴지게 만들었습니다.",
+            "밝은 바닥과 천장 톤으로 하루 종일 머물러도 부담 없는 분위기를 만들었습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-3333.png",
+            "./assets/images/residential-1111.jpg",
+            "./assets/images/residential-6666.jpg"
+          ]
+        },
+        "residential-4444": {
+          category: "주거공간",
+          label: "미니멀 리빙룸",
+          title: "여백을 강조해 더 넓게 느껴지는 미니멀 리빙룸",
+          subtitle:
+            "복잡한 요소를 덜고 가구와 마감의 농도를 낮춰 공간 자체의 비례감을 살린 주거 사례입니다.",
+          hero: "./assets/images/residential-4444.jpg",
+          area: "주거 26평",
+          duration: "3주",
+          cost: "총 공사비 2,140만원",
+          scope: "거실 마감, 수납장, 조명, 가구 배치",
+          description:
+            "소형 평형일수록 공간을 채우는 방식보다 비우는 방식이 더 크게 느껴질 때가 있습니다. 이번 프로젝트는 짧은 공사 기간 안에서 가장 체감이 큰 영역에만 집중해 단순한 구조를 더 고급스럽게 정리했습니다.",
+          points: [
+            "중심 가구를 낮추고 벽면 수납을 정리해 시선이 멀리 뻗도록 했습니다.",
+            "간접 조명과 따뜻한 베이지 톤으로 미니멀하지만 차갑지 않은 무드를 만들었습니다.",
+            "생활 물건이 드러나는 구간을 줄여 정리된 인상이 오래 유지되도록 했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-4444.jpg",
+            "./assets/images/residential-5555.jpg",
+            "./assets/images/residential-8888.jpeg"
+          ]
+        },
+        "residential-5555": {
+          category: "주거공간",
+          label: "하이엔드 욕실 리뉴얼",
+          title: "조용하고 깊은 톤으로 완성한 프리미엄 욕실",
+          subtitle:
+            "채광이 적은 욕실에서도 답답하지 않게 느껴지도록 톤과 라인을 단정하게 정리한 사례입니다.",
+          hero: "./assets/images/residential-5555.jpg",
+          area: "욕실 단독",
+          duration: "10일",
+          cost: "총 공사비 620만원",
+          scope: "욕실 전체, 수전, 조명, 벽체, 바닥",
+          description:
+            "욕실은 자재 선택에 따라 체감 인상이 크게 달라지는 공간입니다. 밝은 톤 일변도로 가지 않고, 질감이 느껴지는 중성 톤을 활용해 안정감과 고급스러움을 함께 살렸습니다.",
+          points: [
+            "벽과 바닥 재료의 결을 맞춰 욕실이 하나의 공간처럼 보이도록 정리했습니다.",
+            "조명 위치를 낮추고 부드럽게 분산해 과하게 번들거리지 않는 분위기를 만들었습니다.",
+            "수납장을 벽체에 녹여 생활감이 튀지 않도록 구성했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-5555.jpg",
+            "./assets/images/residential-4444.jpg",
+            "./assets/images/residential-7777.jpg"
+          ]
+        },
+        "residential-6666": {
+          category: "주거공간",
+          label: "복층형 주거 다이닝",
+          title: "개방감과 가족 동선을 함께 살린 복층형 주거",
+          subtitle:
+            "층고가 주는 장점을 강조하면서 식사, 휴식, 이동 동선이 서로 방해되지 않도록 정리한 사례입니다.",
+          hero: "./assets/images/residential-6666.jpg",
+          area: "주거 41평",
+          duration: "5주",
+          cost: "총 공사비 4,320만원",
+          scope: "다이닝, 계단부, 가구 마감, 조명, 창호 정리",
+          description:
+            "층고가 높은 구조는 시원한 장점이 있지만 자칫 텅 빈 느낌이 날 수 있습니다. 이 프로젝트는 펜던트 조명과 가구 스케일을 활용해 시선을 적절히 묶어주고, 가족이 함께 쓰는 공간의 중심성을 더 강하게 만들었습니다.",
+          points: [
+            "계단과 다이닝 사이 시선 흐름을 정리해 중심 공간이 자연스럽게 드러나도록 했습니다.",
+            "가구 스케일을 키워 층고가 높은 구조에서도 균형이 흐트러지지 않게 잡았습니다.",
+            "주방과 거실 사이 연결감을 유지하면서 영역 구분은 명확하게 설계했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-6666.jpg",
+            "./assets/images/residential-7777.jpg",
+            "./assets/images/residential-8888.jpeg"
+          ]
+        },
+        "residential-7777": {
+          category: "주거공간",
+          label: "북쉘프 리빙룸",
+          title: "가족의 생활감이 자연스럽게 드러나는 북쉘프 리빙룸",
+          subtitle:
+            "아이와 함께 쓰는 생활 공간이면서도 전체 인상은 정돈돼 보이도록 수납과 배치를 풀어낸 사례입니다.",
+          hero: "./assets/images/residential-7777.jpg",
+          area: "주거 38평",
+          duration: "4주",
+          cost: "총 공사비 3,160만원",
+          scope: "거실, 수납 선반, 계단, 바닥, 가구 재배치",
+          description:
+            "생활 가구와 책, 소품이 많은 집일수록 수납 구조와 여백 설계가 중요합니다. 이번 프로젝트는 가족의 물건을 숨기기보다 보기 좋게 정리하는 쪽으로 방향을 잡아 실용성과 분위기를 함께 맞췄습니다.",
+          points: [
+            "선반과 계단부를 연계해 시선이 끊기지 않도록 구성했습니다.",
+            "소품과 도서가 자연스럽게 보이도록 수납 깊이와 간격을 조절했습니다.",
+            "따뜻한 목재 톤으로 생활감이 많은 공간도 편안하게 느껴지도록 했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-7777.jpg",
+            "./assets/images/residential-6666.jpg",
+            "./assets/images/residential-8888.jpeg"
+          ]
+        },
+        "residential-8888": {
+          category: "주거공간",
+          label: "파노라마 워크라운지",
+          title: "시야가 열리는 창을 중심으로 만든 워크라운지",
+          subtitle:
+            "작업과 휴식이 자연스럽게 이어지는 공간을 위해 창 앞 테이블과 주변 수납을 함께 설계한 사례입니다.",
+          hero: "./assets/images/residential-8888.jpeg",
+          area: "주거 33평",
+          duration: "4주",
+          cost: "총 공사비 2,880만원",
+          scope: "서재, 라운지, 창가 테이블, 수납, 바닥",
+          description:
+            "하루 중 가장 오래 머무는 자리의 시선과 빛을 잘 잡는 것이 핵심이었습니다. 넓은 창과 테이블 배치를 중심으로 집중과 대화가 모두 가능한 공간으로 재구성했습니다.",
+          points: [
+            "메인 테이블을 창과 평행하게 두어 풍경과 작업이 자연스럽게 이어지게 했습니다.",
+            "불필요한 파티션 없이 가구만으로 기능 구분을 만들어 개방감을 유지했습니다.",
+            "따뜻한 바닥 톤과 천장 마감으로 긴장감보다 안정감이 느껴지도록 조절했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-8888.jpeg",
+            "./assets/images/residential-9999.jpg",
+            "./assets/images/residential-4444.jpg"
+          ]
+        },
+        "residential-9999": {
+          category: "주거공간",
+          label: "아트월 포인트 홀",
+          title: "조명과 동선이 살아나는 아트월 포인트 주거 공간",
+          subtitle:
+            "입구에서 거실로 이어지는 첫 인상을 강하게 만들면서도 전체 동선은 가볍게 유지한 주거 사례입니다.",
+          hero: "./assets/images/residential-9999.jpg",
+          area: "주거 45평",
+          duration: "5주",
+          cost: "총 공사비 4,980만원",
+          scope: "현관, 거실, 아트월, 조명, 계단부 정리",
+          description:
+            "천장고와 조명 포인트가 살아 있는 공간이라면 강약 조절이 중요합니다. 이 프로젝트는 과한 장식 대신 한두 개의 시선 포인트를 중심으로 공간의 인상을 정리하고, 입구에서부터 고급스러운 흐름이 느껴지도록 계획했습니다.",
+          points: [
+            "아트월과 조명 위치를 정교하게 맞춰 첫 인상이 분명하게 느껴지게 했습니다.",
+            "동선이 복잡해 보이지 않도록 벽체와 가구 볼륨을 줄였습니다.",
+            "거실과 다이닝으로 이어지는 흐름에 고급스러운 긴장감을 더했습니다."
+          ],
+          gallery: [
+            "./assets/images/residential-9999.jpg",
+            "./assets/images/residential-8888.jpeg",
+            "./assets/images/residential-4444.jpg"
+          ]
+        },
+        "commercial-11": {
+          category: "상업공간",
+          label: "브랜드 카페 메인홀",
+          title: "브랜드 동선을 넓게 풀어낸 카페 메인홀 프로젝트",
+          subtitle:
+            "첫 방문 고객에게 공간의 구조와 브랜드 무드가 한눈에 들어오도록 테이블 배치와 조명을 정리한 사례입니다.",
+          hero: "./assets/images/commercial-11.jpg",
+          area: "상업 28평",
+          duration: "3주",
+          cost: "총 공사비 2,920만원",
+          scope: "메인홀, 좌석 배치, 조명, 바닥, 가구",
+          description:
+            "브랜드를 처음 접하는 손님이 머무는 첫 공간이기 때문에, 좌석 배치와 주방 노출 정도, 이동 동선이 모두 중요했습니다. 과하게 복잡한 구성 대신 브랜드 정체성이 분명하게 드러나는 메인홀 구조에 집중했습니다.",
+          points: [
+            "메인 좌석 동선을 길게 열어 고객 체류가 자연스럽게 이어지게 했습니다.",
+            "주방과 홀의 시각적 경계를 조절해 답답하지 않게 구성했습니다.",
+            "조명 위치와 테이블 간격을 브랜드 무드에 맞게 세밀하게 조정했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-11.jpg",
+            "./assets/images/commercial-22.jpeg",
+            "./assets/images/commercial-33.jpg"
+          ]
+        },
+        "commercial-22": {
+          category: "상업공간",
+          label: "라운지형 상담존",
+          title: "머무름이 편안한 라운지형 상담 공간",
+          subtitle:
+            "상담과 대기가 함께 일어나는 구조에서 긴장감보다 편안함이 먼저 느껴지도록 만든 상업 공간 사례입니다.",
+          hero: "./assets/images/commercial-22.jpeg",
+          area: "상업 18평",
+          duration: "2주",
+          cost: "총 공사비 1,860만원",
+          scope: "상담존, 대기존, 벽체 포인트, 조명, 가구",
+          description:
+            "짧게 머무는 공간이지만 브랜드 인상을 결정하는 중요한 구간이라, 소재와 동선 설계에 더 집중했습니다. 벽체와 좌석의 곡선을 활용해 편안한 체류감을 만들고, 시선이 머무는 요소는 최소화했습니다.",
+          points: [
+            "대기와 상담 공간을 자연스럽게 나누면서도 답답한 분리는 피했습니다.",
+            "가구 크기와 배치를 조정해 시선이 한쪽에 몰리지 않도록 정리했습니다.",
+            "체류 시간이 짧아도 인상은 오래 남는 라운지 무드를 목표로 했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-22.jpeg",
+            "./assets/images/commercial-11.jpg",
+            "./assets/images/commercial-55.webp"
+          ]
+        },
+        "commercial-33": {
+          category: "상업공간",
+          label: "오피스 워크존",
+          title: "집중과 개방감을 함께 살린 오피스 워크존",
+          subtitle:
+            "팀 단위 업무에 필요한 개방감과 개인 집중도를 균형 있게 맞춘 사무 공간 사례입니다.",
+          hero: "./assets/images/commercial-33.jpg",
+          area: "상업 40평",
+          duration: "4주",
+          cost: "총 공사비 4,260만원",
+          scope: "워크존, 유리 파티션, 조명, 천장 마감, 동선",
+          description:
+            "공간이 넓을수록 오히려 집중 포인트가 분산되기 쉽습니다. 이번 프로젝트는 파티션 투명도와 책상 배열, 천장 라인을 이용해 시야를 확보하면서도 업무 존의 밀도를 유지하는 데 집중했습니다.",
+          points: [
+            "시선은 열리지만 소음은 분산될 수 있도록 배치를 조정했습니다.",
+            "워크존 중심으로 반복되는 라인을 만들어 정돈된 인상을 강화했습니다.",
+            "브랜드의 단정함이 드러나도록 전체 톤을 절제된 색으로 맞췄습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-33.jpg",
+            "./assets/images/commercial-88.jpg",
+            "./assets/images/commercial-77.webp"
+          ]
+        },
+        "commercial-44": {
+          category: "상업공간",
+          label: "브랜드 쇼룸 아치 공간",
+          title: "첫 시선에 브랜드 무드를 남기는 아치형 쇼룸",
+          subtitle:
+            "진입부에서부터 공간 이미지가 분명하게 느껴지도록 창과 벽체의 인상을 활용한 사례입니다.",
+          hero: "./assets/images/commercial-44.webp",
+          area: "상업 16평",
+          duration: "2주",
+          cost: "총 공사비 1,720만원",
+          scope: "쇼룸 전면부, 포인트 창호, 벽체, 조명",
+          description:
+            "작은 면적의 공간일수록 강한 첫 장면이 필요합니다. 아치형 요소와 채광을 적극 활용해 첫 진입 순간에 브랜드 이미지가 정확히 전달되도록 설계했습니다.",
+          points: [
+            "쇼룸 정면에서 보이는 구조를 가장 먼저 고려해 레이아웃을 잡았습니다.",
+            "장식보다 실루엣과 빛의 인상이 남도록 마감과 조명을 절제했습니다.",
+            "짧은 공사 기간 안에서 체감 변화를 크게 만드는 쪽으로 공정을 압축했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-44.webp",
+            "./assets/images/commercial-99.webp",
+            "./assets/images/commercial-22.jpeg"
+          ]
+        },
+        "commercial-55": {
+          category: "상업공간",
+          label: "한식 다이닝 공간",
+          title: "동선과 시야가 깔끔한 다이닝 공간 리뉴얼",
+          subtitle:
+            "좌석 간 밀도와 이동 동선을 함께 고려해 운영 효율과 첫 인상을 동시에 잡은 외식 공간 사례입니다.",
+          hero: "./assets/images/commercial-55.webp",
+          area: "상업 24평",
+          duration: "3주",
+          cost: "총 공사비 3,140만원",
+          scope: "좌석 구성, 파티션, 조명, 마감, 진입 동선",
+          description:
+            "외식 공간은 예쁜 장면보다 동선의 자연스러움이 훨씬 중요할 때가 많습니다. 이 프로젝트는 주방 접근성과 좌석 운영 효율을 유지하면서, 브랜드가 원하는 차분한 인상이 전달되도록 조율했습니다.",
+          points: [
+            "좌석 간 간격을 정리해 이동 중 부딪힘이 적게 느껴지도록 만들었습니다.",
+            "진입부부터 안쪽까지 시선 흐름이 깨지지 않도록 파티션 높이를 조정했습니다.",
+            "밝은 톤 마감으로 체감 면적이 더 넓게 느껴지도록 설계했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-55.webp",
+            "./assets/images/commercial-11.jpg",
+            "./assets/images/commercial-66.jpeg"
+          ]
+        },
+        "commercial-66": {
+          category: "상업공간",
+          label: "하이엔드 로비",
+          title: "첫 인상과 체류감이 동시에 살아나는 하이엔드 로비",
+          subtitle:
+            "입구에서 느껴지는 고급감과 안쪽으로 이어지는 머무름의 분위기를 함께 설계한 공간입니다.",
+          hero: "./assets/images/commercial-66.jpeg",
+          area: "상업 52평",
+          duration: "5주",
+          cost: "총 공사비 5,760만원",
+          scope: "로비, 라운지, 천장 조명, 벽체, 바닥",
+          description:
+            "로비는 단순히 넓기만 해서는 좋은 인상이 남지 않습니다. 조명 높이와 가구 밀도, 재료의 반사율까지 조정해 체류감과 고급감이 동시에 느껴지도록 균형을 맞췄습니다.",
+          points: [
+            "천장 조명을 중심축으로 잡아 공간 전체가 안정적으로 느껴지게 했습니다.",
+            "가구 스케일과 배치를 조정해 큰 공간이 비어 보이지 않게 구성했습니다.",
+            "다양한 재료가 섞여도 전체 톤은 흔들리지 않도록 마감 방향을 통일했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-66.jpeg",
+            "./assets/images/commercial-77.webp",
+            "./assets/images/commercial-33.jpg"
+          ]
+        },
+        "commercial-77": {
+          category: "상업공간",
+          label: "브랜드 욕실 쇼룸",
+          title: "제품 톤을 정교하게 보여주는 브랜드 욕실 쇼룸",
+          subtitle:
+            "여러 제품이 동시에 보이더라도 산만하지 않게 느껴지도록 시선과 재료 톤을 정리한 쇼룸 사례입니다.",
+          hero: "./assets/images/commercial-77.webp",
+          area: "상업 21평",
+          duration: "3주",
+          cost: "총 공사비 2,740만원",
+          scope: "쇼룸, 욕실 존, 조명, 제품 배치, 마감",
+          description:
+            "제품군이 많은 쇼룸은 자칫 모든 요소가 경쟁하게 됩니다. 이번 프로젝트는 벽체 톤과 조명 확산 범위를 조절해 제품이 가장 잘 보이는 방식으로 배경을 정리했습니다.",
+          points: [
+            "제품이 먼저 보이도록 배경 톤을 안정적으로 맞췄습니다.",
+            "조명 각도와 그림자 범위를 조절해 질감이 살아나도록 구성했습니다.",
+            "고객 동선을 따라 가장 중요한 제품이 순서대로 보이게 설계했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-77.webp",
+            "./assets/images/commercial-33.jpg",
+            "./assets/images/commercial-88.jpg"
+          ]
+        },
+        "commercial-88": {
+          category: "상업공간",
+          label: "오픈 키친 다이닝",
+          title: "따뜻한 목재 톤이 살아나는 오픈 키친 다이닝",
+          subtitle:
+            "길게 이어지는 조리 동선과 손님 좌석의 시선이 충돌하지 않도록 설계한 상업 공간 사례입니다.",
+          hero: "./assets/images/commercial-88.jpg",
+          area: "상업 36평",
+          duration: "4주",
+          cost: "총 공사비 4,180만원",
+          scope: "오픈 키친, 바석, 메인홀, 수납, 조명",
+          description:
+            "오픈 키친은 운영 효율과 연출 효과를 동시에 요구합니다. 이번 프로젝트는 목재 톤을 중심으로 따뜻한 인상을 유지하면서, 주방 내부와 손님 영역이 자연스럽게 나뉘도록 디테일을 다듬었습니다.",
+          points: [
+            "손님 시선이 머무는 메인 축을 먼저 정리해 구조가 쉽게 읽히게 했습니다.",
+            "바석과 메인 테이블의 리듬을 조정해 체류감이 자연스럽게 이어지도록 했습니다.",
+            "운영 동선이 복잡해 보이지 않도록 수납과 설비 영역을 깔끔하게 숨겼습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-88.jpg",
+            "./assets/images/commercial-33.jpg",
+            "./assets/images/commercial-77.webp"
+          ]
+        },
+        "commercial-99": {
+          category: "상업공간",
+          label: "브랜드 라운지 리뉴얼",
+          title: "체류 경험을 높이는 브랜드 라운지 리뉴얼",
+          subtitle:
+            "공간 안에서 머무는 시간이 자연스럽게 늘어나도록 시선과 좌석 구성, 정원 뷰를 함께 설계한 사례입니다.",
+          hero: "./assets/images/commercial-99.webp",
+          area: "상업 30평",
+          duration: "3주",
+          cost: "총 공사비 3,260만원",
+          scope: "라운지, 창가 좌석, 조경 뷰, 조명, 가구",
+          description:
+            "정적인 좌석 배치만으로는 라운지 경험이 살아나지 않을 수 있습니다. 이 프로젝트는 창 너머 보이는 풍경과 실내 좌석의 거리를 조절해 공간에 머무는 경험 자체가 더 편안하게 느껴지도록 만들었습니다.",
+          points: [
+            "창가와 좌석 사이 간격을 조정해 정원 뷰가 더 깊게 느껴지게 만들었습니다.",
+            "가구 배치와 시선 방향을 정리해 누구나 편하게 머물 수 있도록 구성했습니다.",
+            "조용한 분위기를 해치지 않으면서도 브랜드 이미지는 분명하게 보이도록 정리했습니다."
+          ],
+          gallery: [
+            "./assets/images/commercial-99.webp",
+            "./assets/images/commercial-44.webp",
+            "./assets/images/commercial-22.jpeg"
+          ]
+        }
+      };
+
+      function renderEmptyState(app) {
+        app.innerHTML = `
+          <section class="section empty">
+            <h1>포트폴리오를 찾을 수 없습니다</h1>
+            <p>선택한 프로젝트 정보가 아직 준비되지 않았습니다. 주거공간 또는 상업공간 목록으로 돌아가 다른 사례를 확인해 주세요.</p>
+            <a class="button button--primary" href="./index.html#cases">포트폴리오 목록으로 돌아가기</a>
+          </section>
+        `;
+      }
+
+      function renderPortfolio(app, item) {
+        document.title = `${item.title} | 포트폴리오`;
+
+        app.innerHTML = `
+          <section class="hero">
+            <div class="hero__grid">
+              <div class="hero__visual" style="background-image:url('${item.hero}')">
+                <div class="hero__badge">${item.category}</div>
+              </div>
+              <div class="hero__copy">
+                <div>
+                  <div class="eyebrow">${item.label}</div>
+                  <h1 class="hero__title">${item.title}</h1>
+                </div>
+                <p class="hero__subtitle">${item.subtitle}</p>
+                <div class="stats">
+                  <div class="stat">
+                    <div class="stat__label">공간 규모</div>
+                    <div class="stat__value">${item.area}</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat__label">공사 기간</div>
+                    <div class="stat__value">${item.duration}</div>
+                  </div>
+                </div>
+                <div class="meta">
+                  <div class="meta__item">
+                    <div class="meta__label">공사 범위</div>
+                    <div class="meta__value">${item.scope}</div>
+                  </div>
+                  <div class="meta__item">
+                    <div class="meta__label">비용</div>
+                    <div class="meta__value">${item.cost}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section__head">
+              <div>
+                <div class="eyebrow">PROJECT STORY</div>
+                <h2 class="section__title">이 프로젝트를 이렇게 정리했습니다</h2>
+              </div>
+              <div class="section__desc">${item.description}</div>
+            </div>
+            <div class="point-grid">
+              ${item.points
+                .map(
+                  (point, index) => `
+                    <article class="point-card">
+                      <div class="point-card__num">POINT 0${index + 1}</div>
+                      <p class="point-card__text">${point}</p>
+                    </article>
+                  `
+                )
+                .join("")}
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section__head">
+              <div>
+                <div class="eyebrow">DETAIL IMAGE</div>
+                <h2 class="section__title">상세 이미지를 함께 확인해보세요</h2>
+              </div>
+              <div class="section__desc">메인 이미지만 보는 것보다 실제 시공 톤과 디테일이 더 잘 읽히도록 대표 장면과 보조 이미지를 함께 구성했습니다.</div>
+            </div>
+            <div class="gallery">
+              <div class="gallery__lead">
+                <img src="${item.gallery[0]}" alt="${item.title} 대표 이미지" />
+              </div>
+              <div class="gallery__stack">
+                <img src="${item.gallery[1]}" alt="${item.title} 상세 이미지 1" />
+                <img src="${item.gallery[2]}" alt="${item.title} 상세 이미지 2" />
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section__head">
+              <div>
+                <div class="eyebrow">CONSULTING FLOW</div>
+                <h2 class="section__title">상담과 시공은 이런 흐름으로 이어집니다</h2>
+              </div>
+            </div>
+            <div class="story">
+              <div class="story__panel">
+                <h3>상담 기준</h3>
+                <p>공간의 상태와 예산, 일정, 원하는 분위기를 먼저 정리한 뒤 현장 실측과 원가 견적 기준으로 실제 가능한 범위를 제안합니다. 무리한 연출보다 운영과 생활에 맞는 방향을 우선으로 잡는 방식입니다.</p>
+              </div>
+              <div class="story__panel">
+                <h3>체크 포인트</h3>
+                <ul class="story__list">
+                  <li>실측 후 공정상 꼭 필요한 항목과 제외 가능한 항목을 함께 구분합니다.</li>
+                  <li>인건비와 자재비 기준을 먼저 확인한 뒤 디자인과 견적을 조정합니다.</li>
+                  <li>직접 시공 또는 검증된 파트너 연결 구조에 맞춰 일정을 안내합니다.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="cta">
+              <div class="cta__copy">
+                <div class="eyebrow">NEXT STEP</div>
+                <h2>비슷한 방향의 공간을 상담으로 이어보세요</h2>
+                <p>주거 리모델링부터 상업 공간, 부분 시공까지 현재 상황과 예산에 맞는 방식으로 연결해드립니다.</p>
+              </div>
+              <div class="cta__actions">
+                <a class="button button--primary" href="./index.html#contact">상담 신청하기</a>
+                <a class="button button--ghost" href="./index.html#cases">목록으로 돌아가기</a>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      const app = document.getElementById("app");
+      const slug = new URLSearchParams(window.location.search).get("slug");
+      const item = slug ? portfolioMap[slug] : null;
+
+      if (!item) {
+        renderEmptyState(app);
+      } else {
+        renderPortfolio(app, item);
+      }
+    </script>
+  </body>
+</html>
