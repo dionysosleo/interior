@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>원가 공개 인테리어 랜딩</title>
+  <title>인테리어 원가 상담 랜딩</title>
   <meta
     name="description"
-    content="10% 마진과 원가 공개를 전면에 내세운 인테리어 상담 랜딩 페이지 프로토타입입니다."
+    content="매치스 인테리어의 섹션 흐름을 참고해, 더 세련되고 트렌디하게 재구성한 인테리어 랜딩 페이지"
   >
   <style>
     :root {
-      --bg: #f6f1e8;
-      --surface: #fffaf3;
-      --surface-strong: #fff;
-      --ink: #1a1a16;
-      --muted: #6f685d;
-      --line: rgba(26, 26, 22, 0.1);
-      --accent: #ff6a13;
-      --accent-deep: #da4f00;
-      --accent-soft: rgba(255, 106, 19, 0.12);
-      --shadow: 0 24px 60px rgba(84, 52, 28, 0.12);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
+      --bg: #f3eee7;
+      --paper: rgba(252, 249, 245, 0.9);
+      --paper-strong: #fbf8f3;
+      --ink: #161310;
+      --muted: #6f675f;
+      --accent: #9b7a59;
+      --line: rgba(22, 19, 16, 0.08);
+      --shadow: 0 24px 60px rgba(71, 54, 35, 0.08);
+      --radius-xl: 34px;
+      --radius-lg: 26px;
       --radius-md: 18px;
-      --max: 1200px;
+      --max: 1220px;
     }
 
     * {
@@ -39,20 +37,21 @@
       font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(255, 130, 32, 0.12), transparent 24%),
-        radial-gradient(circle at 90% 14%, rgba(255, 179, 71, 0.16), transparent 20%),
-        linear-gradient(180deg, #fff8ef 0%, var(--bg) 52%, #efe6db 100%);
+        radial-gradient(circle at top left, rgba(188, 152, 117, 0.08), transparent 18%),
+        linear-gradient(180deg, #faf7f2 0%, var(--bg) 45%, #ece3d6 100%);
       line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
     }
 
     button,
@@ -63,24 +62,24 @@
     }
 
     .wrap {
-      width: min(calc(100% - 40px), var(--max));
+      width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
       backdrop-filter: blur(16px);
-      background: rgba(255, 248, 239, 0.84);
-      border-bottom: 1px solid rgba(26, 26, 22, 0.06);
+      background: rgba(250, 247, 242, 0.78);
+      border-bottom: 1px solid rgba(22, 19, 16, 0.05);
     }
 
     .topbar-inner {
+      min-height: 74px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      min-height: 78px;
+      justify-content: space-between;
       gap: 24px;
     }
 
@@ -95,117 +94,105 @@
     .brand-mark {
       width: 40px;
       height: 40px;
-      border-radius: 14px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--accent), #ffb347);
+      border-radius: 14px;
+      background: #1f1a16;
       color: #fff;
-      box-shadow: 0 10px 30px rgba(255, 106, 19, 0.3);
-      font-size: 0.95rem;
+      font-size: 0.86rem;
     }
 
     .nav {
       display: flex;
-      gap: 22px;
+      align-items: center;
+      gap: 18px;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.94rem;
       font-weight: 600;
     }
 
-    .nav-cta {
-      padding: 12px 18px;
+    .nav a:last-child {
+      padding: 11px 16px;
       border-radius: 999px;
-      background: var(--ink);
+      background: #1f1a16;
       color: #fff;
     }
 
     .hero {
-      padding: 48px 0 36px;
+      padding: 28px 0 24px;
     }
 
-    .hero-grid {
+    .hero-shell {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 430px);
-      gap: 28px;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 430px);
+      gap: 24px;
       align-items: stretch;
     }
 
     .hero-copy,
-    .hero-card,
-    .section-card,
-    .proof-card,
-    .pain-card,
-    .story-card,
-    .form-shell {
-      border: 1px solid rgba(26, 26, 22, 0.08);
-      background: rgba(255, 250, 243, 0.86);
+    .hero-form,
+    .section-panel,
+    .step-shell,
+    .footer-shell {
+      background: var(--paper);
+      border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
     }
 
     .hero-copy {
-      padding: 42px;
-      position: relative;
-      overflow: hidden;
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
     }
 
-    .hero-copy::after {
-      content: "";
-      position: absolute;
-      inset: auto -80px -80px auto;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 130, 32, 0.18), transparent 68%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
+    .eyebrow,
+    .step-label {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent-deep);
-      font-weight: 700;
-      font-size: 0.92rem;
-      margin-bottom: 24px;
+      color: var(--accent);
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
+    .eyebrow::before,
+    .step-label::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.65;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(2.6rem, 6vw, 5.4rem);
-      line-height: 0.94;
-      letter-spacing: -0.07em;
-      max-width: 10em;
+      font-size: clamp(2.2rem, 4.1vw, 3.9rem);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+      max-width: 8.5em;
       word-break: keep-all;
     }
 
-    .hero-copy .lead {
-      margin-top: 26px;
-      max-width: 38rem;
+    .lead {
+      margin-top: 18px;
+      max-width: 34rem;
       color: var(--muted);
-      font-size: 1.12rem;
-      line-height: 1.9;
+      font-size: 1.02rem;
+      line-height: 1.84;
       font-weight: 500;
     }
 
-    .hero-emphasis {
-      color: var(--accent-deep);
-    }
-
-    .cta-row {
-      margin-top: 34px;
+    .hero-cta {
+      margin-top: 22px;
       display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 12px;
     }
 
     .btn {
@@ -213,361 +200,174 @@
       align-items: center;
       justify-content: center;
       min-height: 54px;
-      padding: 0 22px;
+      padding: 0 20px;
       border-radius: 999px;
+      border: 0;
       font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
+      cursor: pointer;
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: #1f1a16;
       color: #fff;
-      box-shadow: 0 14px 28px rgba(255, 106, 19, 0.24);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.75);
-      border-color: rgba(26, 26, 22, 0.08);
-      color: var(--ink);
-    }
-
-    .hero-stats {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(26, 26, 22, 0.05);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.55rem;
-      letter-spacing: -0.05em;
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 0.94rem;
-      font-weight: 600;
-    }
-
-    .hero-card {
-      padding: 24px;
-      display: grid;
-      gap: 18px;
-      align-content: start;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 246, 236, 0.94)),
-        linear-gradient(140deg, rgba(255, 130, 32, 0.08), transparent 40%);
-    }
-
-    .hero-card-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .hero-card-top .mini {
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
       background: #fff;
-      border: 1px solid rgba(26, 26, 22, 0.08);
-      font-size: 0.92rem;
-      font-weight: 700;
+      color: var(--ink);
+      border: 1px solid rgba(22, 19, 16, 0.08);
     }
 
-    .estimate-board {
-      padding: 22px;
-      border-radius: 24px;
-      background: #161511;
-      color: #fff9f1;
-      display: grid;
-      gap: 16px;
-    }
-
-    .estimate-board h2 {
-      font-size: 1.8rem;
-      line-height: 1.08;
-      letter-spacing: -0.05em;
-    }
-
-    .estimate-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255, 249, 241, 0.12);
-    }
-
-    .estimate-row:last-child {
-      border-bottom: 0;
-    }
-
-    .estimate-row span {
-      color: rgba(255, 249, 241, 0.72);
-    }
-
-    .estimate-row strong {
-      letter-spacing: -0.03em;
-    }
-
-    .card-note {
-      padding: 16px 18px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.78);
-      color: var(--muted);
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .section {
-      padding: 40px 0 0;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-      gap: 24px;
-      align-items: end;
-      margin-bottom: 22px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2rem, 4.5vw, 3.9rem);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      word-break: keep-all;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.82;
-      font-weight: 500;
-    }
-
-    .proof-grid,
-    .story-grid,
-    .pain-grid {
+    .hero-metrics {
+      margin-top: 22px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .proof-card,
-    .story-card,
-    .pain-card {
-      padding: 24px;
-    }
-
-    .proof-card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 248, 238, 0.96));
-    }
-
-    .proof-card .tag,
-    .story-card .tag,
-    .pain-card .tag {
-      display: inline-flex;
-      margin-bottom: 18px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(26, 26, 22, 0.06);
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .proof-card h3,
-    .story-card h3,
-    .pain-card h3 {
-      font-size: 1.45rem;
-      line-height: 1.18;
-      letter-spacing: -0.04em;
-      margin-bottom: 14px;
-      word-break: keep-all;
-    }
-
-    .proof-card p,
-    .story-card p,
-    .pain-card p {
-      color: var(--muted);
-      font-size: 0.98rem;
-      line-height: 1.78;
-      font-weight: 500;
-    }
-
-    .money {
-      display: block;
-      margin-top: 18px;
-      color: var(--accent-deep);
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: -0.06em;
-    }
-
-    .cost-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .section-card {
-      padding: 24px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 248, 241, 0.95));
-    }
-
-    .section-card strong {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .section-card h3 {
-      font-size: 1.38rem;
-      line-height: 1.18;
-      letter-spacing: -0.04em;
-      margin-bottom: 14px;
-      word-break: keep-all;
-    }
-
-    .section-card p {
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .estimate-mini {
-      margin-top: 20px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(26, 26, 22, 0.08);
-      display: grid;
       gap: 10px;
     }
 
-    .estimate-mini div {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 0.96rem;
-      font-weight: 700;
+    .metric {
+      padding: 16px 14px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(22, 19, 16, 0.05);
     }
 
-    .estimate-mini span {
+    .metric strong {
+      display: block;
+      font-size: 1.28rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+
+    .metric span {
       color: var(--muted);
+      font-size: 0.88rem;
       font-weight: 600;
     }
 
-    .process-list {
+    .hero-gallery {
+      margin-top: 26px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: 1.45fr 0.9fr;
+      gap: 14px;
+      flex: 1 1 auto;
+      min-height: 0;
     }
 
-    .process-item {
+    .hero-main,
+    .hero-stack,
+    .hero-small {
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #e7ddd0;
+      border: 1px solid rgba(22, 19, 16, 0.05);
+    }
+
+    .hero-stack {
       display: grid;
-      grid-template-columns: 120px minmax(0, 1fr) minmax(220px, 320px);
-      gap: 20px;
-      padding: 24px 0;
-      border-bottom: 1px solid rgba(26, 26, 22, 0.08);
+      gap: 14px;
+      background: transparent;
+      border: 0;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
     }
 
-    .process-item:first-child {
-      border-top: 1px solid rgba(26, 26, 22, 0.08);
+    .hero-main {
+      min-height: 100%;
     }
 
-    .step-no {
-      color: var(--accent-deep);
-      font-size: 0.92rem;
+    .hero-small {
+      min-height: 0;
+    }
+
+    .img-fill {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1.01);
+      filter: saturate(0.92) contrast(0.98);
+    }
+
+    .img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(18, 15, 12, 0.14), rgba(18, 15, 12, 0.04) 35%, rgba(18, 15, 12, 0.14));
+    }
+
+    .img-note {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.76rem;
       font-weight: 900;
       letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .process-item h3 {
-      font-size: 1.42rem;
-      line-height: 1.2;
-      letter-spacing: -0.04em;
-      margin-bottom: 10px;
-      word-break: keep-all;
+    .img-label {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--ink);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
-    .process-item p,
-    .process-item span {
-      color: var(--muted);
-      font-size: 0.98rem;
-      line-height: 1.78;
-      font-weight: 500;
-    }
+    .img-hero-main { background-image: url("./assets/images/hero-main.jpg"); }
+    .img-hero-bath { background-image: url("./assets/images/hero-estimate.jpg"); }
+    .img-hero-mood { background-image: url("./assets/images/hero-mood.webp"); }
+    .img-case-living { background-image: url("./assets/images/case-living.webp"); }
+    .img-case-commercial { background-image: url("./assets/images/case-commercial.jpg"); }
+    .img-case-partial { background-image: url("./assets/images/case-partial.jpg"); }
+    .img-director-kim { background-image: url("./assets/images/director-kim-black.png"); background-position: center top; }
+    .img-director-lee { background-image: url("./assets/images/director-lee-green.png"); background-position: center top; }
+    .img-director-han { background-image: url("./assets/images/director-han-pink.png"); background-position: center top; }
+    .img-director-park { background-image: url("./assets/images/director-park-red.png"); background-position: center top; }
+    .img-commercial-11 { background-image: url("./assets/images/commercial-11.jpg"); }
+    .img-commercial-22 { background-image: url("./assets/images/commercial-22.jpeg"); }
+    .img-commercial-33 { background-image: url("./assets/images/commercial-33.jpg"); }
+    .img-commercial-44 { background-image: url("./assets/images/commercial-44.webp"); }
+    .img-commercial-55 { background-image: url("./assets/images/commercial-55.webp"); }
+    .img-commercial-66 { background-image: url("./assets/images/commercial-66.jpeg"); }
+    .img-commercial-77 { background-image: url("./assets/images/commercial-77.webp"); }
+    .img-commercial-88 { background-image: url("./assets/images/commercial-88.jpg"); }
+    .img-commercial-99 { background-image: url("./assets/images/commercial-99.webp"); }
+    .img-residential-1111 { background-image: url("./assets/images/residential-1111.jpg"); }
+    .img-residential-2222 { background-image: url("./assets/images/residential-2222.png"); }
+    .img-residential-3333 { background-image: url("./assets/images/residential-3333.png"); }
+    .img-residential-4444 { background-image: url("./assets/images/residential-4444.jpg"); }
+    .img-residential-5555 { background-image: url("./assets/images/residential-5555.jpg"); }
+    .img-residential-6666 { background-image: url("./assets/images/residential-6666.jpg"); }
+    .img-residential-7777 { background-image: url("./assets/images/residential-7777.jpg"); }
+    .img-residential-8888 { background-image: url("./assets/images/residential-8888.jpeg"); }
+    .img-residential-9999 { background-image: url("./assets/images/residential-9999.jpg"); }
 
-    .pain-card {
-      background: linear-gradient(180deg, #1a1915, #232019);
-      color: #fff7f0;
-      border-color: rgba(255, 255, 255, 0.05);
-    }
-
-    .pain-card .tag,
-    .pain-card p {
-      color: rgba(255, 247, 240, 0.72);
-    }
-
-    .pain-card h3 {
-      color: #fff;
-    }
-
-    .pain-card strong {
-      display: block;
-      margin-top: 18px;
-      color: #ffb98d;
-      font-size: 1.05rem;
-    }
-
-    .lead-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
-      gap: 24px;
-      align-items: start;
-    }
-
-    .form-shell {
+    .hero-form {
       padding: 28px;
-      background: rgba(255, 251, 246, 0.94);
+      position: sticky;
+      top: 92px;
     }
 
-    .form-shell h2 {
-      font-size: 2rem;
-      line-height: 1.06;
+    .hero-form h2 {
+      font-size: 1.62rem;
+      line-height: 1.1;
       letter-spacing: -0.05em;
       margin-bottom: 10px;
     }
 
-    .form-shell > p {
+    .hero-form > p {
       color: var(--muted);
-      margin-bottom: 22px;
+      font-size: 0.96rem;
+      line-height: 1.76;
       font-weight: 500;
+      margin-bottom: 18px;
     }
 
     .form-grid {
@@ -581,51 +381,42 @@
     }
 
     .field label {
+      color: #4b443d;
       font-size: 0.92rem;
       font-weight: 800;
-      color: #4f493f;
     }
 
     .field input,
     .field select,
     .field textarea {
       width: 100%;
-      padding: 16px 18px;
+      padding: 15px 16px;
       border-radius: 16px;
-      border: 1px solid rgba(26, 26, 22, 0.08);
+      border: 1px solid rgba(22, 19, 16, 0.08);
       background: #fff;
       color: var(--ink);
       outline: none;
-      transition: border-color 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: rgba(255, 106, 19, 0.48);
-      box-shadow: 0 0 0 4px rgba(255, 106, 19, 0.1);
     }
 
     .field textarea {
-      min-height: 130px;
+      min-height: 112px;
       resize: vertical;
     }
 
-    .consent-box {
-      margin-top: 6px;
-      padding: 18px;
+    .consent {
+      padding: 16px;
       border-radius: 18px;
-      background: rgba(26, 26, 22, 0.04);
-      border: 1px solid rgba(26, 26, 22, 0.06);
+      background: #f5efe7;
+      border: 1px solid rgba(22, 19, 16, 0.05);
     }
 
     .consent-grid {
       display: grid;
-      grid-template-columns: 132px 1fr;
-      gap: 12px;
+      grid-template-columns: 118px 1fr;
+      gap: 10px 14px;
       color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.72;
+      font-size: 0.9rem;
+      line-height: 1.7;
     }
 
     .consent-grid strong {
@@ -636,84 +427,735 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-top: 16px;
-      font-size: 0.95rem;
+      margin-top: 14px;
+      font-size: 0.94rem;
       font-weight: 700;
-      color: var(--ink);
     }
 
-    .lead-copy {
+    .section {
+      padding: 26px 0 0;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section-head .step-label {
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.68rem, 2.7vw, 2.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      word-break: keep-all;
+    }
+
+    .section-head p {
+      margin-top: 10px;
+      max-width: 42rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+      font-weight: 500;
+      word-break: keep-all;
+    }
+
+    .section-panel {
+      padding: 24px;
+    }
+
+    .flow-shell {
+      padding: 26px 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .flow-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .flow-head h2 {
+      font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      word-break: keep-all;
+    }
+
+    .flow-head p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.72;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .saving-grid,
+    .cost-grid,
+    .case-grid,
+    .recommend-grid {
       display: grid;
       gap: 18px;
     }
 
-    .lead-copy .story-card {
-      background: rgba(255, 250, 243, 0.9);
+    .saving-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .saving-card,
+    .cost-card,
+    .case-card,
+    .recommend-card {
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(22, 19, 16, 0.05);
+    }
+
+    .saving-card .saving-amount {
+      display: block;
+      margin-top: 12px;
+      color: var(--accent);
+      font-size: 1.9rem;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .saving-card h3,
+    .cost-card h3,
+    .case-card h3,
+    .recommend-card h3 {
+      font-size: 1.26rem;
+      line-height: 1.22;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+      word-break: keep-all;
+    }
+
+    .saving-card p,
+    .cost-card p,
+    .case-card p,
+    .recommend-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.72;
+      font-weight: 500;
+    }
+
+    .step-shell {
+      padding: 28px;
+    }
+
+    .step-grid {
+      display: block;
+    }
+
+    .step-photo-card {
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .director-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .director-profile {
+      padding: 14px;
+      border-radius: 24px;
+      border: 1px solid rgba(22, 19, 16, 0.05);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .director-photo {
+      position: relative;
+      min-height: 280px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(22, 19, 16, 0.05);
+      background: #e6dbc9;
+    }
+
+    .director-meta {
+      margin-top: 14px;
+    }
+
+    .director-role {
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .director-name {
+      margin-top: 6px;
+      font-size: 1.06rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .director-career {
+      margin-top: 8px;
+      color: #312a23;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      font-weight: 600;
+      word-break: keep-all;
+    }
+
+    .step-block + .step-block {
+      margin-top: 24px;
+    }
+
+    .estimate-table {
+      margin-top: 24px;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(22, 19, 16, 0.08);
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .estimate-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding: 16px;
+      background: rgba(243, 236, 227, 0.86);
+      border-bottom: 1px solid rgba(22, 19, 16, 0.08);
+    }
+
+    .estimate-tab {
+      min-height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(22, 19, 16, 0.08);
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #332b23;
+      text-align: center;
+    }
+
+    .estimate-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .estimate-table th,
+    .estimate-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(22, 19, 16, 0.08);
+      text-align: left;
+      font-size: 0.96rem;
+    }
+
+    .estimate-table th {
+      color: #2f2923;
+      background: rgba(248, 243, 236, 0.88);
+      font-weight: 800;
+    }
+
+    .estimate-table td {
+      color: var(--muted);
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .estimate-table td:first-child,
+    .estimate-table th:first-child {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .data-table-shell {
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(22, 19, 16, 0.08);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .data-table-scroll {
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      min-width: 920px;
+      border-collapse: collapse;
+    }
+
+    .data-table thead th {
+      padding: 18px 20px;
+      text-align: left;
+      background: rgba(248, 243, 236, 0.92);
+      border-bottom: 1px solid rgba(22, 19, 16, 0.08);
+      color: #2f2923;
+      font-size: 0.92rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .data-table tbody td {
+      padding: 20px;
+      border-bottom: 1px solid rgba(22, 19, 16, 0.08);
+      vertical-align: top;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .data-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .data-table td strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.45;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .data-table td span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.65;
+      white-space: nowrap;
+    }
+
+    .table-type {
+      color: var(--accent);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .table-amount {
+      color: var(--ink);
+      font-size: 1.08rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .data-table th:not(:nth-child(3)),
+    .data-table td:not(:nth-child(3)) {
+      white-space: nowrap;
+    }
+
+    .data-table td:nth-child(3) {
+      white-space: normal;
+      min-width: 440px;
+      max-width: 440px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .data-table-saving td:nth-child(3),
+    .data-table-saving td:nth-child(4) {
+      white-space: normal;
+      min-width: 300px;
+      max-width: 300px;
+    }
+
+    .table-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: normal;
+      line-height: 1.7;
+    }
+
+    .data-table-saving th:nth-child(1),
+    .data-table-saving td:nth-child(1) {
+      width: 220px;
+    }
+
+    .data-table-saving th:nth-child(2),
+    .data-table-saving td:nth-child(2) {
+      width: 140px;
+    }
+
+    .data-table-saving th:nth-child(5),
+    .data-table-saving td:nth-child(5) {
+      width: 170px;
+    }
+
+    .payback-shell {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .payback-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .payback-image {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #e6dbc9;
+      border: 1px solid rgba(22, 19, 16, 0.05);
+    }
+
+    .payback-meta {
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(22, 19, 16, 0.12);
+    }
+
+    .payback-meta strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.06rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .payback-amount {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+    }
+
+    .payback-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 8px;
+      background: rgba(22, 19, 16, 0.5);
+      color: #fff;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .recommend-stack {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .recommend-row {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .recommend-icon {
+      display: grid;
+      place-items: center;
+      min-height: 118px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(22, 19, 16, 0.05);
+      font-size: 2rem;
+    }
+
+    .recommend-copy {
+      display: grid;
+      align-items: center;
+      min-height: 118px;
+      padding: 0 26px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(22, 19, 16, 0.05);
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 600;
+      color: #312a23;
+      word-break: keep-all;
+    }
+
+    .cost-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .cost-card .numbers {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(22, 19, 16, 0.08);
+      display: grid;
+      gap: 10px;
+    }
+
+    .numbers div {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .numbers span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .recommend-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .recommend-card {
+      min-height: 170px;
+    }
+
+    .case-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .case-group + .case-group {
+      margin-top: 28px;
+    }
+
+    .case-group-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .case-group-head h3 {
+      font-size: 1.28rem;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      word-break: keep-all;
+    }
+
+    .case-more {
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .case-image {
+      position: relative;
+      min-height: 240px;
+      margin-bottom: 18px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(22, 19, 16, 0.05);
+      background: #e7ddd1;
+    }
+
+    .process-grid {
+      display: grid;
+      gap: 0;
+    }
+
+    .process-row {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr) minmax(220px, 280px);
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(22, 19, 16, 0.08);
+    }
+
+    .process-row:first-child {
+      border-top: 1px solid rgba(22, 19, 16, 0.08);
+    }
+
+    .process-row h3 {
+      font-size: 1.24rem;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .process-row p,
+    .process-side {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.74;
+      font-weight: 500;
     }
 
     .footer {
-      padding: 48px 0 72px;
+      padding: 28px 0 68px;
+    }
+
+    .footer-shell {
+      padding: 28px 30px;
+      display: grid;
+      grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-title {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-copy strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      line-height: 1.4;
+      letter-spacing: -0.04em;
+    }
+
+    .footer-copy p {
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.96rem;
+      line-height: 1.78;
+      font-weight: 500;
+    }
+
+    .footer-info {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 28px;
+      margin-top: 8px;
+    }
+
+    .footer-info div {
+      display: grid;
+      gap: 4px;
+    }
+
+    .footer-info span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-info strong {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: -0.03em;
     }
 
     @media (max-width: 1100px) {
-      .hero-grid,
-      .lead-grid,
-      .section-head,
-      .process-item {
+      .hero-shell,
+      .process-row,
+      .footer-shell {
         grid-template-columns: 1fr;
       }
 
-      .proof-grid,
-      .story-grid,
-      .pain-grid,
-      .cost-grid {
+      .hero-form {
+        position: static;
+      }
+
+      .saving-grid,
+      .cost-grid,
+      .recommend-grid,
+      .case-grid,
+      .payback-shell {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .nav {
-        display: none;
+      .director-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .recommend-row {
+        grid-template-columns: 120px 1fr;
       }
     }
 
     @media (max-width: 720px) {
       .wrap {
-        width: min(calc(100% - 24px), var(--max));
+        width: min(calc(100% - 20px), var(--max));
       }
 
-      .topbar-inner {
-        min-height: 66px;
-      }
-
-      .hero {
-        padding-top: 24px;
+      .nav {
+        display: none;
       }
 
       .hero-copy,
-      .hero-card,
-      .proof-card,
-      .pain-card,
-      .story-card,
-      .section-card,
-      .form-shell {
+      .hero-form,
+      .section-panel,
+      .step-shell,
+      .footer-shell {
         padding: 20px;
         border-radius: 24px;
       }
 
-      .hero-stats,
-      .proof-grid,
-      .story-grid,
-      .pain-grid,
-      .cost-grid {
+      .hero-metrics,
+      .hero-gallery,
+      .saving-grid,
+      .cost-grid,
+      .recommend-grid,
+      .case-grid,
+      .payback-shell {
         grid-template-columns: 1fr;
       }
 
-      .process-item {
-        padding: 18px 0;
+      .flow-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .estimate-tabs,
+      .recommend-row {
+        grid-template-columns: 1fr;
+      }
+
+      .recommend-copy {
+        min-height: auto;
+        padding: 18px 20px;
+      }
+
+      .hero-stack {
+        grid-template-rows: none;
+      }
+
+      .hero-main,
+      .hero-small,
+      .director-photo,
+      .case-image {
+        min-height: 220px;
+      }
+
+      .director-grid {
+        grid-template-columns: 1fr;
       }
 
       .consent-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-info {
         grid-template-columns: 1fr;
       }
     }
@@ -727,336 +1169,113 @@
         <span>인테리어 인스턴트</span>
       </a>
       <nav class="nav">
-        <a href="#proof">원가 사례</a>
-        <a href="#process">진행 방식</a>
-        <a href="#pain">왜 다른가</a>
-        <a class="nav-cta" href="#lead-form">상담 신청</a>
+        <a href="#estimate">원가견적서</a>
+        <a href="#director">소장님</a>
+        <a href="#saving">비용 절감</a>
+        <a href="#cases-residential">주거공간</a>
+        <a href="#cases-commercial">상업공간</a>
+        <a href="#process">공사 과정</a>
+        <a href="#consult-form">상담 신청</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-grid">
+      <div class="wrap hero-shell">
         <div class="hero-copy">
-          <span class="eyebrow">원가 공개 인테리어 랜딩 프로토타입</span>
-          <h1>10% 마진으로 공사하고<br>인테리어 <span class="hero-emphasis">원가를 공개</span>합니다</h1>
-          <p class="lead">
-            광고에서 바로 폼으로 이어지는 구조를 기준으로 만든 샘플입니다.
-            고객은 견적의 불투명함을 가장 먼저 의심하기 때문에,
-            첫 화면에서 <strong>낮은 마진</strong>과 <strong>원가 공개</strong>를 명확하게 보여주는 데 집중했습니다.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#lead-form">원가견적서 받아보기</a>
-            <a class="btn btn-secondary" href="#proof">사례 먼저 보기</a>
+          <span class="eyebrow">Open Cost Interior</span>
+          <h1>9.9% 마진 기준으로 공사하고 인테리어 원가를 공개합니다</h1>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#consult-form">원가견적서 바로 받아보기</a>
+            <a class="btn btn-secondary" href="#estimate">원가 사례 보기</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>10%</strong>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <strong>9.9%</strong>
               <span>공개 마진 기준</span>
             </div>
-            <div class="stat">
-              <strong>6 STEP</strong>
-              <span>상담부터 공사까지</span>
+            <div class="metric">
+              <strong>1:1</strong>
+              <span>소장님 직접 상담 구조</span>
             </div>
-            <div class="stat">
-              <strong>30초</strong>
-              <span>리드 폼 작성 시간</span>
+            <div class="metric">
+              <strong>FREE</strong>
+              <span>실측·견적·3D 검토 가능</span>
+            </div>
+          </div>
+
+          <div class="hero-gallery">
+            <div class="hero-main">
+              <div class="img-fill img-hero-main"></div>
+              <div class="img-overlay"></div>
+              <span class="img-note">Main Image</span>
+              <span class="img-label">대표 시공 이미지</span>
+            </div>
+            <div class="hero-stack">
+              <div class="hero-small">
+                <div class="img-fill img-hero-bath"></div>
+                <div class="img-overlay"></div>
+                <span class="img-note">Sub Image</span>
+                <span class="img-label">욕실 시공 사례</span>
+              </div>
+              <div class="hero-small">
+                <div class="img-fill img-hero-mood"></div>
+                <div class="img-overlay"></div>
+                <span class="img-note">Sub Image</span>
+                <span class="img-label">스타일 무드 사례</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <aside class="hero-card">
-          <div class="hero-card-top">
-            <div>
-              <div class="mini">샘플 견적 공개</div>
-              <strong>32평 아파트 리모델링</strong>
-            </div>
-            <span class="pill">원가 기반 견적</span>
-          </div>
-
-          <div class="estimate-board">
-            <h2>인건비와 자재비를 나눠 보여주면<br>신뢰가 먼저 생깁니다.</h2>
-            <div class="estimate-row">
-              <span>인건비 원가</span>
-              <strong>12,800,000원</strong>
-            </div>
-            <div class="estimate-row">
-              <span>자재비 원가</span>
-              <strong>16,450,000원</strong>
-            </div>
-            <div class="estimate-row">
-              <span>운영 마진</span>
-              <strong>10%</strong>
-            </div>
-            <div class="estimate-row">
-              <span>상담 결과</span>
-              <strong>무료 실측 + 업체 연결</strong>
-            </div>
-          </div>
-
-          <div class="card-note">
-            실제 운영 구조가 플랫폼형이라면 “직접 시공” 대신 “검증된 업체 연결” 중심으로 문구를 조정하면 됩니다.
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="proof">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>광고 클릭 뒤 바로 믿게 만드는 원가 사례</h2>
-          <p>
-            레퍼런스 사이트의 힘은 결국 숫자입니다.
-            추상적인 “합리적 가격”보다, 인건비와 자재비를 분리해 보여주는 카드가 훨씬 강하게 작동합니다.
-          </p>
-        </div>
-
-        <div class="proof-grid">
-          <article class="proof-card">
-            <span class="tag">Case 01</span>
-            <h3>성수 카페 인테리어</h3>
-            <p>상업 공간은 오픈 일정이 중요해서 빠른 견적과 공정 일정 정리가 함께 보여야 합니다.</p>
-            <span class="money">1,980,000원 절감</span>
-          </article>
-          <article class="proof-card">
-            <span class="tag">Case 02</span>
-            <h3>판교 사무실 리뉴얼</h3>
-            <p>브랜드 이미지보다 먼저 비용 구조를 보여주면 리드 품질이 더 안정적으로 올라갑니다.</p>
-            <span class="money">930,000원 절감</span>
-          </article>
-          <article class="proof-card">
-            <span class="tag">Case 03</span>
-            <h3>잠실 아파트 부분 시공</h3>
-            <p>부분 공사는 오히려 숨은 추가금을 걱정하기 때문에 예상 범위를 미리 알려주는 게 중요합니다.</p>
-            <span class="money">740,000원 절감</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>이미지 없이도 시작 가능한 견적 카드 구조</h2>
-          <p>
-            지금은 시공 사진이 없어도 괜찮습니다.
-            먼저 텍스트 중심의 원가 카드로 테스트하고, 전환이 나오는 문구부터 검증할 수 있습니다.
-          </p>
-        </div>
-
-        <div class="cost-grid">
-          <article class="section-card">
-            <strong>주거 24평</strong>
-            <h3>욕실 + 주방 부분 공사</h3>
-            <p>예산이 제한된 고객에게 적합한 가벼운 리모델링 패키지 예시입니다.</p>
-            <div class="estimate-mini">
-              <div><span>인건비</span><b>8,950,000원</b></div>
-              <div><span>자재비</span><b>7,420,000원</b></div>
-            </div>
-          </article>
-          <article class="section-card">
-            <strong>주거 32평</strong>
-            <h3>전체 리모델링</h3>
-            <p>가장 많이 문의가 들어오는 면적대 기준의 대표 샘플 카드입니다.</p>
-            <div class="estimate-mini">
-              <div><span>인건비</span><b>15,260,000원</b></div>
-              <div><span>자재비</span><b>21,720,000원</b></div>
-            </div>
-          </article>
-          <article class="section-card">
-            <strong>상업 18평</strong>
-            <h3>카페 신규 오픈</h3>
-            <p>브랜딩보다 오픈 일정과 동선 효율을 강조하는 상업 공간용 카드입니다.</p>
-            <div class="estimate-mini">
-              <div><span>인건비</span><b>20,240,000원</b></div>
-              <div><span>자재비</span><b>22,940,000원</b></div>
-            </div>
-          </article>
-          <article class="section-card">
-            <strong>상업 40평</strong>
-            <h3>사무실 리뉴얼</h3>
-            <p>업무 중단 최소화와 단계별 공정을 동시에 설명하기 좋은 유형입니다.</p>
-            <div class="estimate-mini">
-              <div><span>인건비</span><b>26,250,000원</b></div>
-              <div><span>자재비</span><b>17,140,000원</b></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>상담부터 시공 연결까지 한 화면에서 설명하는 흐름</h2>
-          <p>
-            인테리어 리드 페이지는 결국 “신청하면 무엇이 진행되는지”가 분명해야 합니다.
-            단계가 보이면 폼 전환이 올라갑니다.
-          </p>
-        </div>
-
-        <div class="process-list">
-          <article class="process-item">
-            <div class="step-no">STEP 01</div>
-            <div>
-              <h3>간단 상담 접수</h3>
-              <p>이름, 연락처, 위치, 공간 유형만 받아도 1차 리드 분류는 충분합니다.</p>
-            </div>
-            <span>광고 클릭 후 30초 내로 작성 가능한 짧은 폼이 핵심입니다.</span>
-          </article>
-          <article class="process-item">
-            <div class="step-no">STEP 02</div>
-            <div>
-              <h3>예산과 목적 확인</h3>
-              <p>전체 시공인지 부분 공사인지, 예산대가 어느 정도인지 먼저 정리합니다.</p>
-            </div>
-            <span>이 단계에서 부적합 리드를 줄이고 상담 효율을 높일 수 있습니다.</span>
-          </article>
-          <article class="process-item">
-            <div class="step-no">STEP 03</div>
-            <div>
-              <h3>원가 기준 안내</h3>
-              <p>인건비와 자재비를 분리해 보여주면 고객이 가장 궁금해하는 부분이 바로 해소됩니다.</p>
-            </div>
-            <span>광고 후킹과 실제 상담 경험이 이어져야 이탈이 줄어듭니다.</span>
-          </article>
-          <article class="process-item">
-            <div class="step-no">STEP 04</div>
-            <div>
-              <h3>실측 또는 업체 연결</h3>
-              <p>운영 구조에 따라 직접 실측하거나 적합한 인테리어 업체로 DB를 연결합니다.</p>
-            </div>
-            <span>여기서부터는 플랫폼형 구조에 맞는 문구 정렬이 중요합니다.</span>
-          </article>
-          <article class="process-item">
-            <div class="step-no">STEP 05</div>
-            <div>
-              <h3>견적과 시안 안내</h3>
-              <p>가능하면 샘플북, 무드보드, 3D 이미지 중 하나라도 제안하면 신뢰가 올라갑니다.</p>
-            </div>
-            <span>실제 자산이 없더라도 프로세스를 먼저 설명하는 것만으로 효과가 있습니다.</span>
-          </article>
-          <article class="process-item">
-            <div class="step-no">STEP 06</div>
-            <div>
-              <h3>계약 및 공사 진행</h3>
-              <p>직접 시공 구조면 책임 시공을, 매칭 구조면 검증된 파트너 연결을 강조합니다.</p>
-            </div>
-            <span>광고 메시지와 실제 운영 구조가 어긋나지 않도록 마지막 문장을 맞추면 됩니다.</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pain">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>왜 사람들은 인테리어 견적을 불신할까</h2>
-          <p>
-            매치스 계열 랜딩이 잘 먹히는 이유는 업계의 불신 포인트를 정면으로 건드리기 때문입니다.
-            이 섹션은 릴스 광고의 대본 소재로도 그대로 쓸 수 있습니다.
-          </p>
-        </div>
-
-        <div class="pain-grid">
-          <article class="pain-card">
-            <span class="tag">Pain 01</span>
-            <h3>불필요한 공정이 숨어 들어가는 경우</h3>
-            <p>고객은 상세 내역을 읽기 어렵기 때문에 실제보다 공정이 부풀려져도 판단하기 어렵습니다.</p>
-            <strong>해결: 공정 설명과 비용을 짧게 풀어 보여주기</strong>
-          </article>
-          <article class="pain-card">
-            <span class="tag">Pain 02</span>
-            <h3>자재 가격 차이를 알 수 없는 경우</h3>
-            <p>같은 느낌의 마감재라도 가격 차이가 커서, 자재비에 대한 불안이 쉽게 생깁니다.</p>
-            <strong>해결: 자재비 범위와 등급을 함께 안내하기</strong>
-          </article>
-          <article class="pain-card">
-            <span class="tag">Pain 03</span>
-            <h3>계약 후 추가금이 붙는 경우</h3>
-            <p>가장 싫어하는 경험은 처음 견적보다 최종 금액이 크게 늘어나는 상황입니다.</p>
-            <strong>해결: 예상 제외 항목과 추가 가능 항목을 미리 고지하기</strong>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap lead-grid">
-        <div class="lead-copy">
-          <div class="section-head">
-            <h2>광고와 폼은 한 세트로 설계하는 편이 좋습니다</h2>
-            <p>
-              메타 광고, 릴스, 랜딩 페이지가 각각 다른 말을 하면 전환이 크게 떨어집니다.
-              그래서 후킹 문구와 신청 폼 제목을 같은 메시지로 맞추는 게 중요합니다.
-            </p>
-          </div>
-
-          <article class="story-card">
-            <span class="tag">Hook 01</span>
-            <h3>10% 마진으로 공사합니다</h3>
-            <p>숫자가 들어가면 광고 첫 문장으로 훨씬 잘 읽힙니다. 단, 실제 운영 기준과 정확히 맞아야 합니다.</p>
-          </article>
-          <article class="story-card">
-            <span class="tag">Hook 02</span>
-            <h3>인건비와 자재비 원가를 공개합니다</h3>
-            <p>“합리적”보다 “공개”가 더 강합니다. 고객이 직접 비교 가능하다고 느끼기 때문입니다.</p>
-          </article>
-          <article class="story-card">
-            <span class="tag">Hook 03</span>
-            <h3>내 지역에 맞는 인테리어 상담을 빠르게 연결합니다</h3>
-            <p>플랫폼 구조라면 이 문구가 더 안전합니다. 연결형 모델에 맞게 포지션을 분명하게 만들어줍니다.</p>
-          </article>
-        </div>
-
-        <aside class="form-shell" id="lead-form">
-          <h2>원가견적서 무료로 받아보기</h2>
-          <p>광고 클릭 후 바로 작성하는 리드 폼 샘플입니다. 지금은 데모라 제출 시 실제 전송 대신 안내 메시지만 표시됩니다.</p>
+        <aside class="hero-form">
+          <h2>원가견적서 빠르게 신청하기</h2>
+          <p>성함, 연락처, 현장 위치와 예산만 남겨주시면 상담을 시작할 수 있습니다.</p>
 
           <form class="form-grid" id="consult-form">
             <div class="field">
-              <label for="name">성함</label>
-              <input id="name" name="name" type="text" placeholder="답변을 입력해주세요." required>
+              <label for="name">성함 *</label>
+              <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." required>
             </div>
             <div class="field">
-              <label for="phone">연락처</label>
-              <input id="phone" name="phone" type="tel" placeholder="숫자만 입력 가능합니다." required>
+              <label for="phone">연락처 *</label>
+              <input id="phone" name="phone" type="tel" placeholder="숫자만 입력해주세요." required>
             </div>
             <div class="field">
-              <label for="location">시공 위치</label>
-              <input id="location" name="location" type="text" placeholder="예: 성수동, 분당구, 송파구" required>
+              <label for="address">현장 위치 *</label>
+              <input id="address" name="address" type="text" placeholder="시공 예정 위치를 입력해주세요." required>
             </div>
             <div class="field">
-              <label for="space">공간 유형</label>
-              <select id="space" name="space" required>
-                <option value="">선택해주세요.</option>
-                <option>아파트</option>
-                <option>빌라/주택</option>
-                <option>상가</option>
-                <option>사무실</option>
-                <option>기타</option>
+              <label for="budget">최대 예산 *</label>
+              <select id="budget" name="budget" required>
+                <option value="">선택하세요.</option>
+                <option>1,000만원 이하</option>
+                <option>1,000만원~3,000만원</option>
+                <option>3,000만원~5,000만원</option>
+                <option>5,000만원 이상</option>
               </select>
             </div>
             <div class="field">
-              <label for="budget">예상 예산</label>
-              <select id="budget" name="budget">
-                <option value="">선택해주세요.</option>
-                <option>500만원 이하</option>
-                <option>500만원~1,500만원</option>
-                <option>1,500만원~3,000만원</option>
-                <option>3,000만원 이상</option>
+              <label for="branch">상담 희망 방식</label>
+              <select id="branch" name="branch">
+                <option value="">선택하세요.</option>
+                <option>전화 상담</option>
+                <option>방문 상담</option>
+                <option>업체 연결 상담</option>
               </select>
             </div>
             <div class="field">
-              <label for="note">상담 내용</label>
-              <textarea id="note" name="note" placeholder="주방, 욕실, 부분 시공, 전체 리모델링 등 필요한 내용을 적어주세요."></textarea>
+              <label for="detail">참고 사항</label>
+              <textarea id="detail" name="detail" placeholder="주거 / 상업 공간, 부분 시공, 전체 리모델링 등 필요한 내용을 적어주세요."></textarea>
             </div>
 
-            <div class="consent-box">
+            <div class="consent">
               <div class="consent-grid">
-                <strong>수집 항목</strong><span>이름, 연락처, 시공 위치</span>
-                <strong>이용 목적</strong><span>인테리어 상담 및 업체 연결</span>
+                <strong>수집 항목</strong><span>이름, 연락처, 주소</span>
+                <strong>이용 목적</strong><span>인테리어 상담 및 맞춤 제안</span>
                 <strong>보유 기간</strong><span>상담 종료 후 1개월 보관</span>
               </div>
               <label class="agree">
@@ -1065,16 +1284,553 @@
               </label>
             </div>
 
-            <button class="btn btn-primary" type="submit">무료 상담 신청하기</button>
+            <button class="btn btn-primary" type="submit">상담 신청하기</button>
           </form>
         </aside>
+      </div>
+    </section>
+
+    <section class="section" id="director">
+      <div class="wrap">
+        <div class="step-shell">
+          <div class="section-head">
+            <h2>소장님 소개</h2>
+            <p>담당 소장님들의 사진을 먼저 보고, 바로 아래에 전문 분야와 경력을 이어서 볼 수 있도록 단순하게 정리했습니다.</p>
+          </div>
+          <div class="step-grid">
+            <div class="step-photo-card">
+              <div class="director-grid">
+                <div class="director-profile">
+                  <div class="director-photo">
+                    <div class="img-fill img-director-kim"></div>
+                  </div>
+                  <div class="director-meta">
+                    <div class="director-role">주거공간 담당</div>
+                    <div class="director-name">김진환 소장</div>
+                    <div class="director-career">아파트·빌라 리모델링 20년 경력</div>
+                  </div>
+                </div>
+                <div class="director-profile">
+                  <div class="director-photo">
+                    <div class="img-fill img-director-lee"></div>
+                  </div>
+                  <div class="director-meta">
+                    <div class="director-role">상업공간 담당</div>
+                    <div class="director-name">이준혁 소장</div>
+                    <div class="director-career">카페·매장 인테리어 10년 경력</div>
+                  </div>
+                </div>
+                <div class="director-profile">
+                  <div class="director-photo">
+                    <div class="img-fill img-director-han"></div>
+                  </div>
+                  <div class="director-meta">
+                    <div class="director-role">현장관리 담당</div>
+                    <div class="director-name">한아름 소장</div>
+                    <div class="director-career">현장 시공·공정 관리 10년 경력</div>
+                  </div>
+                </div>
+                <div class="director-profile">
+                  <div class="director-photo">
+                    <div class="img-fill img-director-park"></div>
+                  </div>
+                  <div class="director-meta">
+                    <div class="director-role">부분공사 담당</div>
+                    <div class="director-name">박미진 소장</div>
+                    <div class="director-career">욕실·주방 부분 시공 9년 경력</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="estimate">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="step-label">Step 2</div>
+          <h2>인건비와 자재비 원가를 먼저 보여드립니다</h2>
+        </div>
+
+        <div class="section-panel">
+          <div class="data-table-shell">
+            <div class="data-table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>공사 유형</th>
+                    <th>설명</th>
+                    <th>인건비 원가</th>
+                    <th>자재비 원가</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-type">주거</td>
+                    <td>
+                      <strong>24평 부분 공사</strong>
+                      <span>욕실 / 주방 중심</span>
+                    </td>
+                    <td>가장 많이 문의되는 예산대의 대표 샘플로, 부분 리모델링 상담 시 기준점으로 활용하기 좋습니다.</td>
+                    <td class="table-amount">8,956,872원</td>
+                    <td class="table-amount">8,900,040원</td>
+                    <td>부분 공사 기준</td>
+                  </tr>
+                  <tr>
+                    <td class="table-type">주거</td>
+                    <td>
+                      <strong>32평 전체 공사</strong>
+                      <span>아파트 전체 리모델링</span>
+                    </td>
+                    <td>가장 보편적인 아파트 리모델링 예산 기준으로 참고하기 좋은 전체 시공 케이스입니다.</td>
+                    <td class="table-amount">15,260,000원</td>
+                    <td class="table-amount">21,722,540원</td>
+                    <td>전체 공사 기준</td>
+                  </tr>
+                  <tr>
+                    <td class="table-type">상업</td>
+                    <td>
+                      <strong>18평 카페 공사</strong>
+                      <span>소형 상업 공간 오픈</span>
+                    </td>
+                    <td>오픈 일정이 중요한 상업 공간에 맞춘 원가 예시로, 일정과 마감 균형을 함께 고려한 사례입니다.</td>
+                    <td class="table-amount">20,240,000원</td>
+                    <td class="table-amount">22,942,000원</td>
+                    <td>카페 / 소형 매장</td>
+                  </tr>
+                  <tr>
+                    <td class="table-type">상업</td>
+                    <td>
+                      <strong>40평 사무실 공사</strong>
+                      <span>중대형 업무 공간</span>
+                    </td>
+                    <td>장비, 동선, 마감재 조건까지 함께 고려한 중대형 공간 기준으로 비교하기 좋은 샘플입니다.</td>
+                    <td class="table-amount">26,256,000원</td>
+                    <td class="table-amount">7,140,000원</td>
+                    <td>사무실 / 오피스</td>
+                  </tr>
+                  <tr>
+                    <td class="table-type">주거</td>
+                    <td>
+                      <strong>욕실 단독 리뉴얼</strong>
+                      <span>부분 집중 공정</span>
+                    </td>
+                    <td>짧은 일정 안에 마감 퀄리티를 올리고 싶은 경우 비교하기 좋은 소규모 공정 예시입니다.</td>
+                    <td class="table-amount">3,820,000원</td>
+                    <td class="table-amount">4,460,000원</td>
+                    <td>참고용 추가 행</td>
+                  </tr>
+                  <tr>
+                    <td class="table-type">상업</td>
+                    <td>
+                      <strong>쇼룸 리뉴얼</strong>
+                      <span>브랜드 경험 중심</span>
+                    </td>
+                    <td>동선과 체류 경험이 중요한 공간에서 마감 밀도와 브랜드 무드를 함께 잡는 예시입니다.</td>
+                    <td class="table-amount">18,600,000원</td>
+                    <td class="table-amount">14,900,000원</td>
+                    <td>확장 가능한 예시</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="saving">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="step-label">Step 3</div>
+          <h2>원가 기준으로 확인한 비용 절감 사례입니다</h2>
+        </div>
+
+        <div class="section-panel">
+          <div class="data-table-shell">
+            <div class="data-table-scroll">
+              <table class="data-table data-table-saving">
+                <thead>
+                  <tr>
+                    <th>사례명</th>
+                    <th>공간 유형</th>
+                    <th>조정 포인트</th>
+                    <th>절감 내용</th>
+                    <th>절감 금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>바디코드 비용 절감 사례</strong>
+                      <span>대표 비교 사례</span>
+                    </td>
+                    <td class="table-type">상업 공간</td>
+                    <td><div class="table-clamp-2">현장 기준과 원가표를 비교하며 공정과 자재 항목을 다시 정리했습니다.</div></td>
+                    <td><div class="table-clamp-2">중복 공정과 과하게 반영될 수 있는 자재 구성을 조정해 전체 비용 구조를 슬림하게 만들었습니다.</div></td>
+                    <td class="table-amount">1,996,800원</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>지니샌드 비용 절감 사례</strong>
+                      <span>견적 구조 재정리</span>
+                    </td>
+                    <td class="table-type">주거 공간</td>
+                    <td><div class="table-clamp-2">자재와 공정 구성을 조정한 뒤 실제 견적 구조를 다시 다듬었습니다.</div></td>
+                    <td><div class="table-clamp-2">상담 단계에서 필요 범위를 다시 정리해 불필요한 비용이 붙지 않도록 조정한 사례입니다.</div></td>
+                    <td class="table-amount">930,000원</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>코드페어 비용 절감 사례</strong>
+                      <span>공정 재검토 중심</span>
+                    </td>
+                    <td class="table-type">상업 공간</td>
+                    <td><div class="table-clamp-2">합리적인 견적과 공정 재검토를 통해 과하게 반영될 수 있는 요소를 줄였습니다.</div></td>
+                    <td><div class="table-clamp-2">공정 순서와 범위를 다시 나눠 예산을 더 효율적으로 배분한 사례입니다.</div></td>
+                    <td class="table-amount">740,000원</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>부분 시공 절감 예시</strong>
+                      <span>욕실 / 주방 중심</span>
+                    </td>
+                    <td class="table-type">주거 공간</td>
+                    <td><div class="table-clamp-2">부분 시공 항목만 남기고 전체 교체가 아닌 보완 중심으로 다시 설계했습니다.</div></td>
+                    <td><div class="table-clamp-2">철거 범위와 자재 교체 범위를 줄여 일정과 비용을 함께 조정한 예시입니다.</div></td>
+                    <td class="table-amount">620,000원</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>오피스 리뉴얼 절감 예시</strong>
+                      <span>운영 유지형 공사</span>
+                    </td>
+                    <td class="table-type">상업 공간</td>
+                    <td><div class="table-clamp-2">운영 중 공사가 가능하도록 공정을 나누고 꼭 필요한 구간만 리뉴얼했습니다.</div></td>
+                    <td><div class="table-clamp-2">공사 범위를 단계별로 나눠 한 번에 들어가는 예산 부담을 줄인 예시입니다.</div></td>
+                    <td class="table-amount">1,120,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>직접 공사한 공간을 실제 시공 사진으로 확인해보세요</h2>
+        </div>
+
+        <div class="section-panel">
+          <div class="case-group" id="cases-residential">
+            <div class="case-group-head">
+              <h3>주거공간 모아보기</h3>
+              <a class="case-more" href="#consult-form">주거 상담 신청하기</a>
+            </div>
+            <div class="case-grid">
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-1111"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">복층형 주거 공간</span>
+                </div>
+                <h3>복층 거실 리모델링</h3>
+                <p>층고와 조명을 활용해 공간감을 강조한 주거 리모델링 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-2222"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">하이엔드 리빙룸</span>
+                </div>
+                <h3>대형 거실 중심 리모델링</h3>
+                <p>웅장한 볼륨감과 조명 연출이 살아있는 고급 주거 공간 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-3333"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">계단형 엔트런스</span>
+                </div>
+                <h3>현관·계단 연결 공간</h3>
+                <p>채광과 동선 흐름이 자연스럽게 이어지는 엔트런스 스타일의 주거 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-4444"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">미니멀 거실</span>
+                </div>
+                <h3>미니멀 웜톤 리빙</h3>
+                <p>과한 장식 없이 톤과 질감만으로 안정적인 분위기를 만든 주거 공간입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-5555"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">플랫폼 리빙</span>
+                </div>
+                <h3>플랫폼 거실 리모델링</h3>
+                <p>휴식과 생활 동선을 함께 담은 저상형 플랫폼 구조의 주거 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-6666"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">우드 다이닝 공간</span>
+                </div>
+                <h3>우드톤 다이닝 리모델링</h3>
+                <p>따뜻한 목재감과 간결한 구획이 특징인 가족 중심 주거 공간입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-7777"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">파노라마 다이닝</span>
+                </div>
+                <h3>채광 중심 다이닝룸</h3>
+                <p>큰 창과 뷰를 살려 주거 공간의 개방감을 끌어올린 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-8888"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">윈도우 바 좌석</span>
+                </div>
+                <h3>창가 수납형 다이닝</h3>
+                <p>창가 좌석과 수납을 함께 설계해 실용성과 분위기를 동시에 살린 공간입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-residential-9999"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Residential</span>
+                  <span class="img-label">클로짓 룸</span>
+                </div>
+                <h3>드레스룸·수납 공간 설계</h3>
+                <p>수납 효율과 조명 연출을 함께 고려한 프리미엄 주거 수납 공간입니다.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="case-group" id="cases-commercial">
+            <div class="case-group-head">
+              <h3>상업공간 모아보기</h3>
+              <a class="case-more" href="#consult-form">상업 상담 신청하기</a>
+            </div>
+            <div class="case-grid">
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-11"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">카페 홀 시공</span>
+                </div>
+                <h3>브랜드 카페 메인 홀</h3>
+                <p>좌석 구성과 조명 포인트가 분명한 카페형 상업 공간 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-22"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">카페 라운지 존</span>
+                </div>
+                <h3>라운지형 상업 공간</h3>
+                <p>체류 시간을 고려해 좌석과 구조물을 함께 설계한 상업 공간 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-33"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">오피스 유리 파사드</span>
+                </div>
+                <h3>개방형 오피스 리뉴얼</h3>
+                <p>유리 파사드와 목재 루버 조합으로 브랜드 이미지를 정돈한 오피스 공간입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-44"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">아치형 쇼룸</span>
+                </div>
+                <h3>아치형 쇼룸 인테리어</h3>
+                <p>곡선 개구부와 채광을 강조해 감도 높은 브랜드 공간을 만든 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-55"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">복도형 식당 공간</span>
+                </div>
+                <h3>한식당 동선 설계</h3>
+                <p>긴 복도형 구조를 활용해 테이블과 파티션 동선을 깔끔하게 정리한 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-66"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">호텔 로비</span>
+                </div>
+                <h3>프리미엄 로비 공간</h3>
+                <p>대형 샹들리에와 고급 마감재로 공간의 첫인상을 강화한 로비 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-77"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">라운지 미팅룸</span>
+                </div>
+                <h3>프라이빗 미팅 라운지</h3>
+                <p>어두운 톤과 포인트 조명을 활용해 고급스러운 미팅 공간을 만든 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-88"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">오피스 카페테리아</span>
+                </div>
+                <h3>사내 카페테리아 공간</h3>
+                <p>직원 라운지와 미팅 기능을 함께 고려한 오피스 카페테리아 사례입니다.</p>
+              </article>
+              <article class="case-card">
+                <div class="case-image">
+                  <div class="img-fill img-commercial-99"></div>
+                  <div class="img-overlay"></div>
+                  <span class="img-note">Commercial</span>
+                  <span class="img-label">클래식 카운터 공간</span>
+                </div>
+                <h3>브랜드 카운터 중심 매장</h3>
+                <p>체커보드 패턴과 곡선 카운터로 강한 아이덴티티를 만든 상업 공간입니다.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>실측과 상담, 견적, 시공까지 이런 흐름으로 진행됩니다</h2>
+        </div>
+
+        <div class="section-panel">
+          <div class="process-grid">
+            <div class="process-row">
+              <div class="step-label">Step 2</div>
+              <div>
+                <h3>초도 상담</h3>
+                <p>통화 또는 채팅을 통해 간단한 상담을 먼저 진행합니다.</p>
+              </div>
+              <div class="process-side">공간 유형과 예산, 일정, 원하는 분위기를 1차로 정리합니다.</div>
+            </div>
+            <div class="process-row">
+              <div class="step-label">Step 3</div>
+              <div>
+                <h3>현장 실측</h3>
+                <p>현장에 방문하여 컨디션과 치수, 공정상 주의사항을 체크합니다.</p>
+              </div>
+              <div class="process-side">실제 구조를 확인한 뒤 필요한 공정과 제외할 항목을 정교하게 구분합니다.</div>
+            </div>
+            <div class="process-row">
+              <div class="step-label">Step 4</div>
+              <div>
+                <h3>원가 견적서 제작</h3>
+                <p>인건비와 자재비 원가 기준이 담긴 견적서를 제작해드립니다.</p>
+              </div>
+              <div class="process-side">추가금 우려가 큰 영역부터 먼저 확인할 수 있도록 정리합니다.</div>
+            </div>
+            <div class="process-row">
+              <div class="step-label">Step 5</div>
+              <div>
+                <h3>3D 이미지 및 디자인 검토</h3>
+                <p>예산안 안에서 가능한 시안과 샘플북을 함께 검토합니다.</p>
+              </div>
+              <div class="process-side">무리한 제안보다 실제 구현 가능한 방향에 맞춰 디자인을 조율합니다.</div>
+            </div>
+            <div class="process-row">
+              <div class="step-label">Step 6</div>
+              <div>
+                <h3>계약과 공사 진행</h3>
+                <p>상담과 제안 내용이 정리되면 실제 시공 일정에 맞춰 공사를 진행합니다.</p>
+              </div>
+              <div class="process-side">운영 구조에 따라 직접 시공 또는 검증된 파트너 연결 방식으로 진행할 수 있습니다.</div>
+            </div>
+          </div>
+
+          <div class="section-head" style="margin: 34px 0 18px;">
+            <h2>이런 분들께 특히 잘 맞는 방식입니다</h2>
+          </div>
+
+          <div class="recommend-grid">
+            <article class="recommend-card">
+              <h3>견적서만 먼저 받아보고 싶은 경우</h3>
+              <p>인테리어가 처음이라 전체 의뢰 전에 기준부터 확인하고 싶은 분께 적합합니다.</p>
+            </article>
+            <article class="recommend-card">
+              <h3>업무에 방해 없는 부분 공사를 원하는 경우</h3>
+              <p>짧은 기간의 욕실, 주방, 사무실 리뉴얼처럼 집중 공정이 필요한 분께 적합합니다.</p>
+            </article>
+            <article class="recommend-card">
+              <h3>합리적인 가격으로 반셀프를 준비하는 경우</h3>
+              <p>직접 챙길 수 있는 부분과 맡길 부분을 나눠 효율적으로 진행하고 싶은 분께 좋습니다.</p>
+            </article>
+            <article class="recommend-card">
+              <h3>오픈 준비로 바빠 전체 공사를 맡기고 싶은 경우</h3>
+              <p>상업 공간처럼 일정 관리가 중요한 프로젝트에서 특히 효율적인 방식입니다.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap">
-      이 페이지는 레퍼런스 구조를 참고해 새로 만든 데모 랜딩입니다. 실제 운영 시에는 브랜드명, 실제 비용 기준, 개인정보 처리 주체를 정확한 정보로 교체해 주세요.
+    <div class="wrap footer-shell">
+      <div class="footer-title">Connect</div>
+      <div class="footer-copy">
+        <strong>공간과 예산에 맞는 인테리어 상담을 연결해드립니다.</strong>
+        <div class="footer-info">
+          <div>
+            <span>연락처</span>
+            <strong>추후 입력</strong>
+          </div>
+          <div>
+            <span>사업자등록번호</span>
+            <strong>추후 입력</strong>
+          </div>
+          <div>
+            <span>이메일</span>
+            <strong>추후 입력</strong>
+          </div>
+          <div>
+            <span>카카오톡</span>
+            <strong>추후 입력</strong>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -1083,7 +1839,7 @@
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      window.alert("데모 폼입니다. 실제 운영 시에는 이 제출을 CRM 또는 상담 채널과 연결하면 됩니다.");
+      window.alert("데모 폼입니다. 실제 운영 시에는 카카오 상담, 이메일, CRM 또는 DB와 연결하면 됩니다.");
       form.reset();
     });
   </script>
