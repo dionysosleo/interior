@@ -1016,63 +1016,117 @@
     }
 
     .footer {
-      padding: 28px 0 68px;
+      padding: 44px 0 76px;
+      background: #89817b;
+      color: rgba(255, 255, 255, 0.94);
     }
 
     .footer-shell {
-      padding: 28px 30px;
       display: grid;
-      grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
-      gap: 24px;
+      grid-template-columns: minmax(220px, 1.1fr) minmax(260px, 1.1fr) minmax(280px, 1.1fr) minmax(180px, 0.9fr);
+      gap: 44px;
       align-items: start;
     }
 
-    .footer-title {
-      color: var(--accent);
-      font-size: 0.9rem;
+    .footer-brand {
+      font-size: clamp(2.1rem, 3vw, 3.1rem);
       font-weight: 900;
-      letter-spacing: 0.12em;
+      letter-spacing: -0.06em;
+      line-height: 0.95;
+    }
+
+    .footer-col {
+      display: grid;
+      gap: 18px;
+    }
+
+    .footer-col h3 {
+      margin: 0;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .footer-copy strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1.08rem;
-      line-height: 1.4;
-      letter-spacing: -0.04em;
-    }
-
-    .footer-copy p {
-      color: var(--muted);
-      font-size: 0.96rem;
-      line-height: 1.78;
-      font-weight: 500;
-    }
-
-    .footer-info {
+    .footer-meta {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px 28px;
-      margin-top: 8px;
-    }
-
-    .footer-info div {
-      display: grid;
-      gap: 4px;
-    }
-
-    .footer-info span {
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .footer-info strong {
-      margin: 0;
+      gap: 10px;
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.65;
+    }
+
+    .footer-meta div {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .footer-meta span {
+      font-weight: 800;
+    }
+
+    .footer-meta strong {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-actions {
+      display: grid;
+      gap: 14px;
+    }
+
+    .footer-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 64px;
+      padding: 0 24px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.96);
+      font-size: 1rem;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .footer-button:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-policy {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.95rem;
+    }
+
+    .footer-policy a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-sns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-sns a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.94);
+      color: #7c756f;
+      font-size: 0.92rem;
+      font-weight: 800;
       letter-spacing: -0.03em;
     }
 
@@ -1166,8 +1220,13 @@
         grid-template-columns: 1fr;
       }
 
-      .footer-info {
+      .footer-shell {
+        gap: 28px;
+      }
+
+      .footer-meta div {
         grid-template-columns: 1fr;
+        gap: 4px;
       }
     }
   </style>
@@ -1856,26 +1915,44 @@
 
   <footer class="footer">
     <div class="wrap footer-shell">
-      <div class="footer-title">Connect</div>
-      <div class="footer-copy">
-        <strong>공간과 예산에 맞는 인테리어 상담을 연결해드립니다.</strong>
-        <div class="footer-info">
+      <div class="footer-brand">interior<br />connect</div>
+      <div class="footer-col">
+        <h3>Company Info</h3>
+        <div class="footer-meta">
           <div>
-            <span>연락처</span>
+            <span>BUSINESS LICENSE</span>
             <strong>추후 입력</strong>
           </div>
           <div>
-            <span>사업자등록번호</span>
+            <span>ADDRESS</span>
             <strong>추후 입력</strong>
           </div>
           <div>
-            <span>이메일</span>
+            <span>PHONE</span>
             <strong>추후 입력</strong>
           </div>
           <div>
-            <span>카카오톡</span>
+            <span>E-MAIL</span>
             <strong>추후 입력</strong>
           </div>
+        </div>
+        <div class="footer-policy">
+          <a href="#">이용약관</a>
+          <a href="#">개인정보 처리방침</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>More Info</h3>
+        <div class="footer-actions">
+          <a class="footer-button" href="#contact">제휴문의</a>
+          <a class="footer-button" href="#contact">원가견적 신청하기</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>SNS</h3>
+        <div class="footer-sns">
+          <a href="#" aria-label="블로그">blog</a>
+          <a href="#" aria-label="인스타그램">ig</a>
         </div>
       </div>
     </div>
