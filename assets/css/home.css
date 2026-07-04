@@ -62,8 +62,14 @@ h1 {
 .hero-metrics {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+}
+
+@media (min-width: 720px) {
+  .hero-metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .metric {
@@ -102,7 +108,7 @@ h1 {
   position: relative;
   overflow: hidden;
   border-radius: 28px;
-  background: #e9dcc8;
+  background: #e5e8eb;
   border: 1px solid var(--color-line-soft);
 }
 
@@ -139,7 +145,7 @@ h1 {
 .img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30, 20, 12, 0.16), rgba(30, 20, 12, 0.02) 35%, rgba(30, 20, 12, 0.16));
+  background: linear-gradient(180deg, rgba(16, 20, 27, 0.16), rgba(16, 20, 27, 0.02) 35%, rgba(16, 20, 27, 0.16));
 }
 
 .img-note {
@@ -269,9 +275,9 @@ h1 {
 .data-table thead th {
   padding: 18px 20px;
   text-align: left;
-  background: rgba(248, 240, 227, 0.94);
+  background: rgba(242, 244, 246, 0.94);
   border-bottom: 1px solid var(--color-line);
-  color: #352a1e;
+  color: var(--color-ink);
   font-size: 0.92rem;
   font-weight: 800;
   white-space: nowrap;
@@ -434,7 +440,7 @@ h1 {
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-line-soft);
-  background: #e9dcc8;
+  background: #e5e8eb;
 }
 
 /* process */
@@ -565,8 +571,8 @@ h1 {
 
 /* event ticker */
 .ticker {
-  background: var(--color-choco);
-  color: #f3e9dc;
+  background: var(--color-accent);
+  color: #ffffff;
 }
 
 .ticker-inner {
@@ -609,7 +615,7 @@ h1 {
   border-radius: var(--radius-xl);
   overflow: hidden;
   border: 1px solid var(--color-line-soft);
-  background: #e9dcc8;
+  background: #e5e8eb;
 }
 
 .feature-copy h3 {

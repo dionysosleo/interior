@@ -36,7 +36,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30, 20, 12, 0.08), rgba(30, 20, 12, 0.32));
+  background: linear-gradient(180deg, rgba(16, 20, 27, 0.08), rgba(16, 20, 27, 0.32));
 }
 
 .hero__badge {
@@ -257,7 +257,7 @@ main {
   padding: 18px;
   border-radius: 16px;
   border: 1px solid var(--color-line);
-  background: rgba(248, 240, 227, 0.82);
+  background: rgba(242, 244, 246, 0.82);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.7;
@@ -312,14 +312,14 @@ main {
 }
 
 .estimate-table th {
-  background: rgba(248, 240, 227, 0.9);
+  background: rgba(242, 244, 246, 0.9);
   font-weight: 800;
   white-space: nowrap;
 }
 
 .estimate-table td {
   font-weight: 600;
-  color: #2e2418;
+  color: var(--color-ink);
   background: rgba(255, 255, 255, 0.78);
 }
 
@@ -331,7 +331,7 @@ main {
 }
 
 .estimate-table__summary td {
-  background: rgba(248, 240, 227, 0.78);
+  background: rgba(242, 244, 246, 0.78);
   font-weight: 800;
 }
 
@@ -356,7 +356,7 @@ main {
   padding: 18px 18px 18px 26px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-line);
-  background: rgba(255, 253, 248, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow-strong);
   backdrop-filter: blur(14px);
 }
@@ -393,7 +393,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 28px 16px;
-  background: rgba(20, 15, 10, 0.5);
+  background: rgba(16, 20, 27, 0.5);
   backdrop-filter: blur(10px);
 }
 
@@ -409,7 +409,7 @@ main {
   padding: 28px;
   border-radius: 30px;
   border: 1px solid var(--color-line);
-  background: rgba(255, 253, 248, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow-strong);
 }
 
@@ -451,7 +451,7 @@ main {
   padding: 20px;
   border-radius: 20px;
   border: 1px solid var(--color-line);
-  background: rgba(248, 240, 227, 0.6);
+  background: rgba(242, 244, 246, 0.6);
 }
 
 .modal__trust strong {
@@ -473,7 +473,7 @@ main {
   padding: 22px;
   border-radius: 22px;
   border: 1px solid var(--color-line);
-  background: rgba(248, 240, 227, 0.72);
+  background: rgba(242, 244, 246, 0.72);
 }
 
 .modal__intro-copy p {
@@ -509,7 +509,7 @@ main {
 }
 
 .form-label .required {
-  color: #d9634d;
+  color: var(--color-danger);
 }
 
 .phone-grid {
