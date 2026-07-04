@@ -38,21 +38,21 @@
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
-  margin-bottom: 14px;
-  padding: 9px 16px;
+  margin-bottom: 20px;
+  padding: 14px 22px;
   border-radius: var(--radius-pill);
-  background: var(--color-accent-soft);
-  color: var(--color-accent-strong);
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  background: var(--color-accent);
+  color: #ffffff;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  box-shadow: 0 10px 24px rgba(49, 130, 246, 0.28);
 }
 
 h1 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
-  line-height: 1.08;
+  line-height: 1.18;
   letter-spacing: -0.055em;
-  max-width: 9em;
   word-break: keep-all;
 }
 
@@ -336,6 +336,18 @@ h1 {
   color: var(--color-accent);
   font-weight: 800;
   white-space: nowrap;
+}
+
+.table-case-link {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+  text-underline-offset: 3px;
+}
+
+.table-case-link:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
 }
 
 .table-amount {

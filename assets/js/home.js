@@ -116,17 +116,20 @@
     if (titleEl) titleEl.textContent = data.title;
 
     bodyEl.innerHTML = data.rows
-      .map(
-        (row) => `
+      .map((row) => {
+        const nameHtml = row.slug
+          ? `<a class="table-case-link" href="./portfolio.html?slug=${row.slug}">${row.name}</a>`
+          : row.name;
+        return `
           <tr>
-            <td><strong>${row.name}</strong><span>${row.sub}</span></td>
+            <td><strong>${nameHtml}</strong><span>${row.sub}</span></td>
             <td class="table-type">${row.spaceType}</td>
             <td><div class="table-clamp-2">${row.point}</div></td>
             <td><div class="table-clamp-2">${row.detail}</div></td>
             <td class="table-amount">${formatWon(row.amount)}</td>
           </tr>
-        `
-      )
+        `;
+      })
       .join("");
   }
 
