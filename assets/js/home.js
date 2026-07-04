@@ -14,6 +14,12 @@
     el.textContent = text;
   }
 
+  function renderHeroBadge(data) {
+    const el = document.querySelector("[data-hero-badge]");
+    if (!el || !data.badge) return;
+    el.textContent = data.badge;
+  }
+
   function renderHeroMetrics(data) {
     const bodyEl = document.querySelector("[data-hero-metrics]");
     if (!bodyEl) return;
@@ -269,6 +275,7 @@
     if (!data) return;
 
     renderEventBanner(data.eventBanner);
+    renderHeroBadge(data.hero);
     renderHeroMetrics(data.hero);
     renderFeatureBlocks(data.featureBlocks);
     renderStatBar(data.statBar);
