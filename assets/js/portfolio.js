@@ -218,12 +218,18 @@
       </section>
     `;
 
-    const discount = applyInquiryDiscount(estimate.total);
+    const discountConfig = (window.SITE_DATA && window.SITE_DATA.inquiryDiscount) || { rate: 0.03, label: "지금 문의 시" };
+    const discount = applyInquiryDiscount(estimate.total, discountConfig.rate);
+    const discountPercent = Math.round(discountConfig.rate * 1000) / 10;
     const floatingBar = document.getElementById("floatingBar");
     const floatingAmount = document.getElementById("floatingAmount");
     const floatingDiscountAmount = document.getElementById("floatingDiscountAmount");
+    const discountLabel = document.getElementById("discountLabel");
+    const discountRateLabel = document.getElementById("discountRateLabel");
     floatingAmount.textContent = formatWon(estimate.total);
     if (floatingDiscountAmount) floatingDiscountAmount.textContent = formatWon(discount.discounted);
+    if (discountLabel) discountLabel.textContent = discountConfig.label;
+    if (discountRateLabel) discountRateLabel.textContent = `${discountPercent}% 할인가`;
     floatingBar.classList.add("is-visible");
     floatingBar.setAttribute("aria-hidden", "false");
 
@@ -232,7 +238,7 @@
     const subtitle = document.getElementById("inquirySubtitle");
     if (targetInput) targetInput.value = `${item.title} | ${window.location.href}`;
     if (contentInput) {
-      contentInput.value = `${item.label}와 비슷한 방향으로 상담 원합니다.\n공간 유형: ${item.category}\n예상 범위: ${item.scope}\n현재 보고 있는 견적 기준: ${formatWon(estimate.total)}\n지금 문의 시 3% 할인가: ${formatWon(discount.discounted)}`;
+      contentInput.value = `${item.label}와 비슷한 방향으로 상담 원합니다.\n공간 유형: ${item.category}\n예상 범위: ${item.scope}\n현재 보고 있는 견적 기준: ${formatWon(estimate.total)}\n${discountConfig.label} ${discountPercent}% 할인가: ${formatWon(discount.discounted)}`;
     }
     if (subtitle) {
       subtitle.textContent = `${item.label} 기준으로 상담을 남겨주시면 현재 보고 계신 디자인 방향과 원가견적을 함께 검토해드립니다.`;

@@ -25,6 +25,13 @@ window.SITE_DATA = {
   // 상단 이벤트 티커 — 실제 이벤트가 정해지면 이 값만 바꾸면 된다.
   eventBanner: "🎁 이번 달 EVENT · 선착순 상담 3팀에게 실측·3D 디자인 검토를 무료로 제공합니다 »",
 
+  // 문의 시 즉시 할인 — 매달 초 진행하는 프로모션으로 운영 예정.
+  // 최초 오픈 시점에는 label을 "지금 문의 시"로 두고, 다음 달부터는 "이번 달 초 문의 시"처럼 바꾸면 된다.
+  inquiryDiscount: {
+    rate: 0.03,
+    label: "지금 문의 시"
+  },
+
   hero: {
     eyebrow: "OPEN COST INTERIOR",
     badge: "9.9% 한자리수 마진 + AS 3년 보장 (소모품 제외)",

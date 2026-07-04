@@ -13,13 +13,14 @@ window.PORTFOLIO_DATA = {
         ["전기", 0.11, 0.08],
         ["설비", 0.08, 0.07],
         ["타일", 0.09, 0.1],
-        ["금속", 0.04, 0.06],
+        ["샤시(금속,유리)", 0.07, 0.14],
         ["도장", 0.08, 0.05],
         ["마루", 0.05, 0.09],
         ["장판", 0.03, 0.02],
+        ["도배", 0.03, 0.02],
         ["필름", 0.04, 0.03],
         ["가구", 0.05, 0.11],
-        ["유리", 0.03, 0.08],
+        ["행위허가", 0.01, 0],
         ["폐기물", 0.02, 0.04]
       ],
       laborRatio: 0.43,
@@ -32,12 +33,13 @@ window.PORTFOLIO_DATA = {
         ["전기", 0.12, 0.08],
         ["설비", 0.07, 0.08],
         ["타일", 0.07, 0.09],
-        ["금속", 0.05, 0.08],
+        ["샤시(금속,유리)", 0.08, 0.16],
         ["페인트", 0.11, 0.06],
         ["마감", 0.06, 0.09],
         ["가구", 0.05, 0.1],
-        ["유리", 0.03, 0.08],
+        ["도배", 0.02, 0.02],
         ["사인물", 0.02, 0.05],
+        ["행위허가", 0.01, 0],
         ["폐기물", 0.02, 0.04]
       ],
       laborRatio: 0.4,
@@ -256,9 +258,9 @@ window.PORTFOLIO_DATA = {
         "거실과 다이닝으로 이어지는 흐름에 고급스러운 긴장감을 더했습니다."
       ],
       savingsHighlight: {
-        trade: "유리",
-        amount: 207000,
-        note: "실측 후 유리 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "샤시(금속,유리)",
+        amount: 393000,
+        note: "실측 후 샤시(금속,유리) 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/residential-9999.jpg", "./assets/images/residential-8888.jpeg", "./assets/images/residential-4444.jpg"]
     },
@@ -424,9 +426,9 @@ window.PORTFOLIO_DATA = {
         "짙은 톤과 따뜻한 소재를 함께 써 차갑지 않은 분위기를 유지했습니다."
       ],
       savingsHighlight: {
-        trade: "유리",
-        amount: 142000,
-        note: "실측 후 유리 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "샤시(금속,유리)",
+        amount: 307000,
+        note: "실측 후 샤시(금속,유리) 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-77.webp", "./assets/images/commercial-33.jpg", "./assets/images/commercial-66.jpeg"]
     },
@@ -477,6 +479,30 @@ window.PORTFOLIO_DATA = {
         note: "실측 후 사인물 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-99.webp", "./assets/images/commercial-44.webp", "./assets/images/commercial-22.jpeg"]
+    },
+    "commercial-100": {
+      category: "상업공간",
+      label: "카페 인테리어 정산 사례",
+      title: "실제 정산 흐름을 그대로 공개한 카페 인테리어 사례",
+      subtitle: "계약금과 중도금, 인건비·자재비 지급까지 실제 정산 데이터를 기준으로 정리한 상업 공간 시공 사례입니다.",
+      hero: "./assets/images/commercial-11.jpg",
+      area: "상업 20평",
+      duration: "3주",
+      cost: "총 공사비 3,938만원",
+      scope: "카페 시공, 목공, 전기·조명, 자재 발주, 인건비 정산",
+      estimateKey: "commercial",
+      description: "계약금과 중도금 2회 지급, 목공·전기·조명 등 공정별 자재 발주, 작업자별 인건비 지급까지 실제 정산 흐름을 그대로 반영해 정리한 카페 인테리어 사례입니다. 공사 완료 후 실제 지출 내역을 기준으로 최종 정산을 투명하게 진행했습니다.",
+      points: [
+        "계약금과 중도금을 2회로 나눠 지급 부담을 분산했습니다.",
+        "목공, 전기·조명, 자재 발주 등 공정별 지출을 세분화해 정산했습니다.",
+        "공사 완료 후 실제 지출 내역을 기준으로 최종 정산을 투명하게 안내했습니다."
+      ],
+      savingsHighlight: {
+        trade: "목공",
+        amount: 345000,
+        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
+      gallery: ["./assets/images/commercial-11.jpg", "./assets/images/commercial-55.webp", "./assets/images/commercial-22.jpeg"]
     }
   }
 };
