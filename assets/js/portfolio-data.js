@@ -63,6 +63,11 @@ window.PORTFOLIO_DATA = {
         "주방과 거실 사이 재료 톤을 통일해 공간이 자연스럽게 이어지도록 만들었습니다.",
         "은은한 간접 조명으로 저녁 시간에도 차분한 분위기가 유지되도록 설계했습니다."
       ],
+      savingsHighlight: {
+        trade: "목공",
+        amount: 550000,
+        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-1111.jpg", "./assets/images/residential-2222.png", "./assets/images/residential-3333.png"]
     },
     "residential-2222": {
@@ -82,6 +87,11 @@ window.PORTFOLIO_DATA = {
         "곡선이 강조되는 요소를 반복해 전체 무드가 자연스럽게 통일되도록 했습니다.",
         "큰 공사 없이도 분위기 차이가 느껴질 수 있도록 포인트를 압축했습니다."
       ],
+      savingsHighlight: {
+        trade: "타일",
+        amount: 194000,
+        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-2222.png", "./assets/images/residential-4444.jpg", "./assets/images/residential-5555.jpg"]
     },
     "residential-3333": {
@@ -101,6 +111,11 @@ window.PORTFOLIO_DATA = {
         "수납 볼륨을 벽면으로 정리해 작업 공간 자체는 더 가볍게 느껴지게 만들었습니다.",
         "밝은 바닥과 천장 톤으로 하루 종일 머물러도 부담 없는 분위기를 만들었습니다."
       ],
+      savingsHighlight: {
+        trade: "가구",
+        amount: 226000,
+        note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-3333.png", "./assets/images/residential-1111.jpg", "./assets/images/residential-6666.jpg"]
     },
     "residential-4444": {
@@ -120,6 +135,11 @@ window.PORTFOLIO_DATA = {
         "간접 조명과 따뜻한 베이지 톤으로 미니멀하지만 차갑지 않은 무드를 만들었습니다.",
         "생활 물건이 드러나는 구간을 줄여 정리된 인상이 오래 유지되도록 했습니다."
       ],
+      savingsHighlight: {
+        trade: "마루",
+        amount: 139000,
+        note: "실측 후 마루 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-4444.jpg", "./assets/images/residential-5555.jpg", "./assets/images/residential-8888.jpeg"]
     },
     "residential-5555": {
@@ -139,6 +159,11 @@ window.PORTFOLIO_DATA = {
         "조명 위치를 낮추고 부드럽게 분산해 과하게 번들거리지 않는 분위기를 만들었습니다.",
         "수납장을 벽체에 녹여 생활감이 튀지 않도록 구성했습니다."
       ],
+      savingsHighlight: {
+        trade: "전기",
+        amount: 149000,
+        note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-5555.jpg", "./assets/images/residential-4444.jpg", "./assets/images/residential-7777.jpg"]
     },
     "residential-6666": {
@@ -158,6 +183,11 @@ window.PORTFOLIO_DATA = {
         "가구 스케일을 키워 층고가 높은 구조에서도 균형이 흐트러지지 않게 잡았습니다.",
         "주방과 거실 사이 연결감을 유지하면서 영역 구분은 명확하게 설계했습니다."
       ],
+      savingsHighlight: {
+        trade: "도장",
+        amount: 268000,
+        note: "실측 후 도장 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-6666.jpg", "./assets/images/residential-7777.jpg", "./assets/images/residential-8888.jpeg"]
     },
     "residential-7777": {
@@ -177,6 +207,11 @@ window.PORTFOLIO_DATA = {
         "소품과 도서가 자연스럽게 보이도록 수납 깊이와 간격을 조절했습니다.",
         "따뜻한 목재 톤으로 생활감이 많은 공간도 편안하게 느껴지도록 했습니다."
       ],
+      savingsHighlight: {
+        trade: "필름",
+        amount: 106000,
+        note: "실측 후 필름 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-7777.jpg", "./assets/images/residential-6666.jpg", "./assets/images/residential-8888.jpeg"]
     },
     "residential-8888": {
@@ -196,6 +231,11 @@ window.PORTFOLIO_DATA = {
         "불필요한 파티션 없이 가구만으로 기능 구분을 만들어 개방감을 유지했습니다.",
         "따뜻한 바닥 톤과 천장 마감으로 긴장감보다 안정감이 느껴지도록 조절했습니다."
       ],
+      savingsHighlight: {
+        trade: "설비",
+        amount: 238000,
+        note: "실측 후 설비 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-8888.jpeg", "./assets/images/residential-9999.jpg", "./assets/images/residential-4444.jpg"]
     },
     "residential-9999": {
@@ -215,6 +255,11 @@ window.PORTFOLIO_DATA = {
         "동선이 복잡해 보이지 않도록 벽체와 가구 볼륨을 줄였습니다.",
         "거실과 다이닝으로 이어지는 흐름에 고급스러운 긴장감을 더했습니다."
       ],
+      savingsHighlight: {
+        trade: "유리",
+        amount: 207000,
+        note: "실측 후 유리 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/residential-9999.jpg", "./assets/images/residential-8888.jpeg", "./assets/images/residential-4444.jpg"]
     },
     "commercial-11": {
@@ -234,6 +279,11 @@ window.PORTFOLIO_DATA = {
         "주방과 홀의 시각적 경계를 조절해 답답하지 않게 구성했습니다.",
         "조명 위치와 테이블 간격을 브랜드 무드에 맞게 세밀하게 조정했습니다."
       ],
+      savingsHighlight: {
+        trade: "목공",
+        amount: 449000,
+        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-11.jpg", "./assets/images/commercial-22.jpeg", "./assets/images/commercial-33.jpg"]
     },
     "commercial-22": {
@@ -253,6 +303,11 @@ window.PORTFOLIO_DATA = {
         "가구 크기와 배치를 조정해 시선이 한쪽에 몰리지 않도록 정리했습니다.",
         "체류 시간이 짧아도 인상은 오래 남는 라운지 무드를 목표로 했습니다."
       ],
+      savingsHighlight: {
+        trade: "타일",
+        amount: 140000,
+        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-22.jpeg", "./assets/images/commercial-11.jpg", "./assets/images/commercial-55.webp"]
     },
     "commercial-33": {
@@ -272,6 +327,11 @@ window.PORTFOLIO_DATA = {
         "워크존 중심으로 반복되는 라인을 만들어 정돈된 인상을 강화했습니다.",
         "브랜드의 단정함이 드러나도록 전체 톤을 절제된 색으로 맞췄습니다."
       ],
+      savingsHighlight: {
+        trade: "가구",
+        amount: 326000,
+        note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-33.jpg", "./assets/images/commercial-88.jpg", "./assets/images/commercial-77.webp"]
     },
     "commercial-44": {
@@ -291,6 +351,11 @@ window.PORTFOLIO_DATA = {
         "장식보다 실루엣과 빛의 인상이 남도록 마감과 조명을 절제했습니다.",
         "짧은 공사 기간 안에서 체감 변화를 크게 만드는 쪽으로 공정을 압축했습니다."
       ],
+      savingsHighlight: {
+        trade: "전기",
+        amount: 211000,
+        note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-44.webp", "./assets/images/commercial-99.webp", "./assets/images/commercial-22.jpeg"]
     },
     "commercial-55": {
@@ -310,6 +375,11 @@ window.PORTFOLIO_DATA = {
         "진입부부터 안쪽까지 시선 흐름이 깨지지 않도록 파티션 높이를 조정했습니다.",
         "밝은 톤 마감으로 체감 면적이 더 넓게 느껴지도록 설계했습니다."
       ],
+      savingsHighlight: {
+        trade: "마감",
+        amount: 158000,
+        note: "실측 후 마감 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-55.webp", "./assets/images/commercial-11.jpg", "./assets/images/commercial-66.jpeg"]
     },
     "commercial-66": {
@@ -329,6 +399,11 @@ window.PORTFOLIO_DATA = {
         "조명 레이어를 나눠 시간대에 따라 분위기가 다르게 연출되도록 했습니다.",
         "마감재의 질감 대비를 활용해 고급스러운 인상을 오래 유지하도록 했습니다."
       ],
+      savingsHighlight: {
+        trade: "페인트",
+        amount: 536000,
+        note: "실측 후 페인트 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-66.jpeg", "./assets/images/commercial-77.webp", "./assets/images/commercial-88.jpg"]
     },
     "commercial-77": {
@@ -348,6 +423,11 @@ window.PORTFOLIO_DATA = {
         "좌석 간격을 넉넉하게 잡아 격식 있는 미팅에도 부담이 없도록 했습니다.",
         "짙은 톤과 따뜻한 소재를 함께 써 차갑지 않은 분위기를 유지했습니다."
       ],
+      savingsHighlight: {
+        trade: "유리",
+        amount: 142000,
+        note: "실측 후 유리 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-77.webp", "./assets/images/commercial-33.jpg", "./assets/images/commercial-66.jpeg"]
     },
     "commercial-88": {
@@ -367,6 +447,11 @@ window.PORTFOLIO_DATA = {
         "주방 존과 좌석 존의 동선이 겹치지 않도록 배치를 정리했습니다.",
         "밝고 편안한 톤으로 짧은 휴식 시간에도 리프레시되는 분위기를 만들었습니다."
       ],
+      savingsHighlight: {
+        trade: "설비",
+        amount: 322000,
+        note: "실측 후 설비 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-88.jpg", "./assets/images/commercial-33.jpg", "./assets/images/commercial-77.webp"]
     },
     "commercial-99": {
@@ -386,6 +471,11 @@ window.PORTFOLIO_DATA = {
         "가구 배치와 시선 방향을 정리해 누구나 편하게 머물 수 있도록 구성했습니다.",
         "조용한 분위기를 해치지 않으면서도 브랜드 이미지는 분명하게 보이도록 정리했습니다."
       ],
+      savingsHighlight: {
+        trade: "사인물",
+        amount: 107000,
+        note: "실측 후 사인물 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
       gallery: ["./assets/images/commercial-99.webp", "./assets/images/commercial-44.webp", "./assets/images/commercial-22.jpeg"]
     }
   }

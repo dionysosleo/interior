@@ -27,8 +27,14 @@
 
     <div class="floating-bar" id="floatingBar" aria-hidden="true">
       <div class="floating-bar__copy">
-        <span class="floating-bar__label">원가견적</span>
-        <strong class="floating-bar__amount" id="floatingAmount">0원</strong>
+        <div class="floating-bar__row">
+          <span class="floating-bar__label">원가견적</span>
+          <strong class="floating-bar__amount" id="floatingAmount">0원</strong>
+        </div>
+        <div class="floating-bar__discount">
+          지금 문의 시 <strong>3% 할인가</strong>
+          <strong class="floating-bar__discount-amount" id="floatingDiscountAmount">0원</strong>
+        </div>
       </div>
       <button class="button button--primary" type="button" id="openInquiryButton">현재 디자인으로 문의하기</button>
     </div>

@@ -5,7 +5,7 @@
 */
 
 (function () {
-  const { formatWon, buildEstimate } = window.EstimateUtils;
+  const { formatWon, buildEstimate, applyInquiryDiscount } = window.EstimateUtils;
 
   function buildEstimateTable(item, estimateTemplates) {
     const estimate = buildEstimate(item, estimateTemplates);
@@ -147,6 +147,17 @@
             )
             .join("")}
         </div>
+
+        ${item.savingsHighlight ? `
+          <div class="savings-highlight">
+            <div class="savings-highlight__label">SAVINGS</div>
+            <div class="savings-highlight__body">
+              <div class="savings-highlight__trade">${item.savingsHighlight.trade} 항목에서 절감</div>
+              <div class="savings-highlight__amount">${formatWon(item.savingsHighlight.amount)}</div>
+            </div>
+            <p class="savings-highlight__note">${item.savingsHighlight.note}</p>
+          </div>
+        ` : ""}
       </section>
 
       <section class="section">
@@ -206,9 +217,12 @@
       </section>
     `;
 
+    const discount = applyInquiryDiscount(estimate.total);
     const floatingBar = document.getElementById("floatingBar");
     const floatingAmount = document.getElementById("floatingAmount");
+    const floatingDiscountAmount = document.getElementById("floatingDiscountAmount");
     floatingAmount.textContent = formatWon(estimate.total);
+    if (floatingDiscountAmount) floatingDiscountAmount.textContent = formatWon(discount.discounted);
     floatingBar.classList.add("is-visible");
     floatingBar.setAttribute("aria-hidden", "false");
 
@@ -217,7 +231,7 @@
     const subtitle = document.getElementById("inquirySubtitle");
     if (targetInput) targetInput.value = `${item.title} | ${window.location.href}`;
     if (contentInput) {
-      contentInput.value = `${item.label}와 비슷한 방향으로 상담 원합니다.\n공간 유형: ${item.category}\n예상 범위: ${item.scope}\n현재 보고 있는 견적 기준: ${formatWon(estimate.total)}`;
+      contentInput.value = `${item.label}와 비슷한 방향으로 상담 원합니다.\n공간 유형: ${item.category}\n예상 범위: ${item.scope}\n현재 보고 있는 견적 기준: ${formatWon(estimate.total)}\n지금 문의 시 3% 할인가: ${formatWon(discount.discounted)}`;
     }
     if (subtitle) {
       subtitle.textContent = `${item.label} 기준으로 상담을 남겨주시면 현재 보고 계신 디자인 방향과 원가견적을 함께 검토해드립니다.`;

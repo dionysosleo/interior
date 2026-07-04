@@ -32,5 +32,12 @@ window.EstimateUtils = (function () {
     return { rows, laborTotal, materialBaseTotal, miscTotal, costBeforeMargin, margin, total };
   }
 
-  return { formatWon, parseKoreanCost, buildEstimate };
+  // 현재 디자인으로 문의 시 적용되는 즉시 할인 (기본 3%)
+  function applyInquiryDiscount(total, rate = 0.03) {
+    const saved = Math.round(total * rate);
+    const discounted = total - saved;
+    return { rate, saved, discounted };
+  }
+
+  return { formatWon, parseKoreanCost, buildEstimate, applyInquiryDiscount };
 })();

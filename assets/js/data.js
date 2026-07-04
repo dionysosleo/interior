@@ -28,7 +28,7 @@ window.SITE_DATA = {
   hero: {
     eyebrow: "OPEN COST INTERIOR",
     badge: "9.9% 한자리수 마진 + AS 3년 보장 (소모품 제외)",
-    title: "9.9% 마진 기준으로 공사하고 인테리어 원가를 공개합니다",
+    title: "업계최초 9.9% 마진 기준으로 공사하고 인테리어 원가를 공개합니다.",
     lead: "유행을 좇기보다 오래 봐도 질리지 않는 디자인과, 처음부터 끝까지 투명한 원가 구조로 안내합니다. 견적서 한 장만 먼저 받아보셔도 괜찮습니다.",
     metrics: [
       { value: "9.9%", label: "공개 마진 기준" },
@@ -63,7 +63,7 @@ window.SITE_DATA = {
     number: "03",
     title: "화려한 광고보다 시공 경험과 고객 만족으로 답합니다",
     stats: [
-      { value: "15년+", label: "평균 현장 시공 경력" },
+      { value: "20년+", label: "평균 현장 시공 경력" },
       { value: "100%", label: "맞춤 설계 적용률" },
       { value: "240+", label: "누적 프로젝트 수" }
     ]
