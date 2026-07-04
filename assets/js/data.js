@@ -82,12 +82,13 @@ window.SITE_DATA = {
       { trade: "전기", lead: 340000, skilled: 290000 },
       { trade: "설비", lead: 380000, skilled: 310000 },
       { trade: "타일", lead: 400000, skilled: 310000 },
-      { trade: "금속", lead: 360000, skilled: 280000 },
+      { trade: "샤시(금속,유리)", lead: 360000, skilled: 280000 },
       { trade: "도장", lead: 330000, skilled: 260000 },
       { trade: "마루", lead: 380000, skilled: 300000 },
       { trade: "장판", lead: 290000, skilled: 230000 },
-      { trade: "도배", lead: 300000, skilled: 240000 },
-      { trade: "필름", lead: 330000, skilled: 260000 }
+      { trade: "도배", lead: 280000, skilled: 220000 },
+      { trade: "필름", lead: 330000, skilled: 260000 },
+      { trade: "행위허가", lead: 150000, skilled: 100000 }
     ]
   },
 

@@ -211,6 +211,7 @@
           </div>
           <div class="cta__actions">
             <button class="button button--primary" type="button" data-open-inquiry>현재 디자인으로 문의하기</button>
+            <a class="button button--ghost" href="./index.html#consult-form">요청 디자인 상담하기</a>
             <a class="button button--ghost" href="./index.html#cases">목록으로 돌아가기</a>
           </div>
         </div>
