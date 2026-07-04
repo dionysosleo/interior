@@ -4,9 +4,19 @@
 
 ## Files
 
-- `index.html`: 랜딩 페이지 본문
+- `index.html`: 랜딩 페이지 본문 (원가공개 / 비용절감 / 시공사례 / 진행과정 / 상담신청)
+- `portfolio.html`: 시공 사례 상세 페이지 (`?slug=` 쿼리로 항목 렌더링)
+- `assets/css/tokens.css`: 두 페이지가 공유하는 디자인 토큰(색상·라운드·타이포)과 topbar/footer/form 공통 스타일
+- `assets/css/home.css`: `index.html` 전용 스타일 (히어로, 원가/절감 테이블, 시공사례 카드, 공정)
+- `assets/css/portfolio.css`: `portfolio.html` 전용 스타일 (상세 히어로, 견적표, 문의 모달)
+- `assets/js/data.js`: 브랜드/회사정보, 원가 견적표, 비용절감 사례, 공정, 추천 카드 데이터
+- `assets/js/portfolio-data.js`: 시공 사례 18건 상세 데이터 + 견적 계산 템플릿
+- `assets/js/home.js`: `index.html` 렌더링(데이터 → 테이블/카드) 및 상담 폼 처리
+- `assets/js/portfolio.js`: `portfolio.html` 렌더링, 견적 계산, 문의 모달 처리
 - `vercel.json`: 정적 배포 설정
 - `.gitignore`: 로컬 불필요 파일 제외
+
+콘텐츠(문구, 숫자, 시공 사례)를 바꿀 때는 `index.html`/`portfolio.html`을 직접 건드리지 말고 `assets/js/data.js`, `assets/js/portfolio-data.js`만 수정하면 된다. 추후 실제 백엔드/CMS를 연동할 때도 이 두 파일의 구조를 API 응답 스키마로 그대로 옮기면 된다.
 
 ## Local Preview
 
