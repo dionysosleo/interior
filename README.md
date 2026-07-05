@@ -13,6 +13,8 @@
 - `assets/js/portfolio-data.js`: 시공 사례 18건 상세 데이터 + 견적 계산 템플릿
 - `assets/js/home.js`: `index.html` 렌더링(데이터 → 테이블/카드) 및 상담 폼 처리
 - `assets/js/portfolio.js`: `portfolio.html` 렌더링, 견적 계산, 문의 모달 처리
+- `assets/js/estimate-utils.js`: 견적 계산 공통 유틸(홈 카드 미리보기 + 상세 견적표에서 공유)
+- `assets/css/policy.css`, `terms.html`, `privacy.html`: 이용약관 / 개인정보 처리방침 (표준 템플릿, 실서비스 적용 전 법률 검토 권장)
 - `vercel.json`: 정적 배포 설정
 - `.gitignore`: 로컬 불필요 파일 제외
 
