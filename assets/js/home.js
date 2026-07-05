@@ -255,6 +255,83 @@
       .join("");
   }
 
+  function renderEventModal(data) {
+    if (!data) return;
+    const titleEl = document.querySelector("[data-event-modal-title]");
+    const subtitleEl = document.querySelector("[data-event-modal-subtitle]");
+    const imageEl = document.querySelector("[data-event-modal-image]");
+    const introEl = document.querySelector("[data-event-modal-intro]");
+    const highlightEl = document.querySelector("[data-event-modal-highlight]");
+
+    if (titleEl) titleEl.textContent = data.title;
+    if (subtitleEl) subtitleEl.textContent = data.subtitle;
+    if (imageEl && data.image) imageEl.style.backgroundImage = `url('${data.image}')`;
+    if (introEl) introEl.textContent = data.intro;
+    if (highlightEl) highlightEl.textContent = data.highlight;
+  }
+
+  function openModal(modal) {
+    if (!modal) return;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    if (!document.querySelector(".modal.is-open")) {
+      document.body.style.overflow = "";
+    }
+  }
+
+  function initEventModal() {
+    const tickerButton = document.getElementById("eventTickerButton");
+    const eventModal = document.getElementById("eventModal");
+    const eventSuccessModal = document.getElementById("eventSuccessModal");
+    const eventForm = document.getElementById("eventForm");
+    if (!tickerButton || !eventModal) return;
+
+    tickerButton.addEventListener("click", () => openModal(eventModal));
+
+    document.addEventListener("click", (event) => {
+      if (event.target.matches("[data-close-event-modal]") || event.target === eventModal) {
+        closeModal(eventModal);
+      }
+      if (event.target.matches("[data-close-event-success]") || event.target === eventSuccessModal) {
+        closeModal(eventSuccessModal);
+      }
+    });
+
+    if (eventForm) {
+      eventForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("eventName").value.trim();
+        const phone1 = document.getElementById("eventPhone1").value.trim();
+        const phone2 = document.getElementById("eventPhone2").value.trim();
+        const phone3 = document.getElementById("eventPhone3").value.trim();
+        const agreed = document.getElementById("eventPrivacyAgree").checked;
+
+        if (!name || !phone1 || !phone2 || !phone3 || !agreed) {
+          window.alert("성함, 연락처, 개인정보 동의를 확인해 주세요.");
+          return;
+        }
+
+        closeModal(eventModal);
+        eventForm.reset();
+        openModal(eventSuccessModal);
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        if (eventModal.classList.contains("is-open")) closeModal(eventModal);
+        if (eventSuccessModal && eventSuccessModal.classList.contains("is-open")) closeModal(eventSuccessModal);
+      }
+    });
+  }
+
   function renderCompanyInfo(company) {
     document.querySelectorAll("[data-company-license]").forEach((el) => (el.textContent = company.license));
     document.querySelectorAll("[data-company-address]").forEach((el) => (el.textContent = company.address));
@@ -278,6 +355,8 @@
     if (!data) return;
 
     renderEventBanner(data.eventBanner);
+    renderEventModal(data.eventModal);
+    initEventModal();
     renderHeroBadge(data.hero);
     renderHeroMetrics(data.hero);
     renderFeatureBlocks(data.featureBlocks);

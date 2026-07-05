@@ -31,13 +31,25 @@
 }
 
 .hero-copy .eyebrow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 10px;
   margin-bottom: 18px;
+}
+
+.hero-copy .eyebrow::before {
+  width: 100%;
+  height: 2px;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
   margin-bottom: 20px;
   padding: 14px 22px;
   border-radius: var(--radius-pill);
@@ -46,6 +58,8 @@
   font-size: clamp(1rem, 1.4vw, 1.2rem);
   font-weight: 900;
   letter-spacing: -0.02em;
+  white-space: normal;
+  word-break: keep-all;
   box-shadow: 0 10px 24px rgba(49, 130, 246, 0.28);
 }
 
@@ -615,11 +629,38 @@ h1 {
 }
 
 .ticker-inner {
+  display: block;
   padding: 10px 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
   text-align: center;
   font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.ticker-inner:hover {
+  opacity: 0.88;
+}
+
+/* event modal visual banner (no people photos — reuses an interior mood shot) */
+.event-modal__visual {
+  position: relative;
+  min-height: 220px;
+  margin: -28px -28px 24px;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .event-modal__visual {
+    margin: -22px -18px 20px;
+    min-height: 180px;
+  }
 }
 
 /* numbered section label */

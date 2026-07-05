@@ -14,7 +14,86 @@
 </head>
 <body>
   <div class="ticker">
-    <div class="wrap ticker-inner" data-event-banner></div>
+    <button type="button" class="wrap ticker-inner" id="eventTickerButton" data-event-banner></button>
+  </div>
+
+  <div class="modal" id="eventModal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+      <button class="modal__close" type="button" data-close-event-modal aria-label="닫기">&times;</button>
+
+      <div class="event-modal__visual">
+        <div class="img-fill" data-event-modal-image></div>
+        <div class="img-overlay"></div>
+      </div>
+
+      <h2 class="modal__title" id="eventModalTitle" data-event-modal-title></h2>
+      <p class="modal__subtitle" data-event-modal-subtitle></p>
+
+      <div class="modal__intro">
+        <div class="modal__intro-copy">
+          <p data-event-modal-intro></p>
+          <div class="modal__highlight" data-event-modal-highlight></div>
+        </div>
+      </div>
+
+      <form class="modal__form" id="eventForm">
+        <div class="form-group">
+          <label class="form-label" for="eventName">성함 <span class="required">*</span></label>
+          <input class="form-input" id="eventName" name="name" type="text" placeholder="성함을 입력해 주세요." required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">연락처 <span class="required">*</span></label>
+          <div class="phone-grid">
+            <input class="form-input" id="eventPhone1" name="phone1" type="tel" inputmode="numeric" placeholder="010" maxlength="3" required />
+            <input class="form-input" id="eventPhone2" name="phone2" type="tel" inputmode="numeric" placeholder="1234" maxlength="4" required />
+            <input class="form-input" id="eventPhone3" name="phone3" type="tel" inputmode="numeric" placeholder="5678" maxlength="4" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="eventContent">내용</label>
+          <textarea class="form-textarea" id="eventContent" name="content" rows="5" placeholder="상담 원하는 공간, 예산, 일정 등을 자유롭게 적어주세요."></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">개인정보 수집 및 이용 동의 <span class="required">*</span></div>
+          <div class="privacy-box">
+            회사는 이벤트 접수 및 인테리어 상담을 위해 이름, 연락처, 문의 내용을 수집합니다. 수집된 정보는 상담 검토와 회신 목적에만 사용되며, 상담 종료 후 1개월 이내 안전하게 파기합니다.
+            <br /><br />
+            수집 항목: 성함, 연락처, 문의 내용
+            <br />
+            이용 목적: 이벤트 접수, 인테리어 상담 및 견적 안내
+            <br />
+            보유 기간: 상담 종료 후 1개월
+            <br /><br />
+            동의를 거부할 수 있으나 이벤트 접수가 제한될 수 있습니다.
+          </div>
+        </div>
+
+        <label class="form-check">
+          <input id="eventPrivacyAgree" name="privacy" type="checkbox" required />
+          <span>개인정보 수집 및 이용에 동의합니다.</span>
+        </label>
+
+        <div class="form-actions">
+          <button class="button button--primary" type="submit">이벤트 할인 신청하기</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="eventSuccessModal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="eventSuccessTitle">
+      <button class="modal__close" type="button" data-close-event-success aria-label="닫기">&times;</button>
+      <div class="success-box">
+        <h3 id="eventSuccessTitle">이벤트 신청이 완료되었습니다</h3>
+        <p>선착순 인원 확인 후 담당자가 순서대로 연락드리겠습니다.</p>
+        <div class="form-actions" style="margin-top: 24px;">
+          <button class="button button--primary" type="button" data-close-event-success>확인</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <header class="topbar">
