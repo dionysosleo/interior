@@ -122,27 +122,27 @@ window.PORTFOLIO_DATA = {
     },
     "residential-4444": {
       category: "주거공간",
-      label: "미니멀 리빙룸",
-      title: "여백을 강조해 더 넓게 느껴지는 미니멀 리빙룸",
-      subtitle: "복잡한 요소를 덜고 가구와 마감의 농도를 낮춰 공간 자체의 비례감을 살린 주거 사례입니다.",
-      hero: "./assets/images/residential-4444.jpg",
-      area: "주거 26평",
-      duration: "3주",
-      cost: "총 공사비 3,140만원",
-      scope: "거실 마감, 수납장, 조명, 가구 배치",
+      label: "대림현대3차 리모델링",
+      title: "화이트 톤으로 정리한 대림현대3차 주방·거실 리모델링",
+      subtitle: "주방과 거실의 동선을 넓히고 화이트 톤으로 통일해 밝고 정돈된 인상을 만든 대림현대3차 리모델링 사례입니다.",
+      hero: "./assets/images/residential-daelim3-01.jpeg",
+      area: "대림현대3차 24평형",
+      duration: "4주",
+      cost: "총 공사비 4,180만원",
+      scope: "주방, 거실, 안방 드레스룸, 조명, 마감",
       estimateKey: "residential",
-      description: "소형 평형일수록 공간을 채우는 방식보다 비우는 방식이 더 크게 느껴질 때가 있습니다. 이번 프로젝트는 짧은 공사 기간 안에서 가장 체감이 큰 영역에만 집중해 단순한 구조를 더 고급스럽게 정리했습니다.",
+      description: "대림현대3차 전용면적 43.92㎡(공급 24평형) 세대를 화이트 톤으로 통일해 주방과 거실의 개방감을 살린 리모델링 사례입니다. 상부장과 하부장을 화이트 무광으로 맞추고, 냉장고장과 팬트리를 하나의 라인으로 정리해 수납과 동선을 함께 개선했습니다.",
       points: [
-        "중심 가구를 낮추고 벽면 수납을 정리해 시선이 멀리 뻗도록 했습니다.",
-        "간접 조명과 따뜻한 베이지 톤으로 미니멀하지만 차갑지 않은 무드를 만들었습니다.",
-        "생활 물건이 드러나는 구간을 줄여 정리된 인상이 오래 유지되도록 했습니다."
+        "ㄱ자 주방 동선을 넓히고 아일랜드형 조리대를 더해 조리와 이동이 편해지도록 구성했습니다.",
+        "냉장고장, 팬트리, 상부장을 화이트 무광 마감으로 통일해 주방 전체가 하나의 라인처럼 보이도록 정리했습니다.",
+        "안방에는 드레스룸과 파우더존을 별도로 구성해 수납과 동선을 분리했습니다."
       ],
       savingsHighlight: {
-        trade: "마루",
-        amount: 139000,
-        note: "실측 후 마루 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "가구",
+        amount: 226000,
+        note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-4444.jpg", "./assets/images/residential-5555.jpg", "./assets/images/residential-8888.jpeg"]
+      gallery: ["./assets/images/residential-daelim3-01.jpeg", "./assets/images/residential-daelim3-06.jpeg", "./assets/images/residential-daelim3-08.jpeg"]
     },
     "residential-5555": {
       category: "주거공간",
