@@ -50,75 +50,124 @@ window.PORTFOLIO_DATA = {
   items: {
     "residential-1111": {
       category: "주거공간",
-      label: "아파트 거실 리뉴얼",
-      title: "밝고 단정한 무드로 정리한 주거 리모델링",
-      subtitle: "거실과 주방의 연결감을 살리면서도 일상 동선이 편안하게 이어지도록 정리한 주거 공간 사례입니다.",
-      hero: "./assets/images/residential-1111.jpg",
+      label: "미아동 두산위브 리모델링",
+      title: "마블 포인트 벽과 간접조명으로 완성한 미아동 두산위브 리모델링",
+      subtitle: "거실 한쪽 벽면을 대형 마블 타일로 마감하고 걸레받이 라인에 간접조명을 둘러 넓고 차분한 인상을 만든 미아동 두산위브 리모델링 사례입니다.",
+      hero: "./assets/images/residential-mia-doosan-01.jpeg",
       area: "주거 34평",
-      duration: "4주",
-      cost: "총 공사비 5,120만원",
-      scope: "거실, 주방, 벽체 정리, 조명, 가구 마감",
+      duration: "5주",
+      cost: "총 공사비 10,242만원",
+      scope: "전체 철거, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시, 주방·붙박이 가구",
       estimateKey: "residential",
-      description: "기존 공간은 채광이 좋았지만 가구 배치가 무겁고 시선이 분산돼 전체 인상이 답답하게 느껴졌습니다. 이번 프로젝트는 과한 장식 대신 밝은 톤과 정돈된 라인을 중심으로 구성해 생활감은 남기고 공간 밀도는 가볍게 만드는 데 집중했습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 미아동 두산위브 리모델링 사례입니다. 거실 한쪽 벽면 전체를 대형 마블 포세린 타일로 마감하고, 걸레받이 라인을 따라 간접조명을 둘러 바닥에서부터 은은한 빛이 퍼지도록 설계했습니다.",
       points: [
-        "거실 중심 시야를 방해하던 요소를 줄이고 좌석 배치를 더 여유 있게 조정했습니다.",
-        "주방과 거실 사이 재료 톤을 통일해 공간이 자연스럽게 이어지도록 만들었습니다.",
-        "은은한 간접 조명으로 저녁 시간에도 차분한 분위기가 유지되도록 설계했습니다."
+        "거실 벽면을 대형 마블 타일 한 장으로 이어 붙여 이음새 없이 넓어 보이도록 정리했습니다.",
+        "걸레받이 라인에 간접조명을 매립해 저녁 시간에도 바닥부터 은은하게 밝아지도록 했습니다.",
+        "발코니 확장 창호를 전체 교체해 채광과 단열을 함께 개선했습니다."
       ],
       savingsHighlight: {
-        trade: "목공",
-        amount: 550000,
-        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "도기",
+        amount: 362000,
+        note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-1111.jpg", "./assets/images/residential-2222.png", "./assets/images/residential-3333.png"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 2876964 },
+          { name: "철거·설비", amount: 9982445 },
+          { name: "목공", amount: 13081500 },
+          { name: "전기", amount: 3907008 },
+          { name: "도배", amount: 3384001 },
+          { name: "타일", amount: 7835600 },
+          { name: "도기", amount: 5177500 },
+          { name: "도장", amount: 802670 },
+          { name: "마루", amount: 7067520 },
+          { name: "샤시(금속,유리)", amount: 10150000 },
+          { name: "기타", amount: 28925830 }
+        ]
+      },
+      gallery: ["./assets/images/residential-mia-doosan-02.jpeg", "./assets/images/residential-mia-doosan-03.jpeg", "./assets/images/residential-mia-doosan-04.jpeg"]
     },
     "residential-2222": {
       category: "주거공간",
-      label: "주거 아치 포인트",
-      title: "부드러운 곡선과 채광을 살린 주거 공간",
-      subtitle: "아치 창과 벽체의 곡선을 강조해 집 전체의 인상을 더 부드럽고 안정적으로 정리한 사례입니다.",
-      hero: "./assets/images/residential-2222.png",
+      label: "백현마을 휴먼시아 이편한세상 리모델링",
+      title: "PH 펜던트 조명과 대리석 마감으로 완성한 백현마을 리모델링",
+      subtitle: "기하학적 패턴 창과 대리석 포인트 벽, PH 펜던트 조명으로 감도 높은 인상을 더한 백현마을 휴먼시아 이편한세상 909동 리모델링 사례입니다.",
+      hero: "./assets/images/residential-baekhyun-01.jpeg",
       area: "주거 29평",
-      duration: "3주",
-      cost: "총 공사비 3,780만원",
-      scope: "창호 포인트, 마감 정리, 조명, 벽체 개선",
+      duration: "4주",
+      cost: "총 공사비 5,526만원",
+      scope: "전체 철거, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 주방·붙박이 가구",
       estimateKey: "residential",
-      description: "이 프로젝트는 구조 변경보다 분위기 개선에 초점을 맞춘 리뉴얼입니다. 창 주변 라인을 살리고 불필요한 시각 요소를 덜어내면서 공간이 더 넓고 편안하게 느껴지도록 균형을 맞췄습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 백현마을 휴먼시아 이편한세상 리모델링 사례입니다. 주방 상부에는 PH 펜던트 조명 3구를 나란히 매달아 포인트를 주고, 거실 한쪽에는 대리석 톤 마감과 격자 패턴 창을 더해 감도 높은 인상을 완성했습니다.",
       points: [
-        "창을 중심으로 빛이 퍼지는 방향을 고려해 마감 톤을 정리했습니다.",
-        "곡선이 강조되는 요소를 반복해 전체 무드가 자연스럽게 통일되도록 했습니다.",
-        "큰 공사 없이도 분위기 차이가 느껴질 수 있도록 포인트를 압축했습니다."
+        "주방 아일랜드 위에 PH 펜던트 조명 3구를 나란히 배치해 공간의 포인트를 분명하게 잡았습니다.",
+        "거실 한쪽 벽면을 대리석 톤과 격자 패턴 창으로 마감해 입체감을 더했습니다.",
+        "복도에는 세로 루버 마감과 벽부등을 더해 통로 구간도 밋밋하지 않도록 정리했습니다."
       ],
       savingsHighlight: {
         trade: "타일",
-        amount: 194000,
+        amount: 405000,
         note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-2222.png", "./assets/images/residential-4444.jpg", "./assets/images/residential-5555.jpg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 2097706 },
+          { name: "철거·설비", amount: 5337625 },
+          { name: "목공", amount: 9629000 },
+          { name: "전기", amount: 5197732 },
+          { name: "도배", amount: 4154300 },
+          { name: "타일", amount: 6745500 },
+          { name: "도기", amount: 6674900 },
+          { name: "도장", amount: 750000 },
+          { name: "마루", amount: 6062500 },
+          { name: "가구", amount: 0 },
+          { name: "기타", amount: 3635225 }
+        ]
+      },
+      gallery: ["./assets/images/residential-baekhyun-02.jpeg", "./assets/images/residential-baekhyun-03.jpeg", "./assets/images/residential-baekhyun-04.jpeg"]
     },
     "residential-3333": {
       category: "주거공간",
-      label: "내추럴 우드 홈오피스",
-      title: "채광과 작업 동선을 함께 잡은 홈오피스형 주거",
-      subtitle: "집 안에서 일과 휴식을 함께 풀어낼 수 있도록 책상, 수납, 창가 영역을 유기적으로 연결한 사례입니다.",
-      hero: "./assets/images/residential-3333.png",
-      area: "주거 31평",
-      duration: "4주",
-      cost: "총 공사비 4,180만원",
-      scope: "홈오피스, 수납, 바닥, 창가 벤치, 조명",
+      label: "북아현동 신촌 푸르지오 리모델링",
+      title: "PH 펜던트와 화이트 톤으로 정리한 북아현동 신촌 푸르지오 주방 리모델링",
+      subtitle: "냉장고장을 짙은 프레임으로 포인트를 주고 나머지는 화이트 톤으로 통일해 깔끔하게 정리한 북아현동 신촌 푸르지오 리모델링 사례입니다.",
+      hero: "./assets/images/residential-bukahyeon-01.jpeg",
+      area: "주거 26평",
+      duration: "3주",
+      cost: "총 공사비 5,032만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 바닥",
       estimateKey: "residential",
-      description: "거주자의 생활 패턴상 집 안에서 작업하는 시간이 길어, 단순한 책상 배치보다 집중도와 휴식 전환이 모두 가능한 구성을 원했습니다. 자연광과 우드 톤을 중심으로 작업 환경이 과하게 긴장되지 않도록 완급을 조절했습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 북아현동 신촌 푸르지오 리모델링 사례입니다. 주방 냉장고장을 짙은 프레임 마감으로 포인트를 주고, PH 펜던트 조명을 더해 화이트 톤 주방에 리듬감을 살렸습니다.",
       points: [
-        "창가 벤치와 책상 라인을 이어 작업과 휴식의 전환이 자연스럽게 되도록 했습니다.",
-        "수납 볼륨을 벽면으로 정리해 작업 공간 자체는 더 가볍게 느껴지게 만들었습니다.",
-        "밝은 바닥과 천장 톤으로 하루 종일 머물러도 부담 없는 분위기를 만들었습니다."
+        "냉장고장을 짙은 프레임 마감으로 포인트를 줘 화이트 톤 주방에 리듬감을 더했습니다.",
+        "주방 아일랜드 위 PH 펜던트 조명으로 시선이 자연스럽게 모이도록 했습니다.",
+        "거실 벽면에 대형 벽걸이 TV 자리를 미리 계획해 배선과 마감을 깔끔하게 정리했습니다."
       ],
       savingsHighlight: {
-        trade: "가구",
-        amount: 226000,
-        note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "목공",
+        amount: 222000,
+        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-3333.png", "./assets/images/residential-1111.jpg", "./assets/images/residential-6666.jpg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 1982352 },
+          { name: "철거·설비", amount: 4669720 },
+          { name: "목공", amount: 3412000 },
+          { name: "전기", amount: 4121176 },
+          { name: "도배", amount: 2447580 },
+          { name: "타일", amount: 4021000 },
+          { name: "욕실", amount: 1721000 },
+          { name: "가구", amount: 5330000 },
+          { name: "샤시(금속,유리)", amount: 8031200 },
+          { name: "도장", amount: 1176520 },
+          { name: "바닥", amount: 2320000 },
+          { name: "기타", amount: 6550000 }
+        ]
+      },
+      gallery: ["./assets/images/residential-bukahyeon-02.jpeg", "./assets/images/residential-bukahyeon-03.jpeg", "./assets/images/residential-bukahyeon-04.jpeg"]
     },
     "residential-4444": {
       category: "주거공간",
@@ -146,51 +195,84 @@ window.PORTFOLIO_DATA = {
     },
     "residential-5555": {
       category: "주거공간",
-      label: "하이엔드 욕실 리뉴얼",
-      title: "조용하고 깊은 톤으로 완성한 프리미엄 욕실",
-      subtitle: "채광이 적은 욕실에서도 답답하지 않게 느껴지도록 톤과 라인을 단정하게 정리한 사례입니다.",
-      hero: "./assets/images/residential-5555.jpg",
-      area: "욕실 2개 + 파우더룸",
-      duration: "3주",
-      cost: "총 공사비 3,180만원",
-      scope: "메인욕실, 파우더룸, 세탁실, 수전, 조명, 벽체, 바닥",
+      label: "삼성동 우정에쉐르 리모델링",
+      title: "붙박이 책장 벽과 아치 도어로 완성한 삼성동 우정에쉐르 리모델링",
+      subtitle: "거실 전면을 붙박이 책장으로 채우고 안쪽 방 입구에 아치형 도어를 더해 감도 높은 인상을 만든 삼성동 우정에쉐르 리모델링 사례입니다.",
+      hero: "./assets/images/residential-samsung-woojeong-01.jpeg",
+      area: "주거 33평",
+      duration: "6주",
+      cost: "총 공사비 1억 1,116만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 마루",
       estimateKey: "residential",
-      description: "욕실은 자재 선택에 따라 체감 인상이 크게 달라지는 공간입니다. 밝은 톤 일변도로 가지 않고, 질감이 느껴지는 중성 톤을 활용해 안정감과 고급스러움을 함께 살렸습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 삼성동 우정에쉐르 리모델링 사례입니다. 거실 한쪽 벽면 전체를 화이트 붙박이 책장으로 채우고, 안쪽 방으로 이어지는 입구에는 아치형 도어를 더해 공간에 리듬감을 주었습니다.",
       points: [
-        "벽과 바닥 재료의 결을 맞춰 욕실이 하나의 공간처럼 보이도록 정리했습니다.",
-        "조명 위치를 낮추고 부드럽게 분산해 과하게 번들거리지 않는 분위기를 만들었습니다.",
-        "수납장을 벽체에 녹여 생활감이 튀지 않도록 구성했습니다."
+        "거실 벽면 전체를 화이트 붙박이 책장으로 채워 수납과 디스플레이를 함께 해결했습니다.",
+        "안쪽 방 입구에 아치형 도어를 적용해 동선의 흐름에 부드러운 포인트를 더했습니다.",
+        "욕실은 곡선 세면대와 격자 패턴 유리 파티션으로 마감해 호텔 욕실 같은 분위기를 살렸습니다."
       ],
       savingsHighlight: {
         trade: "전기",
-        amount: 149000,
+        amount: 322000,
         note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-5555.jpg", "./assets/images/residential-4444.jpg", "./assets/images/residential-7777.jpg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 1622237 },
+          { name: "철거·설비", amount: 7250565 },
+          { name: "목공", amount: 9790500 },
+          { name: "전기", amount: 4599717 },
+          { name: "도배", amount: 3648448 },
+          { name: "타일", amount: 6202000 },
+          { name: "욕실", amount: 5123100 },
+          { name: "가구", amount: 41535000 },
+          { name: "샤시(금속,유리)", amount: 13003000 },
+          { name: "도장", amount: 801591 },
+          { name: "마루", amount: 4662100 },
+          { name: "기타", amount: 2905000 }
+        ]
+      },
+      gallery: ["./assets/images/residential-samsung-woojeong-02.jpeg", "./assets/images/residential-samsung-woojeong-03.jpeg", "./assets/images/residential-samsung-woojeong-04.jpeg"]
     },
     "residential-6666": {
       category: "주거공간",
-      label: "복층형 주거 다이닝",
-      title: "개방감과 가족 동선을 함께 살린 복층형 주거",
-      subtitle: "층고가 주는 장점을 강조하면서 식사, 휴식, 이동 동선이 서로 방해되지 않도록 정리한 사례입니다.",
-      hero: "./assets/images/residential-6666.jpg",
-      area: "주거 41평",
-      duration: "5주",
-      cost: "총 공사비 5,940만원",
-      scope: "다이닝, 계단부, 가구 마감, 조명, 창호 정리",
+      label: "삼성동 롯데캐슬프레미어 리모델링",
+      title: "그리드 글라스 파티션으로 완성한 삼성동 롯데캐슬프레미어 리모델링",
+      subtitle: "현관 진입부에 격자 패턴 글라스 파티션과 스톤 톤 마감을 더해 첫인상을 분명하게 잡은 삼성동 롯데캐슬프레미어 리모델링 사례입니다.",
+      hero: "./assets/images/residential-lottecastle-01.jpeg",
+      area: "주거 45평",
+      duration: "6주",
+      cost: "총 공사비 7,429만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시",
       estimateKey: "residential",
-      description: "층고가 높은 구조는 시원한 장점이 있지만 자칫 텅 빈 느낌이 날 수 있습니다. 이 프로젝트는 펜던트 조명과 가구 스케일을 활용해 시선을 적절히 묶어주고, 가족이 함께 쓰는 공간의 중심성을 더 강하게 만들었습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 삼성동 롯데캐슬프레미어 리모델링 사례입니다. 현관 진입부에 격자 패턴 글라스 파티션과 짙은 스톤 톤 마감을 더해 첫인상을 분명하게 잡고, 거실은 이중 매입 조명과 사이드 간접등으로 층위감을 살렸습니다.",
       points: [
-        "계단과 다이닝 사이 시선 흐름을 정리해 중심 공간이 자연스럽게 드러나도록 했습니다.",
-        "가구 스케일을 키워 층고가 높은 구조에서도 균형이 흐트러지지 않게 잡았습니다.",
-        "주방과 거실 사이 연결감을 유지하면서 영역 구분은 명확하게 설계했습니다."
+        "현관 진입부에 격자 패턴 글라스 파티션을 세워 첫 시선을 분명하게 잡았습니다.",
+        "거실 천장에 사각 매입 조명 세트를 더해 층고가 높은 공간에도 안정감을 주었습니다.",
+        "주방·다이닝 공간에는 클러스터형 펜던트 조명을 더해 포인트를 살렸습니다."
       ],
       savingsHighlight: {
-        trade: "도장",
-        amount: 268000,
-        note: "실측 후 도장 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "타일",
+        amount: 674000,
+        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-6666.jpg", "./assets/images/residential-7777.jpg", "./assets/images/residential-8888.jpeg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 3002404 },
+          { name: "철거·설비", amount: 9154270 },
+          { name: "목공", amount: 8284000 },
+          { name: "전기", amount: 3712288 },
+          { name: "도배", amount: 3323359 },
+          { name: "타일", amount: 9627000 },
+          { name: "도기", amount: 4055500 },
+          { name: "도장", amount: 1150000 },
+          { name: "마루", amount: 5727000 },
+          { name: "샤시(금속,유리)", amount: 12925700 },
+          { name: "기타", amount: 6634330 }
+        ]
+      },
+      gallery: ["./assets/images/residential-lottecastle-02.jpeg", "./assets/images/residential-lottecastle-03.jpeg", "./assets/images/residential-lottecastle-04.jpeg"]
     },
     "residential-7777": {
       category: "주거공간",
