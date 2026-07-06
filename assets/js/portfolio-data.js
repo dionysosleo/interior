@@ -242,27 +242,44 @@ window.PORTFOLIO_DATA = {
     },
     "residential-9999": {
       category: "주거공간",
-      label: "아트월 포인트 홀",
-      title: "조명과 동선이 살아나는 아트월 포인트 주거 공간",
-      subtitle: "입구에서 거실로 이어지는 첫 인상을 강하게 만들면서도 전체 동선은 가볍게 유지한 주거 사례입니다.",
-      hero: "./assets/images/residential-9999.jpg",
-      area: "주거 45평",
-      duration: "5주",
-      cost: "총 공사비 6,520만원",
-      scope: "현관, 거실, 아트월, 조명, 계단부 정리",
+      label: "도곡동 SK리더스뷰294A 리모델링",
+      title: "화이트 마블톤으로 완성한 도곡동 SK리더스뷰 전체 리모델링",
+      subtitle: "아치형 황동 중문과 대리석 톤 마감으로 고급스러운 인상을 더한 도곡동 SK리더스뷰294A 전체 리모델링 사례입니다.",
+      hero: "./assets/images/residential-daegok294a-01.jpeg",
+      area: "전용 51평 (294A타입)",
+      duration: "6주",
+      cost: "총 공사비 7,621만원",
+      scope: "전체 철거, 목공, 전기, 타일, 도장, 마루, 도기, 주방·붙박이 가구, 중문",
       estimateKey: "residential",
-      description: "천장고와 조명 포인트가 살아 있는 공간이라면 강약 조절이 중요합니다. 이 프로젝트는 과한 장식 대신 한두 개의 시선 포인트를 중심으로 공간의 인상을 정리하고, 입구에서부터 고급스러운 흐름이 느껴지도록 계획했습니다.",
+      description: "실제 현장 발주서와 견적서를 기준으로 정리한 도곡동 SK리더스뷰294A 전체 리모델링 사례입니다. 대리석 톤 포세린 타일로 바닥 전체를 통일하고, 현관에는 아치형 황동 프레임 중문을 더해 입구에서부터 고급스러운 인상이 이어지도록 설계했습니다.",
       points: [
-        "아트월과 조명 위치를 정교하게 맞춰 첫 인상이 분명하게 느껴지게 했습니다.",
-        "동선이 복잡해 보이지 않도록 벽체와 가구 볼륨을 줄였습니다.",
-        "거실과 다이닝으로 이어지는 흐름에 고급스러운 긴장감을 더했습니다."
+        "거실과 주방을 대형 포세린 타일로 통일해 층고와 개방감이 한층 강조되도록 정리했습니다.",
+        "현관에 아치형 황동 프레임 중문을 적용해 첫인상부터 공간의 톤을 분명하게 잡았습니다.",
+        "간접조명과 매입등을 층별로 나눠 배치해 시간대에 따라 다른 분위기를 연출할 수 있도록 했습니다."
       ],
       savingsHighlight: {
-        trade: "샤시(금속,유리)",
-        amount: 393000,
-        note: "실측 후 샤시(금속,유리) 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "도기",
+        amount: 293000,
+        note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-9999.jpg", "./assets/images/residential-8888.jpeg", "./assets/images/residential-4444.jpg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 2028574 },
+          { name: "철거·설비", amount: 9211140 },
+          { name: "목공", amount: 11810500 },
+          { name: "전기", amount: 5664656 },
+          { name: "도배", amount: 1194968 },
+          { name: "타일", amount: 11683600 },
+          { name: "도기", amount: 4183500 },
+          { name: "도장", amount: 8200000 },
+          { name: "마루", amount: 3451800 },
+          { name: "샤시(금속,유리)", amount: 0 },
+          { name: "가구", amount: 0 },
+          { name: "기타", amount: 11918535 }
+        ]
+      },
+      gallery: ["./assets/images/residential-daegok294a-02.jpeg", "./assets/images/residential-daegok294a-03.jpeg", "./assets/images/residential-daegok294a-04.jpeg"]
     },
     "commercial-11": {
       category: "상업공간",

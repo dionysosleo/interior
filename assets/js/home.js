@@ -139,7 +139,16 @@
 
   function renderCaseCard(slug, item, estimateTemplates) {
     const estimate = buildEstimate(item, estimateTemplates);
-    const materialWithMisc = estimate.materialBaseTotal + estimate.miscTotal;
+
+    const costPreviewHtml = estimate.isCustom
+      ? `
+          <span>공사 원가 <strong>${formatWon(estimate.costBeforeMargin)}</strong></span>
+          <span>이윤(${Math.round(estimate.marginRate * 1000) / 10}%) <strong>${formatWon(estimate.margin)}</strong></span>
+        `
+      : `
+          <span>인건비 원가 <strong>${formatWon(estimate.laborTotal)}</strong></span>
+          <span>자재비 원가 <strong>${formatWon(estimate.materialBaseTotal + estimate.miscTotal)}</strong></span>
+        `;
 
     return `
       <article class="case-card">
@@ -153,8 +162,7 @@
           <h3>${item.title}</h3>
           <p>${item.subtitle}</p>
           <div class="case-cost-preview">
-            <span>인건비 원가 <strong>${formatWon(estimate.laborTotal)}</strong></span>
-            <span>자재비 원가 <strong>${formatWon(materialWithMisc)}</strong></span>
+            ${costPreviewHtml}
           </div>
         </a>
       </article>

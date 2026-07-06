@@ -14,7 +14,21 @@ window.EstimateUtils = (function () {
     return Number(match[1].replace(/,/g, "")) * 10000;
   }
 
+  // 실제 현장 공정표(발주서/견적서)를 그대로 반영하는 케이스용 — 공정별 단일 금액(공정, 금액)을 쓰고
+  // 인건비/자재비로 나누지 않는다. 원본 견적서 형식과 동일하게 "공정 / 금액"으로만 보여준다.
+  function buildCustomEstimate(custom) {
+    const costBeforeMargin = custom.rows.reduce((sum, row) => sum + row.amount, 0);
+    const rate = custom.marginRate != null ? custom.marginRate : 0.099;
+    const margin = Math.round(costBeforeMargin * rate);
+    const total = costBeforeMargin + margin;
+    return { rows: custom.rows, costBeforeMargin, margin, total, marginRate: rate, isCustom: true };
+  }
+
   function buildEstimate(item, estimateTemplates) {
+    if (item.customEstimate) {
+      return buildCustomEstimate(item.customEstimate);
+    }
+
     const total = parseKoreanCost(item.cost);
     const template = estimateTemplates[item.estimateKey || "residential"];
     const costBeforeMargin = Math.round(total / 1.099);
@@ -29,7 +43,7 @@ window.EstimateUtils = (function () {
       material: Math.round(materialBaseTotal * materialWeight)
     }));
 
-    return { rows, laborTotal, materialBaseTotal, miscTotal, costBeforeMargin, margin, total };
+    return { rows, laborTotal, materialBaseTotal, miscTotal, costBeforeMargin, margin, total, isCustom: false };
   }
 
   // 현재 디자인으로 문의 시 적용되는 즉시 할인 (기본 3%)

@@ -9,6 +9,61 @@
 
   function buildEstimateTable(item, estimateTemplates) {
     const estimate = buildEstimate(item, estimateTemplates);
+    const marginPercent = Math.round((estimate.marginRate != null ? estimate.marginRate : 0.099) * 1000) / 10;
+
+    if (estimate.isCustom) {
+      // 실제 현장 공정표(발주서/견적서) 기반 — 공정별 "금액" 한 컬럼만 그대로 보여준다.
+      const rowsHtml = estimate.rows
+        .map(
+          (row) => `
+            <tr>
+              <td>${row.name}</td>
+              <td>${formatWon(row.amount)}</td>
+            </tr>
+          `
+        )
+        .join("");
+
+      return `
+        <section class="section">
+          <div class="estimate-card">
+            <div class="estimate-card__head">
+              <div>
+                <div class="eyebrow">REAL COST BREAKDOWN</div>
+                <h2 class="estimate-card__title">실제 현장 공정표를 그대로 공개합니다</h2>
+              </div>
+              <div class="estimate-card__desc">실제 발주서와 견적서에 기재된 공정별 금액을 그대로 반영하고, 그 위에 ${marginPercent}% 기준 마진만 더해 최종 공사비를 계산했습니다.</div>
+            </div>
+            <div class="estimate-table-wrap">
+              <table class="estimate-table">
+                <thead>
+                  <tr>
+                    <th>공정</th>
+                    <th>금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${rowsHtml}
+                  <tr class="estimate-table__summary">
+                    <td>공사 원가 (소계)</td>
+                    <td>${formatWon(estimate.costBeforeMargin)}</td>
+                  </tr>
+                  <tr class="estimate-table__summary">
+                    <td>이윤(${marginPercent}%)</td>
+                    <td>${formatWon(estimate.margin)}</td>
+                  </tr>
+                  <tr class="estimate-table__total">
+                    <td>현재 원가견적</td>
+                    <td>${formatWon(estimate.total)}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
     const rowsHtml = estimate.rows
       .map(
         (row) => `
