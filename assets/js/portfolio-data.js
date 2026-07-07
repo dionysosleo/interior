@@ -172,31 +172,6 @@ window.PORTFOLIO_DATA = {
       },
       gallery: ["./assets/images/residential-bukahyeon-02.jpeg", "./assets/images/residential-bukahyeon-03.jpeg", "./assets/images/residential-bukahyeon-04.jpeg"]
     },
-    "residential-4444": {
-      category: "주거공간",
-      label: "화이트 올인원 키친",
-      title: "화이트 톤으로 정리한 대림현대3차 주방·거실 리모델링",
-      subtitle: "주방과 거실의 동선을 넓히고 화이트 톤으로 통일해 밝고 정돈된 인상을 만든 대림현대3차 리모델링 사례입니다.",
-      hero: "./assets/images/residential-daelim3-01.jpeg",
-      area: "대림현대3차 24평형",
-      duration: "4주",
-      cost: "총 공사비 4,180만원",
-      scope: "주방, 거실, 안방 드레스룸, 조명, 마감",
-      estimateKey: "residential",
-      description: "대림현대3차 전용면적 43.92㎡(공급 24평형) 세대를 화이트 톤으로 통일해 주방과 거실의 개방감을 살린 리모델링 사례입니다. 상부장과 하부장을 화이트 무광으로 맞추고, 냉장고장과 팬트리를 하나의 라인으로 정리해 수납과 동선을 함께 개선했습니다.",
-      points: [
-        "ㄱ자 주방 동선을 넓히고 아일랜드형 조리대를 더해 조리와 이동이 편해지도록 구성했습니다.",
-        "냉장고장, 팬트리, 상부장을 화이트 무광 마감으로 통일해 주방 전체가 하나의 라인처럼 보이도록 정리했습니다.",
-        "안방에는 드레스룸과 파우더존을 별도로 구성해 수납과 동선을 분리했습니다."
-      ],
-      savingsHighlight: {
-        trade: "가구",
-        rate: 0.055,
-        amount: 2299000,
-        note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/residential-daelim3-01.jpeg", "./assets/images/residential-daelim3-06.jpeg", "./assets/images/residential-daelim3-08.jpeg"]
-    },
     "residential-5555": {
       category: "주거공간",
       label: "북월 아치도어 리빙룸",
