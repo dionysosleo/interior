@@ -48,6 +48,89 @@ window.PORTFOLIO_DATA = {
   },
 
   items: {
+    "residential-5555": {
+      category: "주거공간",
+      label: "북월 아치도어 리빙룸",
+      title: "붙박이 책장 벽과 아치 도어로 완성한 삼성동 우정에쉐르 리모델링",
+      subtitle: "거실 전면을 붙박이 책장으로 채우고 안쪽 방 입구에 아치형 도어를 더해 감도 높은 인상을 만든 삼성동 우정에쉐르 리모델링 사례입니다.",
+      hero: "./assets/images/residential-samsung-woojeong-01.jpeg",
+      area: "주거 33평",
+      duration: "6주",
+      cost: "총 공사비 1억 1,116만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 마루",
+      estimateKey: "residential",
+      description: "실제 현장 견적서를 기준으로 정리한 삼성동 우정에쉐르 리모델링 사례입니다. 거실 한쪽 벽면 전체를 화이트 붙박이 책장으로 채우고, 안쪽 방으로 이어지는 입구에는 아치형 도어를 더해 공간에 리듬감을 주었습니다.",
+      points: [
+        "거실 벽면 전체를 화이트 붙박이 책장으로 채워 수납과 디스플레이를 함께 해결했습니다.",
+        "안쪽 방 입구에 아치형 도어를 적용해 동선의 흐름에 부드러운 포인트를 더했습니다.",
+        "욕실은 곡선 세면대와 격자 패턴 유리 파티션으로 마감해 호텔 욕실 같은 분위기를 살렸습니다."
+      ],
+      savingsHighlight: {
+        trade: "전기",
+        rate: 0.06,
+        amount: 6669000,
+        note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 1622237 },
+          { name: "철거·설비", amount: 7250565 },
+          { name: "목공", amount: 9790500 },
+          { name: "전기", amount: 4599717 },
+          { name: "도배", amount: 3648448 },
+          { name: "타일", amount: 6202000 },
+          { name: "욕실", amount: 5123100 },
+          { name: "가구", amount: 41535000 },
+          { name: "샤시(금속,유리)", amount: 13003000 },
+          { name: "도장", amount: 801591 },
+          { name: "마루", amount: 4662100 },
+          { name: "기타", amount: 2905000 }
+        ]
+      },
+      gallery: ["./assets/images/residential-samsung-woojeong-02.jpeg", "./assets/images/residential-samsung-woojeong-03.jpeg", "./assets/images/residential-samsung-woojeong-04.jpeg"]
+    },
+    "residential-6666": {
+      category: "주거공간",
+      label: "그리드글라스 엔트런스",
+      title: "그리드 글라스 파티션으로 완성한 삼성동 롯데캐슬프레미어 리모델링",
+      subtitle: "현관 진입부에 격자 패턴 글라스 파티션과 스톤 톤 마감을 더해 첫인상을 분명하게 잡은 삼성동 롯데캐슬프레미어 리모델링 사례입니다.",
+      hero: "./assets/images/residential-lottecastle-01.jpeg",
+      area: "주거 45평",
+      duration: "6주",
+      cost: "총 공사비 7,429만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시",
+      estimateKey: "residential",
+      description: "실제 현장 견적서를 기준으로 정리한 삼성동 롯데캐슬프레미어 리모델링 사례입니다. 현관 진입부에 격자 패턴 글라스 파티션과 짙은 스톤 톤 마감을 더해 첫인상을 분명하게 잡고, 거실은 이중 매입 조명과 사이드 간접등으로 층위감을 살렸습니다.",
+      points: [
+        "현관 진입부에 격자 패턴 글라스 파티션을 세워 첫 시선을 분명하게 잡았습니다.",
+        "거실 천장에 사각 매입 조명 세트를 더해 층고가 높은 공간에도 안정감을 주었습니다.",
+        "주방·다이닝 공간에는 클러스터형 펜던트 조명을 더해 포인트를 살렸습니다."
+      ],
+      savingsHighlight: {
+        trade: "타일",
+        rate: 0.042,
+        amount: 3120000,
+        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
+      },
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 3002404 },
+          { name: "철거·설비", amount: 9154270 },
+          { name: "목공", amount: 8284000 },
+          { name: "전기", amount: 3712288 },
+          { name: "도배", amount: 3323359 },
+          { name: "타일", amount: 9627000 },
+          { name: "도기", amount: 4055500 },
+          { name: "도장", amount: 1150000 },
+          { name: "마루", amount: 5727000 },
+          { name: "샤시(금속,유리)", amount: 12925700 },
+          { name: "기타", amount: 6634330 }
+        ]
+      },
+      gallery: ["./assets/images/residential-lottecastle-02.jpeg", "./assets/images/residential-lottecastle-03.jpeg", "./assets/images/residential-lottecastle-04.jpeg"]
+    },
     "residential-1111": {
       category: "주거공간",
       label: "마블 포인트 리빙룸",
@@ -171,89 +254,6 @@ window.PORTFOLIO_DATA = {
         ]
       },
       gallery: ["./assets/images/residential-bukahyeon-02.jpeg", "./assets/images/residential-bukahyeon-03.jpeg", "./assets/images/residential-bukahyeon-04.jpeg"]
-    },
-    "residential-5555": {
-      category: "주거공간",
-      label: "북월 아치도어 리빙룸",
-      title: "붙박이 책장 벽과 아치 도어로 완성한 삼성동 우정에쉐르 리모델링",
-      subtitle: "거실 전면을 붙박이 책장으로 채우고 안쪽 방 입구에 아치형 도어를 더해 감도 높은 인상을 만든 삼성동 우정에쉐르 리모델링 사례입니다.",
-      hero: "./assets/images/residential-samsung-woojeong-01.jpeg",
-      area: "주거 33평",
-      duration: "6주",
-      cost: "총 공사비 1억 1,116만원",
-      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 마루",
-      estimateKey: "residential",
-      description: "실제 현장 견적서를 기준으로 정리한 삼성동 우정에쉐르 리모델링 사례입니다. 거실 한쪽 벽면 전체를 화이트 붙박이 책장으로 채우고, 안쪽 방으로 이어지는 입구에는 아치형 도어를 더해 공간에 리듬감을 주었습니다.",
-      points: [
-        "거실 벽면 전체를 화이트 붙박이 책장으로 채워 수납과 디스플레이를 함께 해결했습니다.",
-        "안쪽 방 입구에 아치형 도어를 적용해 동선의 흐름에 부드러운 포인트를 더했습니다.",
-        "욕실은 곡선 세면대와 격자 패턴 유리 파티션으로 마감해 호텔 욕실 같은 분위기를 살렸습니다."
-      ],
-      savingsHighlight: {
-        trade: "전기",
-        rate: 0.06,
-        amount: 6669000,
-        note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      customEstimate: {
-        marginRate: 0.099,
-        rows: [
-          { name: "가설", amount: 1622237 },
-          { name: "철거·설비", amount: 7250565 },
-          { name: "목공", amount: 9790500 },
-          { name: "전기", amount: 4599717 },
-          { name: "도배", amount: 3648448 },
-          { name: "타일", amount: 6202000 },
-          { name: "욕실", amount: 5123100 },
-          { name: "가구", amount: 41535000 },
-          { name: "샤시(금속,유리)", amount: 13003000 },
-          { name: "도장", amount: 801591 },
-          { name: "마루", amount: 4662100 },
-          { name: "기타", amount: 2905000 }
-        ]
-      },
-      gallery: ["./assets/images/residential-samsung-woojeong-02.jpeg", "./assets/images/residential-samsung-woojeong-03.jpeg", "./assets/images/residential-samsung-woojeong-04.jpeg"]
-    },
-    "residential-6666": {
-      category: "주거공간",
-      label: "그리드글라스 엔트런스",
-      title: "그리드 글라스 파티션으로 완성한 삼성동 롯데캐슬프레미어 리모델링",
-      subtitle: "현관 진입부에 격자 패턴 글라스 파티션과 스톤 톤 마감을 더해 첫인상을 분명하게 잡은 삼성동 롯데캐슬프레미어 리모델링 사례입니다.",
-      hero: "./assets/images/residential-lottecastle-01.jpeg",
-      area: "주거 45평",
-      duration: "6주",
-      cost: "총 공사비 7,429만원",
-      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시",
-      estimateKey: "residential",
-      description: "실제 현장 견적서를 기준으로 정리한 삼성동 롯데캐슬프레미어 리모델링 사례입니다. 현관 진입부에 격자 패턴 글라스 파티션과 짙은 스톤 톤 마감을 더해 첫인상을 분명하게 잡고, 거실은 이중 매입 조명과 사이드 간접등으로 층위감을 살렸습니다.",
-      points: [
-        "현관 진입부에 격자 패턴 글라스 파티션을 세워 첫 시선을 분명하게 잡았습니다.",
-        "거실 천장에 사각 매입 조명 세트를 더해 층고가 높은 공간에도 안정감을 주었습니다.",
-        "주방·다이닝 공간에는 클러스터형 펜던트 조명을 더해 포인트를 살렸습니다."
-      ],
-      savingsHighlight: {
-        trade: "타일",
-        rate: 0.042,
-        amount: 3120000,
-        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      customEstimate: {
-        marginRate: 0.099,
-        rows: [
-          { name: "가설", amount: 3002404 },
-          { name: "철거·설비", amount: 9154270 },
-          { name: "목공", amount: 8284000 },
-          { name: "전기", amount: 3712288 },
-          { name: "도배", amount: 3323359 },
-          { name: "타일", amount: 9627000 },
-          { name: "도기", amount: 4055500 },
-          { name: "도장", amount: 1150000 },
-          { name: "마루", amount: 5727000 },
-          { name: "샤시(금속,유리)", amount: 12925700 },
-          { name: "기타", amount: 6634330 }
-        ]
-      },
-      gallery: ["./assets/images/residential-lottecastle-02.jpeg", "./assets/images/residential-lottecastle-03.jpeg", "./assets/images/residential-lottecastle-04.jpeg"]
     },
     "residential-7777": {
       category: "주거공간",
