@@ -50,7 +50,7 @@ window.PORTFOLIO_DATA = {
   items: {
     "residential-1111": {
       category: "주거공간",
-      label: "미아동 두산위브 리모델링",
+      label: "마블 포인트 리빙룸",
       title: "마블 포인트 벽과 간접조명으로 완성한 미아동 두산위브 리모델링",
       subtitle: "거실 한쪽 벽면을 대형 마블 타일로 마감하고 걸레받이 라인에 간접조명을 둘러 넓고 차분한 인상을 만든 미아동 두산위브 리모델링 사례입니다.",
       hero: "./assets/images/residential-mia-doosan-01.jpeg",
@@ -67,7 +67,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "도기",
-        amount: 362000,
+        rate: 0.04,
+        amount: 4097000,
         note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
@@ -90,7 +91,7 @@ window.PORTFOLIO_DATA = {
     },
     "residential-2222": {
       category: "주거공간",
-      label: "백현마을 휴먼시아 이편한세상 리모델링",
+      label: "PH펜던트 화이트키친",
       title: "PH 펜던트 조명과 대리석 마감으로 완성한 백현마을 리모델링",
       subtitle: "기하학적 패턴 창과 대리석 포인트 벽, PH 펜던트 조명으로 감도 높은 인상을 더한 백현마을 휴먼시아 이편한세상 909동 리모델링 사례입니다.",
       hero: "./assets/images/residential-baekhyun-01.jpeg",
@@ -107,7 +108,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        amount: 405000,
+        rate: 0.045,
+        amount: 2487000,
         note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
@@ -130,7 +132,7 @@ window.PORTFOLIO_DATA = {
     },
     "residential-3333": {
       category: "주거공간",
-      label: "북아현동 신촌 푸르지오 리모델링",
+      label: "다크프레임 키친",
       title: "PH 펜던트와 화이트 톤으로 정리한 북아현동 신촌 푸르지오 주방 리모델링",
       subtitle: "냉장고장을 짙은 프레임으로 포인트를 주고 나머지는 화이트 톤으로 통일해 깔끔하게 정리한 북아현동 신촌 푸르지오 리모델링 사례입니다.",
       hero: "./assets/images/residential-bukahyeon-01.jpeg",
@@ -147,7 +149,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "목공",
-        amount: 222000,
+        rate: 0.05,
+        amount: 2516000,
         note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
@@ -171,7 +174,7 @@ window.PORTFOLIO_DATA = {
     },
     "residential-4444": {
       category: "주거공간",
-      label: "대림현대3차 리모델링",
+      label: "화이트 올인원 키친",
       title: "화이트 톤으로 정리한 대림현대3차 주방·거실 리모델링",
       subtitle: "주방과 거실의 동선을 넓히고 화이트 톤으로 통일해 밝고 정돈된 인상을 만든 대림현대3차 리모델링 사례입니다.",
       hero: "./assets/images/residential-daelim3-01.jpeg",
@@ -188,14 +191,15 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "가구",
-        amount: 226000,
+        rate: 0.055,
+        amount: 2299000,
         note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/residential-daelim3-01.jpeg", "./assets/images/residential-daelim3-06.jpeg", "./assets/images/residential-daelim3-08.jpeg"]
     },
     "residential-5555": {
       category: "주거공간",
-      label: "삼성동 우정에쉐르 리모델링",
+      label: "북월 아치도어 리빙룸",
       title: "붙박이 책장 벽과 아치 도어로 완성한 삼성동 우정에쉐르 리모델링",
       subtitle: "거실 전면을 붙박이 책장으로 채우고 안쪽 방 입구에 아치형 도어를 더해 감도 높은 인상을 만든 삼성동 우정에쉐르 리모델링 사례입니다.",
       hero: "./assets/images/residential-samsung-woojeong-01.jpeg",
@@ -212,7 +216,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "전기",
-        amount: 322000,
+        rate: 0.06,
+        amount: 6669000,
         note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
@@ -236,7 +241,7 @@ window.PORTFOLIO_DATA = {
     },
     "residential-6666": {
       category: "주거공간",
-      label: "삼성동 롯데캐슬프레미어 리모델링",
+      label: "그리드글라스 엔트런스",
       title: "그리드 글라스 파티션으로 완성한 삼성동 롯데캐슬프레미어 리모델링",
       subtitle: "현관 진입부에 격자 패턴 글라스 파티션과 스톤 톤 마감을 더해 첫인상을 분명하게 잡은 삼성동 롯데캐슬프레미어 리모델링 사례입니다.",
       hero: "./assets/images/residential-lottecastle-01.jpeg",
@@ -253,7 +258,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        amount: 674000,
+        rate: 0.042,
+        amount: 3120000,
         note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
@@ -293,7 +299,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "필름",
-        amount: 106000,
+        rate: 0.048,
+        amount: 2458000,
         note: "실측 후 필름 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/residential-7777.jpg", "./assets/images/residential-6666.jpg", "./assets/images/residential-8888.jpeg"]
@@ -317,14 +324,15 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "설비",
-        amount: 238000,
+        rate: 0.052,
+        amount: 2226000,
         note: "실측 후 설비 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/residential-8888.jpeg", "./assets/images/residential-9999.jpg", "./assets/images/residential-4444.jpg"]
     },
     "residential-9999": {
       category: "주거공간",
-      label: "도곡동 SK리더스뷰294A 리모델링",
+      label: "아치도어 포인트홀",
       title: "화이트 마블톤으로 완성한 도곡동 SK리더스뷰 전체 리모델링",
       subtitle: "아치형 황동 중문과 대리석 톤 마감으로 고급스러운 인상을 더한 도곡동 SK리더스뷰294A 전체 리모델링 사례입니다.",
       hero: "./assets/images/residential-daegok294a-01.jpeg",
@@ -341,7 +349,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "도기",
-        amount: 293000,
+        rate: 0.058,
+        amount: 4420000,
         note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
@@ -382,7 +391,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "목공",
-        amount: 449000,
+        rate: 0.044,
+        amount: 2094000,
         note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-11.jpg", "./assets/images/commercial-22.jpeg", "./assets/images/commercial-33.jpg"]
@@ -406,7 +416,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        amount: 140000,
+        rate: 0.046,
+        amount: 1490000,
         note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-22.jpeg", "./assets/images/commercial-11.jpg", "./assets/images/commercial-55.webp"]
@@ -430,7 +441,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "가구",
-        amount: 326000,
+        rate: 0.054,
+        amount: 3456000,
         note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-33.jpg", "./assets/images/commercial-88.jpg", "./assets/images/commercial-77.webp"]
@@ -454,7 +466,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "전기",
-        amount: 211000,
+        rate: 0.056,
+        amount: 1971000,
         note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-44.webp", "./assets/images/commercial-99.webp", "./assets/images/commercial-22.jpeg"]
@@ -478,7 +491,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "마감",
-        amount: 158000,
+        rate: 0.049,
+        amount: 2058000,
         note: "실측 후 마감 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-55.webp", "./assets/images/commercial-11.jpg", "./assets/images/commercial-66.jpeg"]
@@ -502,7 +516,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "페인트",
-        amount: 536000,
+        rate: 0.051,
+        amount: 4774000,
         note: "실측 후 페인트 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-66.jpeg", "./assets/images/commercial-77.webp", "./assets/images/commercial-88.jpg"]
@@ -526,7 +541,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "샤시(금속,유리)",
-        amount: 307000,
+        rate: 0.053,
+        amount: 2215000,
         note: "실측 후 샤시(금속,유리) 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-77.webp", "./assets/images/commercial-33.jpg", "./assets/images/commercial-66.jpeg"]
@@ -550,7 +566,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "설비",
-        amount: 322000,
+        rate: 0.047,
+        amount: 2717000,
         note: "실측 후 설비 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-88.jpg", "./assets/images/commercial-33.jpg", "./assets/images/commercial-77.webp"]
@@ -574,7 +591,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "사인물",
-        amount: 107000,
+        rate: 0.059,
+        amount: 3098000,
         note: "실측 후 사인물 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-99.webp", "./assets/images/commercial-44.webp", "./assets/images/commercial-22.jpeg"]
@@ -598,7 +616,8 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "목공",
-        amount: 345000,
+        rate: 0.043,
+        amount: 1693000,
         note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       gallery: ["./assets/images/commercial-11.jpg", "./assets/images/commercial-55.webp", "./assets/images/commercial-22.jpeg"]

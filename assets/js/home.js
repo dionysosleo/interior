@@ -104,7 +104,7 @@
       .join("");
   }
 
-  function renderSavingsTable(data) {
+  function renderSavingsTable(data, portfolioData) {
     const numberEl = document.querySelector("[data-saving-number]");
     const eyebrowEl = document.querySelector("[data-saving-eyebrow]");
     const titleEl = document.querySelector("[data-saving-title]");
@@ -115,18 +115,28 @@
     if (eyebrowEl) eyebrowEl.textContent = data.eyebrow;
     if (titleEl) titleEl.textContent = data.title;
 
+    const { items, estimateTemplates } = portfolioData || { items: {}, estimateTemplates: {} };
+
     bodyEl.innerHTML = data.rows
       .map((row) => {
-        const nameHtml = row.slug
-          ? `<a class="table-case-link" href="./portfolio.html?slug=${row.slug}">${row.name}</a>`
-          : row.name;
+        const item = items[row.slug];
+        if (!item) return "";
+
+        const estimate = buildEstimate(item, estimateTemplates);
+        const rate = item.savingsHighlight ? item.savingsHighlight.rate : 0.05;
+        const amount = Math.round(estimate.total * rate / 1000) * 1000;
+        const name = `${item.label} 절감 사례`;
+        const sub = `공사비 ${formatWon(estimate.total)} 기준`;
+        const detailWithRate = row.detail.replace("원 검토 대비", `원 검토 대비 ${Math.round(rate * 1000) / 10}%`);
+        const nameHtml = `<a class="table-case-link" href="./portfolio.html?slug=${row.slug}">${name}</a>`;
+
         return `
           <tr>
-            <td><strong>${nameHtml}</strong><span>${row.sub}</span></td>
+            <td><strong>${nameHtml}</strong><span>${sub}</span></td>
             <td class="table-type">${row.spaceType}</td>
             <td><div class="table-clamp-2">${row.point}</div></td>
-            <td><div class="table-clamp-2">${row.detail}</div></td>
-            <td class="table-amount">${formatWon(row.amount)}</td>
+            <td><div class="table-clamp-2">${detailWithRate}</div></td>
+            <td class="table-amount">${formatWon(amount)}</td>
           </tr>
         `;
       })
@@ -157,6 +167,7 @@
             <div class="img-fill img-${slug}"></div>
             <div class="img-overlay"></div>
             <span class="img-note">${categoryTag(item.category)}</span>
+            ${item.savingsHighlight ? `<span class="img-savings">-${Math.round(item.savingsHighlight.rate * 1000) / 10}% 절감</span>` : ""}
             <span class="img-label">${item.label}</span>
           </div>
           <h3>${item.title}</h3>
@@ -370,7 +381,7 @@
     renderFeatureBlocks(data.featureBlocks);
     renderStatBar(data.statBar);
     renderCostTable(data.costTable);
-    renderSavingsTable(data.savingsTable);
+    renderSavingsTable(data.savingsTable, window.PORTFOLIO_DATA);
     renderCases(data.cases, window.PORTFOLIO_DATA);
     renderProcess(data.process);
     renderRecommend(data.recommend);
