@@ -257,53 +257,86 @@ window.PORTFOLIO_DATA = {
     },
     "residential-7777": {
       category: "주거공간",
-      label: "북쉘프 리빙룸",
-      title: "가족의 생활감이 자연스럽게 드러나는 북쉘프 리빙룸",
-      subtitle: "아이와 함께 쓰는 생활 공간이면서도 전체 인상은 정돈돼 보이도록 수납과 배치를 풀어낸 사례입니다.",
-      hero: "./assets/images/residential-7777.jpg",
-      area: "주거 38평",
-      duration: "4주",
-      cost: "총 공사비 5,120만원",
-      scope: "거실, 수납 선반, 계단, 바닥, 가구 재배치",
+      label: "스틱펜던트 화이트키친",
+      title: "스틱형 펜던트 조명으로 포인트를 준 신당동 약수하이츠 전체 리모델링",
+      subtitle: "주방 아일랜드 위 스틱형 펜던트 조명과 다크 프레임 냉장고장으로 포인트를 주고, 나머지 공간은 화이트·우드 톤으로 정리한 신당동 약수하이츠 106동 1303호 전체 리모델링 사례입니다.",
+      hero: "./assets/images/residential-sindang-01.jpeg",
+      area: "주거 43평",
+      duration: "5주",
+      cost: "총 공사비 8,697만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 마루, 기타",
       estimateKey: "residential",
-      description: "생활 가구와 책, 소품이 많은 집일수록 수납 구조와 여백 설계가 중요합니다. 이번 프로젝트는 가족의 물건을 숨기기보다 보기 좋게 정리하는 쪽으로 방향을 잡아 실용성과 분위기를 함께 맞췄습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 신당동 약수하이츠 106동 1303호 전체 리모델링 사례입니다. 주방은 화이트 상하부장에 다크 프레임 냉장고장을 더해 포인트를 주고, 나머지 공간은 화이트·우드 톤으로 통일해 전체적으로 밝고 정돈된 인상이 이어지도록 설계했습니다.",
       points: [
-        "선반과 계단부를 연계해 시선이 끊기지 않도록 구성했습니다.",
-        "소품과 도서가 자연스럽게 보이도록 수납 깊이와 간격을 조절했습니다.",
-        "따뜻한 목재 톤으로 생활감이 많은 공간도 편안하게 느껴지도록 했습니다."
+        "주방 아일랜드 상부에 스틱형 펜던트 조명을 달아 다크 프레임 냉장고장과 어우러지는 포인트를 만들었습니다.",
+        "계단실 하부 자투리 공간을 코너형 오픈 선반으로 짜 넣어 수납을 극대화했습니다.",
+        "현관에는 격자 프레임 글라스 중문을 적용해 신발장과 실내가 자연스럽게 분리되도록 정리했습니다."
       ],
       savingsHighlight: {
-        trade: "필름",
-        rate: 0.048,
-        amount: 2458000,
-        note: "실측 후 필름 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "타일",
+        rate: 0.05,
+        amount: 4349000,
+        note: "실측 후 타일 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-7777.jpg", "./assets/images/residential-6666.jpg", "./assets/images/residential-8888.jpeg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 1753515 },
+          { name: "철거·설비", amount: 6087865 },
+          { name: "목공", amount: 8406000 },
+          { name: "전기", amount: 4700009 },
+          { name: "도배", amount: 3558612 },
+          { name: "타일", amount: 5456000 },
+          { name: "욕실", amount: 4351600 },
+          { name: "가구", amount: 24770000 },
+          { name: "샤시", amount: 12977955 },
+          { name: "도장", amount: 778745 },
+          { name: "마루", amount: 4660480 },
+          { name: "기타", amount: 1639000 }
+        ]
+      },
+      gallery: ["./assets/images/residential-sindang-02.jpeg", "./assets/images/residential-sindang-03.jpeg", "./assets/images/residential-sindang-04.jpeg"]
     },
     "residential-8888": {
       category: "주거공간",
-      label: "파노라마 워크라운지",
-      title: "시야가 열리는 창을 중심으로 만든 워크라운지",
-      subtitle: "작업과 휴식이 자연스럽게 이어지는 공간을 위해 창 앞 테이블과 주변 수납을 함께 설계한 사례입니다.",
-      hero: "./assets/images/residential-8888.jpeg",
-      area: "주거 33평",
+      label: "우드슬랫 히든도어",
+      title: "우드 슬랫 마감으로 중문을 숨긴 응봉대림 2차 리모델링",
+      subtitle: "현관에서 이어지는 복도 벽을 우드 슬랫으로 마감하고 중문을 같은 톤으로 숨겨 넣어 이질감 없이 이어지도록 정리한 응봉대림 2차 102동605호 리모델링 사례입니다.",
+      hero: "./assets/images/residential-eungbong-01.jpeg",
+      area: "주거 34평",
       duration: "4주",
-      cost: "총 공사비 4,280만원",
-      scope: "서재, 라운지, 창가 테이블, 수납, 바닥",
+      cost: "총 공사비 4,245만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시, 기타",
       estimateKey: "residential",
-      description: "하루 중 가장 오래 머무는 자리의 시선과 빛을 잘 잡는 것이 핵심이었습니다. 넓은 창과 테이블 배치를 중심으로 집중과 대화가 모두 가능한 공간으로 재구성했습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 응봉대림 2차 102동605호 리모델링 사례입니다. 우드 슬랫 마감과 스톤 톤 포인트월로 현관에서 거실까지 이어지는 동선에 통일감을 주고, 주방은 딥그린 아일랜드로 수납과 조리 동선을 함께 정리했습니다.",
       points: [
-        "메인 테이블을 창과 평행하게 두어 풍경과 작업이 자연스럽게 이어지게 했습니다.",
-        "불필요한 파티션 없이 가구만으로 기능 구분을 만들어 개방감을 유지했습니다.",
-        "따뜻한 바닥 톤과 천장 마감으로 긴장감보다 안정감이 느껴지도록 조절했습니다."
+        "현관 복도 벽 전체를 우드 슬랫으로 마감하고 중문을 같은 톤으로 맞춰 눈에 띄지 않게 숨겼습니다.",
+        "주방에는 딥그린 컬러 아일랜드와 황동 벽등을 매치해 우드톤 공간에 포인트를 더했습니다.",
+        "거실 포인트월은 대형 스톤 타일로 마감하고 간접조명 라인을 둘러 은은한 무드를 살렸습니다."
       ],
       savingsHighlight: {
-        trade: "설비",
-        rate: 0.052,
-        amount: 2226000,
-        note: "실측 후 설비 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "타일",
+        rate: 0.045,
+        amount: 1910000,
+        note: "실측 후 타일 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
-      gallery: ["./assets/images/residential-8888.jpeg", "./assets/images/residential-9999.jpg", "./assets/images/residential-4444.jpg"]
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 1991970 },
+          { name: "철거·설비", amount: 6378555 },
+          { name: "목공", amount: 6395000 },
+          { name: "전기", amount: 3595310 },
+          { name: "도배", amount: 2710013 },
+          { name: "타일", amount: 3358000 },
+          { name: "도기", amount: 2031000 },
+          { name: "도장", amount: 506025 },
+          { name: "마루", amount: 3375520 },
+          { name: "샤시", amount: 7582497 },
+          { name: "기타", amount: 700000 }
+        ]
+      },
+      gallery: ["./assets/images/residential-eungbong-02.jpeg", "./assets/images/residential-eungbong-03.jpeg", "./assets/images/residential-eungbong-04.jpeg"]
     },
     "residential-9999": {
       category: "주거공간",
