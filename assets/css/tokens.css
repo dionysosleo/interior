@@ -18,10 +18,10 @@
   --color-muted-soft: #8b95a1;
 
   /* accent — Toss Blue */
-  --color-accent: #3182f6;
-  --color-accent-strong: #1b64da;
-  --color-accent-soft: rgba(49, 130, 246, 0.12);
-  --color-choco: #191f28;
+  --color-accent: #2f7d6c;
+  --color-accent-strong: #1f5c50;
+  --color-accent-soft: rgba(47, 125, 108, 0.12);
+  --color-choco: #2f7d6c;
   --color-danger: #f04452;
 
   --color-line: #e5e8eb;
@@ -114,7 +114,9 @@ button, input, select, textarea {
   border-radius: 14px;
   background: var(--color-choco);
   color: #fff;
-  font-size: 0.86rem;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .nav {
