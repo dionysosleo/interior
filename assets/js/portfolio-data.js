@@ -215,45 +215,84 @@ window.PORTFOLIO_DATA = {
     },
     "residential-3333": {
       category: "주거공간",
-      label: "다크프레임 키친",
-      title: "PH 펜던트와 화이트 톤으로 정리한 북아현동 신촌 푸르지오 주방 리모델링",
-      subtitle: "냉장고장을 짙은 프레임으로 포인트를 주고 나머지는 화이트 톤으로 통일해 깔끔하게 정리한 북아현동 신촌 푸르지오 리모델링 사례입니다.",
-      hero: "./assets/images/residential-bukahyeon-01.jpeg",
-      area: "주거 26평",
-      duration: "3주",
-      cost: "총 공사비 5,032만원",
-      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 바닥",
+      label: "컬러PH펜던트 다이닝",
+      title: "멀티컬러 PH펜던트로 포인트를 준 성남 하대원아튼빌 리모델링",
+      subtitle: "다이닝 공간에 컬러가 다른 PH 펜던트 조명 세 개를 나란히 달아 화이트 톤 공간에 포인트를 준 성남 하대원아튼빌 1012동1103호 전체 리모델링 사례입니다.",
+      hero: "./assets/images/residential-hadaewon-01.jpeg",
+      area: "주거 36평",
+      duration: "4주",
+      cost: "총 공사비 4,657만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시, 기타",
       estimateKey: "residential",
-      description: "실제 현장 견적서를 기준으로 정리한 북아현동 신촌 푸르지오 리모델링 사례입니다. 주방 냉장고장을 짙은 프레임 마감으로 포인트를 주고, PH 펜던트 조명을 더해 화이트 톤 주방에 리듬감을 살렸습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 성남 하대원아튼빌 1012동1103호 전체 리모델링 사례입니다. 다이닝 공간에는 컬러가 다른 PH 펜던트 조명을 나란히 달아 화이트 톤 거실·주방에 포인트를 주고, 침실은 붙박이장과 화장대를 하나로 이어 수납과 동선을 함께 정리했습니다.",
       points: [
-        "냉장고장을 짙은 프레임 마감으로 포인트를 줘 화이트 톤 주방에 리듬감을 더했습니다.",
-        "주방 아일랜드 위 PH 펜던트 조명으로 시선이 자연스럽게 모이도록 했습니다.",
-        "거실 벽면에 대형 벽걸이 TV 자리를 미리 계획해 배선과 마감을 깔끔하게 정리했습니다."
+        "다이닝 테이블과 아일랜드 위에 컬러가 다른 PH 펜던트 조명 세 개를 나란히 달아 화이트 톤 공간에 포인트를 만들었습니다.",
+        "침실은 붙박이장과 화장대를 하나의 라인으로 이어 붙여 수납과 동선을 함께 해결했습니다.",
+        "거실 통창에는 시어커튼과 암막커튼을 이중으로 달아 채광과 프라이버시를 모두 챙겼습니다."
       ],
       savingsHighlight: {
-        trade: "목공",
-        rate: 0.05,
-        amount: 2516000,
-        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
+        trade: "샤시",
+        rate: 0.045,
+        amount: 2095000,
+        note: "실측 후 샤시 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 1982352 },
-          { name: "철거·설비", amount: 4669720 },
-          { name: "목공", amount: 3412000 },
-          { name: "전기", amount: 4121176 },
-          { name: "도배", amount: 2447580 },
-          { name: "타일", amount: 4021000 },
-          { name: "욕실", amount: 1721000 },
-          { name: "가구", amount: 5330000 },
-          { name: "샤시(금속,유리)", amount: 8031200 },
-          { name: "도장", amount: 1176520 },
-          { name: "바닥", amount: 2320000 },
-          { name: "기타", amount: 6550000 }
+          { name: "가설", amount: 1849952 },
+          { name: "철거·설비", amount: 4735700 },
+          { name: "목공", amount: 6529500 },
+          { name: "전기", amount: 3313344 },
+          { name: "도배", amount: 2452425 },
+          { name: "타일", amount: 1814000 },
+          { name: "도기", amount: 55500 },
+          { name: "도장", amount: 884400 },
+          { name: "마루", amount: 4268460 },
+          { name: "샤시", amount: 7814000 },
+          { name: "기타", amount: 8653200 }
         ]
       },
-      gallery: ["./assets/images/residential-bukahyeon-02.jpeg", "./assets/images/residential-bukahyeon-03.jpeg", "./assets/images/residential-bukahyeon-04.jpeg"]
+      gallery: ["./assets/images/residential-hadaewon-02.jpeg", "./assets/images/residential-hadaewon-03.jpeg", "./assets/images/residential-hadaewon-04.jpeg"]
+    },
+    "residential-1212": {
+      category: "주거공간",
+      label: "마블월 블랙프레임도어",
+      title: "마블 톤 월과 블랙 프레임 중문으로 포인트를 준 잠실리센츠224동 리모델링",
+      subtitle: "현관에서 이어지는 벽면을 대리석 톤 포세린 타일로 감싸고 블랙 스틸 프레임 중문을 매치해 입구부터 인상을 분명하게 잡은 잠실리센츠 224동801호 리모델링 사례입니다.",
+      hero: "./assets/images/residential-jamsil-01.jpeg",
+      area: "주거 33평",
+      duration: "4주",
+      cost: "총 공사비 3,012만원",
+      scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 필름, 바닥, 기타",
+      estimateKey: "residential",
+      description: "실제 현장 견적서를 기준으로 정리한 잠실리센츠 224동801호 리모델링 사례입니다. 최초 검토 견적은 3,500만원 수준이었으나 중복 반영된 항목과 시공 범위를 다시 정리해 최종 3,012만원으로 조정했습니다. 현관 벽면은 대리석 톤 포세린 타일로 통일하고 블랙 스틸 프레임 중문을 매치해 입구에서부터 분명한 인상을 남기도록 설계했습니다.",
+      points: [
+        "현관 벽면을 대리석 톤 포세린 타일로 통일하고 블랙 스틸 프레임 중문을 매치해 입구에서부터 포인트를 만들었습니다.",
+        "욕실은 헤링본 패턴 우드톤 타일과 골드 라인 조명으로 호텔 욕실 같은 분위기를 냈습니다.",
+        "주방은 그레이 톤 셰이커 도어와 원목 라이브에지 테이블을 매치해 차분하면서도 자연스러운 다이닝 공간을 만들었습니다."
+      ],
+      savingsHighlight: {
+        trade: "필름",
+        rate: 0.05,
+        amount: 1506000,
+        note: "실측 후 필름 항목의 자재·시공 구성을 조정해 절감했습니다."
+      },
+      customEstimate: {
+        marginRate: 0.099,
+        rows: [
+          { name: "가설", amount: 1223730 },
+          { name: "철거·설비", amount: 3619050 },
+          { name: "목공", amount: 4471500 },
+          { name: "전기", amount: 2531850 },
+          { name: "도배", amount: 2296045 },
+          { name: "타일", amount: 3286000 },
+          { name: "필름", amount: 3500250 },
+          { name: "바닥", amount: 3776500 },
+          { name: "기타", amount: 2511500 },
+          { name: "단수정리", amount: 190000 }
+        ]
+      },
+      gallery: ["./assets/images/residential-jamsil-02.jpeg", "./assets/images/residential-jamsil-03.jpeg", "./assets/images/residential-jamsil-04.jpeg"]
     },
     "residential-7777": {
       category: "주거공간",
