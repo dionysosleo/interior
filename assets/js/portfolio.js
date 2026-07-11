@@ -203,7 +203,23 @@
             .join("")}
         </div>
 
-        ${item.savingsHighlight ? `
+        ${item.savingsHighlight ? (() => {
+          const rate = item.savingsHighlight.rate;
+          if (estimate.isCustom) {
+            // 실사례: rate는 최초 검토가(anchor) 대비 절감율 — anchor = 확정 공사비 / (1 - 절감율).
+            const reviewedTotal = Math.round(estimate.total / (1 - rate));
+            return `
+            <div class="savings-highlight">
+              <div class="savings-highlight__label">SAVINGS</div>
+              <div class="savings-highlight__body">
+                <div class="savings-highlight__trade">최초 검토가 대비 절감</div>
+                <div class="savings-highlight__amount">${formatWon(item.savingsHighlight.amount)}</div>
+              </div>
+              <p class="savings-highlight__note">최초 검토가 ${formatWon(reviewedTotal)} → 확정 공사비 ${formatWon(estimate.total)} (-${Math.round(rate * 1000) / 10}%). ${item.savingsHighlight.note}</p>
+            </div>
+            `;
+          }
+          return `
           <div class="savings-highlight">
             <div class="savings-highlight__label">SAVINGS</div>
             <div class="savings-highlight__body">
@@ -212,7 +228,8 @@
             </div>
             <p class="savings-highlight__note">${item.savingsHighlight.note}</p>
           </div>
-        ` : ""}
+          `;
+        })() : ""}
       </section>
 
       <section class="section">

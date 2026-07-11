@@ -124,9 +124,11 @@
 
         const estimate = buildEstimate(item, estimateTemplates);
         const rate = item.savingsHighlight ? item.savingsHighlight.rate : 0.05;
-        const amount = Math.round(estimate.total * rate / 1000) * 1000;
+        // rate는 최초 검토가(anchor) 대비 절감율이므로, 절감액은 anchor 기준으로 계산해야
+        // 상세페이지·썸네일 배지와 동일한 금액이 나온다 (anchor = total / (1 - rate)).
+        const amount = Math.round((estimate.total * rate) / (1 - rate) / 1000) * 1000;
         const name = `${item.label} 절감 사례`;
-        const sub = `공사비 ${formatWon(estimate.total)} 기준`;
+        const sub = `확정 공사비 ${formatWon(estimate.total)} 기준`;
         const detailWithRate = row.detail.replace("원 검토 대비", `원 검토 대비 ${Math.round(rate * 1000) / 10}%`);
         const nameHtml = `<a class="table-case-link" href="./portfolio.html?slug=${row.slug}">${name}</a>`;
 

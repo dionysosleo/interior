@@ -68,8 +68,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "전기",
         rate: 0.085,
-        amount: 9034000,
-        note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
+        amount: 9873000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -110,8 +110,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "타일",
         rate: 0.09,
-        amount: 6494000,
-        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
+        amount: 7136000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -151,8 +151,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "도기",
         rate: 0.07,
-        amount: 6993000,
-        note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
+        amount: 7519000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -192,8 +192,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "타일",
         rate: 0.075,
-        amount: 4181000,
-        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
+        amount: 4520000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -233,8 +233,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "샤시",
         rate: 0.08,
-        amount: 3795000,
-        note: "실측 후 샤시 항목의 자재·시공 구성을 조정해 절감했습니다."
+        amount: 4125000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -274,8 +274,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "필름",
         rate: 0.11,
-        amount: 3907000,
-        note: "실측 후 필름 항목의 자재·시공 구성을 조정해 절감했습니다."
+        amount: 4390000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -313,8 +313,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "타일",
         rate: 0.095,
-        amount: 7908000,
-        note: "실측 후 타일 항목의 자재·시공 구성을 조정해 절감했습니다."
+        amount: 8738000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -355,8 +355,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "타일",
         rate: 0.1,
-        amount: 4270000,
-        note: "실측 후 타일 항목의 자재·시공 구성을 조정해 절감했습니다."
+        amount: 4745000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
@@ -396,8 +396,8 @@ window.PORTFOLIO_DATA = {
       savingsHighlight: {
         trade: "도기",
         rate: 0.105,
-        amount: 7632000,
-        note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
+        amount: 8527000,
+        note: "현장 재검토를 거쳐 여러 공정의 구성을 다시 잡아 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
