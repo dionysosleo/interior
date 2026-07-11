@@ -12,7 +12,7 @@
     const marginPercent = Math.round((estimate.marginRate != null ? estimate.marginRate : 0.099) * 1000) / 10;
 
     if (estimate.isCustom) {
-      // 실제 현장 공정표(발주서/견적서) 기반 — 공정별 "금액" 한 컬럼만 그대로 보여준다.
+      // 실제 현장 공정표(발주서/견적서) 기반 — 재검토 후 절감 반영된 공정별 "금액" 한 컬럼만 보여준다.
       const rowsHtml = estimate.rows
         .map(
           (row) => `
@@ -30,9 +30,9 @@
             <div class="estimate-card__head">
               <div>
                 <div class="eyebrow">REAL COST BREAKDOWN</div>
-                <h2 class="estimate-card__title">실제 현장 공정표를 그대로 공개합니다</h2>
+                <h2 class="estimate-card__title">실제 현장 견적서를 기준으로 공정표를 공개합니다</h2>
               </div>
-              <div class="estimate-card__desc">실제 발주서와 견적서에 기재된 공정별 금액을 그대로 반영하고, 그 위에 ${marginPercent}% 기준 마진만 더해 최종 공사비를 계산했습니다.</div>
+              <div class="estimate-card__desc">실제 발주서와 견적서를 기준으로 공정별 금액을 정리하고, 현장 재검토를 거쳐 절감한 부분과 ${marginPercent}% 기준 마진을 함께 반영해 최종 공사비를 계산했습니다.</div>
             </div>
             <div class="estimate-table-wrap">
               <table class="estimate-table">

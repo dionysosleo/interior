@@ -56,7 +56,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-samsung-woojeong-01.jpeg",
       area: "주거 33평",
       duration: "6주",
-      cost: "총 공사비 1억 1,116만원",
+      cost: "총 공사비 10,628만원",
       scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 마루",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 삼성동 우정에쉐르 리모델링 사례입니다. 거실 한쪽 벽면 전체를 화이트 붙박이 책장으로 채우고, 안쪽 방으로 이어지는 입구에는 아치형 도어를 더해 공간에 리듬감을 주었습니다.",
@@ -67,25 +67,25 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "전기",
-        rate: 0.06,
-        amount: 6669000,
+        rate: 0.085,
+        amount: 9034000,
         note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 1622237 },
-          { name: "철거·설비", amount: 7250565 },
-          { name: "목공", amount: 9790500 },
-          { name: "전기", amount: 4599717 },
-          { name: "도배", amount: 3648448 },
-          { name: "타일", amount: 6202000 },
-          { name: "욕실", amount: 5123100 },
-          { name: "가구", amount: 41535000 },
-          { name: "샤시(금속,유리)", amount: 13003000 },
-          { name: "도장", amount: 801591 },
-          { name: "마루", amount: 4662100 },
-          { name: "기타", amount: 2905000 }
+          { name: "가설", amount: 1551115 },
+          { name: "철거·설비", amount: 6932687 },
+          { name: "목공", amount: 9361267 },
+          { name: "전기", amount: 4398057 },
+          { name: "도배", amount: 3488494 },
+          { name: "타일", amount: 5930093 },
+          { name: "욕실", amount: 4898494 },
+          { name: "가구", amount: 39714031 },
+          { name: "샤시(금속,유리)", amount: 12432925 },
+          { name: "도장", amount: 766448 },
+          { name: "마루", amount: 4457705 },
+          { name: "기타", amount: 2777640 }
         ]
       },
       gallery: ["./assets/images/residential-samsung-woojeong-02.jpeg", "./assets/images/residential-samsung-woojeong-03.jpeg", "./assets/images/residential-samsung-woojeong-04.jpeg"]
@@ -98,7 +98,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-lottecastle-01.jpeg",
       area: "주거 45평",
       duration: "6주",
-      cost: "총 공사비 7,429만원",
+      cost: "총 공사비 7,215만원",
       scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 삼성동 롯데캐슬프레미어 리모델링 사례입니다. 현관 진입부에 격자 패턴 글라스 파티션과 짙은 스톤 톤 마감을 더해 첫인상을 분명하게 잡고, 거실은 이중 매입 조명과 사이드 간접등으로 층위감을 살렸습니다.",
@@ -109,24 +109,24 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        rate: 0.042,
-        amount: 3120000,
+        rate: 0.09,
+        amount: 6494000,
         note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 3002404 },
-          { name: "철거·설비", amount: 9154270 },
-          { name: "목공", amount: 8284000 },
-          { name: "전기", amount: 3712288 },
-          { name: "도배", amount: 3323359 },
-          { name: "타일", amount: 9627000 },
-          { name: "도기", amount: 4055500 },
-          { name: "도장", amount: 1150000 },
-          { name: "마루", amount: 5727000 },
-          { name: "샤시(금속,유리)", amount: 12925700 },
-          { name: "기타", amount: 6634330 }
+          { name: "가설", amount: 2916080 },
+          { name: "철거·설비", amount: 8891069 },
+          { name: "목공", amount: 8045820 },
+          { name: "전기", amount: 3605553 },
+          { name: "도배", amount: 3227807 },
+          { name: "타일", amount: 9350207 },
+          { name: "도기", amount: 3938897 },
+          { name: "도장", amount: 1116935 },
+          { name: "마루", amount: 5562339 },
+          { name: "샤시(금속,유리)", amount: 12554063 },
+          { name: "기타", amount: 6443581 }
         ]
       },
       gallery: ["./assets/images/residential-lottecastle-02.jpeg", "./assets/images/residential-lottecastle-03.jpeg", "./assets/images/residential-lottecastle-04.jpeg"]
@@ -139,7 +139,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-mia-doosan-01.jpeg",
       area: "주거 34평",
       duration: "5주",
-      cost: "총 공사비 10,242만원",
+      cost: "총 공사비 9,990만원",
       scope: "전체 철거, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시, 주방·붙박이 가구",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 미아동 두산위브 리모델링 사례입니다. 거실 한쪽 벽면 전체를 대형 마블 포세린 타일로 마감하고, 걸레받이 라인을 따라 간접조명을 둘러 바닥에서부터 은은한 빛이 퍼지도록 설계했습니다.",
@@ -150,24 +150,24 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "도기",
-        rate: 0.04,
-        amount: 4097000,
+        rate: 0.07,
+        amount: 6993000,
         note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 2876964 },
-          { name: "철거·설비", amount: 9982445 },
-          { name: "목공", amount: 13081500 },
-          { name: "전기", amount: 3907008 },
-          { name: "도배", amount: 3384001 },
-          { name: "타일", amount: 7835600 },
-          { name: "도기", amount: 5177500 },
-          { name: "도장", amount: 802670 },
-          { name: "마루", amount: 7067520 },
-          { name: "샤시(금속,유리)", amount: 10150000 },
-          { name: "기타", amount: 28925830 }
+          { name: "가설", amount: 2806198 },
+          { name: "철거·설비", amount: 9736903 },
+          { name: "목공", amount: 12759730 },
+          { name: "전기", amount: 3810906 },
+          { name: "도배", amount: 3300764 },
+          { name: "타일", amount: 7642865 },
+          { name: "도기", amount: 5050147 },
+          { name: "도장", amount: 782926 },
+          { name: "마루", amount: 6893678 },
+          { name: "샤시(금속,유리)", amount: 9900337 },
+          { name: "기타", amount: 28214331 }
         ]
       },
       gallery: ["./assets/images/residential-mia-doosan-02.jpeg", "./assets/images/residential-mia-doosan-03.jpeg", "./assets/images/residential-mia-doosan-04.jpeg"]
@@ -180,7 +180,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-baekhyun-01.jpeg",
       area: "주거 29평",
       duration: "4주",
-      cost: "총 공사비 5,526만원",
+      cost: "총 공사비 5,574만원",
       scope: "전체 철거, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 주방·붙박이 가구",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 백현마을 휴먼시아 이편한세상 리모델링 사례입니다. 주방 상부에는 PH 펜던트 조명 3구를 나란히 매달아 포인트를 주고, 거실 한쪽에는 대리석 톤 마감과 격자 패턴 창을 더해 감도 높은 인상을 완성했습니다.",
@@ -191,24 +191,24 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        rate: 0.045,
-        amount: 2487000,
+        rate: 0.075,
+        amount: 4181000,
         note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 2097706 },
-          { name: "철거·설비", amount: 5337625 },
-          { name: "목공", amount: 9629000 },
-          { name: "전기", amount: 5197732 },
-          { name: "도배", amount: 4154300 },
-          { name: "타일", amount: 6745500 },
-          { name: "도기", amount: 6674900 },
-          { name: "도장", amount: 750000 },
-          { name: "마루", amount: 6062500 },
+          { name: "가설", amount: 2115938 },
+          { name: "철거·설비", amount: 5384016 },
+          { name: "목공", amount: 9712688 },
+          { name: "전기", amount: 5242907 },
+          { name: "도배", amount: 4190406 },
+          { name: "타일", amount: 6804127 },
+          { name: "도기", amount: 6732913 },
+          { name: "도장", amount: 756518 },
+          { name: "마루", amount: 6115191 },
           { name: "가구", amount: 0 },
-          { name: "기타", amount: 3635225 }
+          { name: "기타", amount: 3666820 }
         ]
       },
       gallery: ["./assets/images/residential-baekhyun-02.jpeg", "./assets/images/residential-baekhyun-03.jpeg", "./assets/images/residential-baekhyun-04.jpeg"]
@@ -221,7 +221,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-hadaewon-01.jpeg",
       area: "주거 36평",
       duration: "4주",
-      cost: "총 공사비 4,657만원",
+      cost: "총 공사비 4,744만원",
       scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시, 기타",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 성남 하대원아튼빌 1012동1103호 전체 리모델링 사례입니다. 다이닝 공간에는 컬러가 다른 PH 펜던트 조명을 나란히 달아 화이트 톤 거실·주방에 포인트를 주고, 침실은 붙박이장과 화장대를 하나로 이어 수납과 동선을 함께 정리했습니다.",
@@ -232,24 +232,24 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "샤시",
-        rate: 0.045,
-        amount: 2095000,
+        rate: 0.08,
+        amount: 3795000,
         note: "실측 후 샤시 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 1849952 },
-          { name: "철거·설비", amount: 4735700 },
-          { name: "목공", amount: 6529500 },
-          { name: "전기", amount: 3313344 },
-          { name: "도배", amount: 2452425 },
-          { name: "타일", amount: 1814000 },
-          { name: "도기", amount: 55500 },
-          { name: "도장", amount: 884400 },
-          { name: "마루", amount: 4268460 },
-          { name: "샤시", amount: 7814000 },
-          { name: "기타", amount: 8653200 }
+          { name: "가설", amount: 1884706 },
+          { name: "철거·설비", amount: 4824666 },
+          { name: "목공", amount: 6652165 },
+          { name: "전기", amount: 3375590 },
+          { name: "도배", amount: 2498497 },
+          { name: "타일", amount: 1848078 },
+          { name: "도기", amount: 56543 },
+          { name: "도장", amount: 901015 },
+          { name: "마루", amount: 4348649 },
+          { name: "샤시", amount: 7960796 },
+          { name: "기타", amount: 8815762 }
         ]
       },
       gallery: ["./assets/images/residential-hadaewon-02.jpeg", "./assets/images/residential-hadaewon-03.jpeg", "./assets/images/residential-hadaewon-04.jpeg"]
@@ -262,10 +262,10 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-jamsil-01.jpeg",
       area: "주거 33평",
       duration: "4주",
-      cost: "총 공사비 3,012만원",
+      cost: "총 공사비 3,552만원",
       scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 필름, 바닥, 기타",
       estimateKey: "residential",
-      description: "실제 현장 견적서를 기준으로 정리한 잠실리센츠 224동801호 리모델링 사례입니다. 최초 검토 견적은 3,500만원 수준이었으나 중복 반영된 항목과 시공 범위를 다시 정리해 최종 3,012만원으로 조정했습니다. 현관 벽면은 대리석 톤 포세린 타일로 통일하고 블랙 스틸 프레임 중문을 매치해 입구에서부터 분명한 인상을 남기도록 설계했습니다.",
+      description: "실제 현장 견적서를 기준으로 정리한 잠실리센츠 224동801호 리모델링 사례입니다. 최초 검토 견적은 3,991만원 수준이었으나 중복 반영된 항목과 시공 범위를 다시 정리해 최종 3,552만원으로 조정했습니다. 현관 벽면은 대리석 톤 포세린 타일로 통일하고 블랙 스틸 프레임 중문을 매치해 입구에서부터 분명한 인상을 남기도록 설계했습니다.",
       points: [
         "현관 벽면을 대리석 톤 포세린 타일로 통일하고 블랙 스틸 프레임 중문을 매치해 입구에서부터 포인트를 만들었습니다.",
         "욕실은 헤링본 패턴 우드톤 타일과 골드 라인 조명으로 호텔 욕실 같은 분위기를 냈습니다.",
@@ -273,23 +273,22 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "필름",
-        rate: 0.05,
-        amount: 1506000,
+        rate: 0.11,
+        amount: 3907000,
         note: "실측 후 필름 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 1223730 },
-          { name: "철거·설비", amount: 3619050 },
-          { name: "목공", amount: 4471500 },
-          { name: "전기", amount: 2531850 },
-          { name: "도배", amount: 2296045 },
-          { name: "타일", amount: 3286000 },
-          { name: "필름", amount: 3500250 },
-          { name: "바닥", amount: 3776500 },
-          { name: "기타", amount: 2511500 },
-          { name: "단수정리", amount: 190000 }
+          { name: "가설", amount: 1453242 },
+          { name: "철거·설비", amount: 4297806 },
+          { name: "목공", amount: 5310134 },
+          { name: "전기", amount: 3006701 },
+          { name: "도배", amount: 2726670 },
+          { name: "타일", amount: 3902292 },
+          { name: "필름", amount: 4156725 },
+          { name: "바닥", amount: 4484786 },
+          { name: "기타", amount: 2982534 }
         ]
       },
       gallery: ["./assets/images/residential-jamsil-02.jpeg", "./assets/images/residential-jamsil-03.jpeg", "./assets/images/residential-jamsil-04.jpeg"]
@@ -302,7 +301,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-sindang-01.jpeg",
       area: "주거 43평",
       duration: "5주",
-      cost: "총 공사비 8,697만원",
+      cost: "총 공사비 8,324만원",
       scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 욕실, 가구, 샤시, 도장, 마루, 기타",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 신당동 약수하이츠 106동 1303호 전체 리모델링 사례입니다. 주방은 화이트 상하부장에 다크 프레임 냉장고장을 더해 포인트를 주고, 나머지 공간은 화이트·우드 톤으로 통일해 전체적으로 밝고 정돈된 인상이 이어지도록 설계했습니다.",
@@ -313,25 +312,25 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        rate: 0.05,
-        amount: 4349000,
+        rate: 0.095,
+        amount: 7908000,
         note: "실측 후 타일 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 1753515 },
-          { name: "철거·설비", amount: 6087865 },
-          { name: "목공", amount: 8406000 },
-          { name: "전기", amount: 4700009 },
-          { name: "도배", amount: 3558612 },
-          { name: "타일", amount: 5456000 },
-          { name: "욕실", amount: 4351600 },
-          { name: "가구", amount: 24770000 },
-          { name: "샤시", amount: 12977955 },
-          { name: "도장", amount: 778745 },
-          { name: "마루", amount: 4660480 },
-          { name: "기타", amount: 1639000 }
+          { name: "가설", amount: 1678161 },
+          { name: "철거·설비", amount: 5826249 },
+          { name: "목공", amount: 8044766 },
+          { name: "전기", amount: 4498034 },
+          { name: "도배", amount: 3405687 },
+          { name: "타일", amount: 5221538 },
+          { name: "욕실", amount: 4164597 },
+          { name: "가구", amount: 23705551 },
+          { name: "샤시", amount: 12420249 },
+          { name: "도장", amount: 745280 },
+          { name: "마루", amount: 4460204 },
+          { name: "기타", amount: 1568567 }
         ]
       },
       gallery: ["./assets/images/residential-sindang-02.jpeg", "./assets/images/residential-sindang-03.jpeg", "./assets/images/residential-sindang-04.jpeg"]
@@ -344,7 +343,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-eungbong-01.jpeg",
       area: "주거 34평",
       duration: "4주",
-      cost: "총 공사비 4,245만원",
+      cost: "총 공사비 4,270만원",
       scope: "가설, 철거·설비, 목공, 전기, 도배, 타일, 도기, 도장, 마루, 샤시, 기타",
       estimateKey: "residential",
       description: "실제 현장 견적서를 기준으로 정리한 응봉대림 2차 102동605호 리모델링 사례입니다. 우드 슬랫 마감과 스톤 톤 포인트월로 현관에서 거실까지 이어지는 동선에 통일감을 주고, 주방은 딥그린 아일랜드로 수납과 조리 동선을 함께 정리했습니다.",
@@ -355,24 +354,24 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "타일",
-        rate: 0.045,
-        amount: 1910000,
+        rate: 0.1,
+        amount: 4270000,
         note: "실측 후 타일 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 1991970 },
-          { name: "철거·설비", amount: 6378555 },
-          { name: "목공", amount: 6395000 },
-          { name: "전기", amount: 3595310 },
-          { name: "도배", amount: 2710013 },
-          { name: "타일", amount: 3358000 },
-          { name: "도기", amount: 2031000 },
-          { name: "도장", amount: 506025 },
-          { name: "마루", amount: 3375520 },
-          { name: "샤시", amount: 7582497 },
-          { name: "기타", amount: 700000 }
+          { name: "가설", amount: 2003948 },
+          { name: "철거·설비", amount: 6416909 },
+          { name: "목공", amount: 6433453 },
+          { name: "전기", amount: 3616928 },
+          { name: "도배", amount: 2726308 },
+          { name: "타일", amount: 3378191 },
+          { name: "도기", amount: 2043212 },
+          { name: "도장", amount: 509068 },
+          { name: "마루", amount: 3395817 },
+          { name: "샤시", amount: 7628090 },
+          { name: "기타", amount: 704209 }
         ]
       },
       gallery: ["./assets/images/residential-eungbong-02.jpeg", "./assets/images/residential-eungbong-03.jpeg", "./assets/images/residential-eungbong-04.jpeg"]
@@ -385,7 +384,7 @@ window.PORTFOLIO_DATA = {
       hero: "./assets/images/residential-daegok294a-01.jpeg",
       area: "전용 51평 (294A타입)",
       duration: "6주",
-      cost: "총 공사비 7,621만원",
+      cost: "총 공사비 7,269만원",
       scope: "전체 철거, 목공, 전기, 타일, 도장, 마루, 도기, 주방·붙박이 가구, 중문",
       estimateKey: "residential",
       description: "실제 현장 발주서와 견적서를 기준으로 정리한 도곡동 SK리더스뷰294A 전체 리모델링 사례입니다. 대리석 톤 포세린 타일로 바닥 전체를 통일하고, 현관에는 아치형 황동 프레임 중문을 더해 입구에서부터 고급스러운 인상이 이어지도록 설계했습니다.",
@@ -396,25 +395,25 @@ window.PORTFOLIO_DATA = {
       ],
       savingsHighlight: {
         trade: "도기",
-        rate: 0.058,
-        amount: 4420000,
+        rate: 0.105,
+        amount: 7632000,
         note: "실측 후 도기 항목의 자재·시공 구성을 조정해 절감했습니다."
       },
       customEstimate: {
         marginRate: 0.099,
         rows: [
-          { name: "가설", amount: 2028574 },
-          { name: "철거·설비", amount: 9211140 },
-          { name: "목공", amount: 11810500 },
-          { name: "전기", amount: 5664656 },
-          { name: "도배", amount: 1194968 },
-          { name: "타일", amount: 11683600 },
-          { name: "도기", amount: 4183500 },
-          { name: "도장", amount: 8200000 },
-          { name: "마루", amount: 3451800 },
+          { name: "가설", amount: 1934686 },
+          { name: "철거·설비", amount: 8784823 },
+          { name: "목공", amount: 11263878 },
+          { name: "전기", amount: 5402480 },
+          { name: "도배", amount: 1139662 },
+          { name: "타일", amount: 11142851 },
+          { name: "도기", amount: 3989876 },
+          { name: "도장", amount: 7820482 },
+          { name: "마루", amount: 3292041 },
           { name: "샤시(금속,유리)", amount: 0 },
           { name: "가구", amount: 0 },
-          { name: "기타", amount: 11918535 }
+          { name: "기타", amount: 11366913 }
         ]
       },
       gallery: ["./assets/images/residential-daegok294a-02.jpeg", "./assets/images/residential-daegok294a-03.jpeg", "./assets/images/residential-daegok294a-04.jpeg"]
