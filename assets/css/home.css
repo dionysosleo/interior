@@ -136,41 +136,32 @@ h1 {
 
 .hero-gallery {
   margin-top: 26px;
-  display: grid;
-  grid-template-columns: 1.45fr 0.9fr;
-  gap: 14px;
+  position: relative;
   flex: 1 1 auto;
-  min-height: 0;
+  min-height: 340px;
 }
 
 .hero-main,
-.hero-stack,
-.hero-small {
-  position: relative;
+.hero-float {
+  position: absolute;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 24px;
   background: #e5e8eb;
   border: 1px solid var(--color-line-soft);
 }
 
 .hero-main {
-  border-radius: 30px 28px 30px 46px;
+  inset: 0;
 }
 
-.hero-stack {
-  display: grid;
-  gap: 14px;
-  background: transparent;
-  border: 0;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
-.hero-main {
-  min-height: 100%;
-}
-
-.hero-small {
-  min-height: 0;
+.hero-float {
+  right: -16px;
+  bottom: -20px;
+  width: 46%;
+  aspect-ratio: 4 / 3;
+  border: 6px solid var(--color-surface);
+  box-shadow: 0 20px 44px rgba(16, 20, 27, 0.16);
+  z-index: 2;
 }
 
 .img-fill {
@@ -610,7 +601,6 @@ h1 {
   }
 
   .hero-metrics,
-  .hero-gallery,
   .case-grid,
   .recommend-grid {
     grid-template-columns: 1fr;
@@ -621,8 +611,14 @@ h1 {
     flex-direction: column;
   }
 
-  .hero-main,
-  .hero-small,
+  .hero-gallery {
+    min-height: 240px;
+  }
+
+  .hero-float {
+    display: none;
+  }
+
   .case-image {
     min-height: 220px;
   }
