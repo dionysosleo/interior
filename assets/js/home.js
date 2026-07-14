@@ -353,6 +353,26 @@
     });
   }
 
+  function initHeroRotator() {
+    const rotator = document.querySelector("[data-hero-rotator]");
+    if (!rotator) return;
+
+    const layers = Array.from(rotator.children);
+    if (layers.length < 2) return;
+
+    let index = layers.findIndex((el) => el.classList.contains("is-active"));
+    if (index < 0) index = 0;
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    setInterval(() => {
+      layers[index].classList.remove("is-active");
+      index = (index + 1) % layers.length;
+      layers[index].classList.add("is-active");
+    }, 5000);
+  }
+
   function renderCompanyInfo(company) {
     document.querySelectorAll("[data-company-license]").forEach((el) => (el.textContent = company.license));
     document.querySelectorAll("[data-company-address]").forEach((el) => (el.textContent = company.address));
@@ -380,6 +400,7 @@
     initEventModal();
     renderHeroBadge(data.hero);
     renderHeroMetrics(data.hero);
+    initHeroRotator();
     renderFeatureBlocks(data.featureBlocks);
     renderStatBar(data.statBar);
     renderCostTable(data.costTable);

@@ -160,6 +160,21 @@ h1 {
   filter: saturate(0.94) contrast(0.98) sepia(0.06);
 }
 
+.hero-rotator {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-rotator .img-fill {
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.hero-rotator .img-fill.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
 .img-fill--kenburns {
   animation: heroKenBurns 16s ease-in-out infinite;
 }
