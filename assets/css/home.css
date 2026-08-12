@@ -258,15 +258,8 @@ h1 {
 .img-hero-main { background-image: url("../images/residential-mia-doosan-02.jpeg"); }
 .img-hero-bath { background-image: url("../images/residential-samsung-woojeong-03.jpeg"); }
 .img-hero-mood { background-image: url("../images/hero-mood.webp"); }
-.img-commercial-11 { background-image: url("../images/commercial-11.jpg"); }
-.img-commercial-22 { background-image: url("../images/commercial-22.jpeg"); }
-.img-commercial-33 { background-image: url("../images/commercial-33.jpg"); }
-.img-commercial-44 { background-image: url("../images/commercial-44.webp"); }
-.img-commercial-55 { background-image: url("../images/commercial-55.webp"); }
-.img-commercial-66 { background-image: url("../images/commercial-66.jpeg"); }
-.img-commercial-77 { background-image: url("../images/commercial-77.webp"); }
-.img-commercial-88 { background-image: url("../images/commercial-88.jpg"); }
-.img-commercial-99 { background-image: url("../images/commercial-99.webp"); }
+.img-commercial-namuegupgi { background-image: url("../images/commercial-namuegupgi-01.jpg"); }
+.img-commercial-redmango-gwacheon { background-image: url("../images/commercial-redmango-gwacheon-01.jpg"); }
 .img-residential-1111 { background-image: url("../images/residential-mia-doosan-01.jpeg"); }
 .img-residential-2222 { background-image: url("../images/residential-baekhyun-01.jpeg"); }
 .img-residential-3333 { background-image: url("../images/residential-hadaewon-01.jpeg"); }
@@ -547,6 +540,55 @@ h1 {
   overflow: hidden;
   border: 1px solid var(--color-line-soft);
   background: #e5e8eb;
+}
+
+.case-link--popup {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.commercial-modal__gallery {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.commercial-modal__main {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #e5e8eb;
+  background-size: cover;
+  background-position: center;
+}
+
+.commercial-modal__thumbs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.commercial-modal__thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e5e8eb;
+  background-size: cover;
+  background-position: center;
+}
+
+.commercial-modal__cta {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
 }
 
 /* process */

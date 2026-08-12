@@ -418,255 +418,27 @@ window.PORTFOLIO_DATA = {
       },
       gallery: ["./assets/images/residential-daegok294a-02.jpeg", "./assets/images/residential-daegok294a-03.jpeg", "./assets/images/residential-daegok294a-04.jpeg"]
     },
-    "commercial-11": {
+"commercial-namuegupgi": {
       category: "상업공간",
-      label: "브랜드 카페 메인홀",
-      title: "브랜드 동선을 넓게 풀어낸 카페 메인홀 프로젝트",
-      subtitle: "첫 방문 고객에게 공간의 구조와 브랜드 무드가 한눈에 들어오도록 테이블 배치와 조명을 정리한 사례입니다.",
-      hero: "./assets/images/commercial-11.jpg",
-      area: "상업 28평",
-      duration: "3주",
-      cost: "총 공사비 4,760만원",
-      scope: "메인홀, 좌석 배치, 조명, 바닥, 가구",
-      estimateKey: "commercial",
-      description: "브랜드를 처음 접하는 손님이 머무는 첫 공간이기 때문에, 좌석 배치와 주방 노출 정도, 이동 동선이 모두 중요했습니다. 과하게 복잡한 구성 대신 브랜드 정체성이 분명하게 드러나는 메인홀 구조에 집중했습니다.",
-      points: [
-        "메인 좌석 동선을 길게 열어 고객 체류가 자연스럽게 이어지게 했습니다.",
-        "주방과 홀의 시각적 경계를 조절해 답답하지 않게 구성했습니다.",
-        "조명 위치와 테이블 간격을 브랜드 무드에 맞게 세밀하게 조정했습니다."
-      ],
-      savingsHighlight: {
-        trade: "목공",
-        rate: 0.044,
-        amount: 2094000,
-        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-11.jpg", "./assets/images/commercial-22.jpeg", "./assets/images/commercial-33.jpg"]
+      label: "우드톤 베이커리 인테리어",
+      title: "우드 톤 소재로 아늑하게 완성한 베이커리 인테리어",
+      subtitle: "원목 소재와 따뜻한 조명 계획으로 편안한 체류감을 살린 매장 인테리어 사례입니다.",
+      popupImages: [
+        "./assets/images/commercial-namuegupgi-01.jpg",
+        "./assets/images/commercial-namuegupgi-02.jpg",
+        "./assets/images/commercial-namuegupgi-03.jpg"
+      ]
     },
-    "commercial-22": {
+    "commercial-redmango-gwacheon": {
       category: "상업공간",
-      label: "라운지형 상담존",
-      title: "머무름이 편안한 라운지형 상담 공간",
-      subtitle: "상담과 대기가 함께 일어나는 구조에서 긴장감보다 편안함이 먼저 느껴지도록 만든 상업 공간 사례입니다.",
-      hero: "./assets/images/commercial-22.jpeg",
-      area: "상업 18평",
-      duration: "2주",
-      cost: "총 공사비 3,240만원",
-      scope: "상담존, 대기존, 벽체 포인트, 조명, 가구",
-      estimateKey: "commercial",
-      description: "짧게 머무는 공간이지만 브랜드 인상을 결정하는 중요한 구간이라, 소재와 동선 설계에 더 집중했습니다. 벽체와 좌석의 곡선을 활용해 편안한 체류감을 만들고, 시선이 머무는 요소는 최소화했습니다.",
-      points: [
-        "대기와 상담 공간을 자연스럽게 나누면서도 답답한 분리는 피했습니다.",
-        "가구 크기와 배치를 조정해 시선이 한쪽에 몰리지 않도록 정리했습니다.",
-        "체류 시간이 짧아도 인상은 오래 남는 라운지 무드를 목표로 했습니다."
-      ],
-      savingsHighlight: {
-        trade: "타일",
-        rate: 0.046,
-        amount: 1490000,
-        note: "실측 후 타일 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-22.jpeg", "./assets/images/commercial-11.jpg", "./assets/images/commercial-55.webp"]
-    },
-    "commercial-33": {
-      category: "상업공간",
-      label: "오피스 워크존",
-      title: "집중과 개방감을 함께 살린 오피스 워크존",
-      subtitle: "팀 단위 업무에 필요한 개방감과 개인 집중도를 균형 있게 맞춘 사무 공간 사례입니다.",
-      hero: "./assets/images/commercial-33.jpg",
-      area: "상업 40평",
-      duration: "4주",
-      cost: "총 공사비 6,400만원",
-      scope: "워크존, 유리 파티션, 조명, 천장 마감, 동선",
-      estimateKey: "commercial",
-      description: "공간이 넓을수록 오히려 집중 포인트가 분산되기 쉽습니다. 이번 프로젝트는 파티션 투명도와 책상 배열, 천장 라인을 이용해 시야를 확보하면서도 업무 존의 밀도를 유지하는 데 집중했습니다.",
-      points: [
-        "시선은 열리지만 소음은 분산될 수 있도록 배치를 조정했습니다.",
-        "워크존 중심으로 반복되는 라인을 만들어 정돈된 인상을 강화했습니다.",
-        "브랜드의 단정함이 드러나도록 전체 톤을 절제된 색으로 맞췄습니다."
-      ],
-      savingsHighlight: {
-        trade: "가구",
-        rate: 0.054,
-        amount: 3456000,
-        note: "실측 후 가구 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-33.jpg", "./assets/images/commercial-88.jpg", "./assets/images/commercial-77.webp"]
-    },
-    "commercial-44": {
-      category: "상업공간",
-      label: "브랜드 쇼룸 아치 공간",
-      title: "첫 시선에 브랜드 무드를 남기는 아치형 쇼룸",
-      subtitle: "진입부에서부터 공간 이미지가 분명하게 느껴지도록 창과 벽체의 인상을 활용한 사례입니다.",
-      hero: "./assets/images/commercial-44.webp",
-      area: "상업 16평",
-      duration: "2주",
-      cost: "총 공사비 3,520만원",
-      scope: "쇼룸 전면부, 포인트 창호, 벽체, 조명",
-      estimateKey: "commercial",
-      description: "작은 면적의 공간일수록 강한 첫 장면이 필요합니다. 아치형 요소와 채광을 적극 활용해 첫 진입 순간에 브랜드 이미지가 정확히 전달되도록 설계했습니다.",
-      points: [
-        "쇼룸 정면에서 보이는 구조를 가장 먼저 고려해 레이아웃을 잡았습니다.",
-        "장식보다 실루엣과 빛의 인상이 남도록 마감과 조명을 절제했습니다.",
-        "짧은 공사 기간 안에서 체감 변화를 크게 만드는 쪽으로 공정을 압축했습니다."
-      ],
-      savingsHighlight: {
-        trade: "전기",
-        rate: 0.056,
-        amount: 1971000,
-        note: "실측 후 전기 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-44.webp", "./assets/images/commercial-99.webp", "./assets/images/commercial-22.jpeg"]
-    },
-    "commercial-55": {
-      category: "상업공간",
-      label: "한식 다이닝 공간",
-      title: "동선과 시야가 깔끔한 다이닝 공간 리뉴얼",
-      subtitle: "좌석 간 밀도와 이동 동선을 함께 고려해 운영 효율과 첫 인상을 동시에 잡은 외식 공간 사례입니다.",
-      hero: "./assets/images/commercial-55.webp",
-      area: "상업 24평",
-      duration: "3주",
-      cost: "총 공사비 4,200만원",
-      scope: "좌석 구성, 파티션, 조명, 마감, 진입 동선",
-      estimateKey: "commercial",
-      description: "외식 공간은 예쁜 장면보다 동선의 자연스러움이 훨씬 중요할 때가 많습니다. 이 프로젝트는 주방 접근성과 좌석 운영 효율을 유지하면서, 브랜드가 원하는 차분한 인상이 전달되도록 조율했습니다.",
-      points: [
-        "좌석 간 간격을 정리해 이동 중 부딪힘이 적게 느껴지도록 만들었습니다.",
-        "진입부부터 안쪽까지 시선 흐름이 깨지지 않도록 파티션 높이를 조정했습니다.",
-        "밝은 톤 마감으로 체감 면적이 더 넓게 느껴지도록 설계했습니다."
-      ],
-      savingsHighlight: {
-        trade: "마감",
-        rate: 0.049,
-        amount: 2058000,
-        note: "실측 후 마감 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-55.webp", "./assets/images/commercial-11.jpg", "./assets/images/commercial-66.jpeg"]
-    },
-    "commercial-66": {
-      category: "상업공간",
-      label: "하이엔드 로비",
-      title: "첫 인상과 체류감이 동시에 살아나는 하이엔드 로비",
-      subtitle: "입구에서 느껴지는 고급감과 안쪽으로 이어지는 머무름의 분위기를 함께 설계한 공간입니다.",
-      hero: "./assets/images/commercial-66.jpeg",
-      area: "상업 52평",
-      duration: "5주",
-      cost: "총 공사비 9,360만원",
-      scope: "로비, 라운지, 천장 조명, 벽체, 바닥",
-      estimateKey: "commercial",
-      description: "로비는 방문객이 브랜드를 처음 마주하는 공간이라 마감 밀도와 조명 계획이 특히 중요했습니다. 큰 볼륨의 조명과 자연스러운 동선 계획으로 첫인상과 체류감을 함께 설계했습니다.",
-      points: [
-        "입구에서부터 시선이 자연스럽게 안쪽으로 이어지도록 동선을 계획했습니다.",
-        "조명 레이어를 나눠 시간대에 따라 분위기가 다르게 연출되도록 했습니다.",
-        "마감재의 질감 대비를 활용해 고급스러운 인상을 오래 유지하도록 했습니다."
-      ],
-      savingsHighlight: {
-        trade: "페인트",
-        rate: 0.051,
-        amount: 4774000,
-        note: "실측 후 페인트 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-66.jpeg", "./assets/images/commercial-77.webp", "./assets/images/commercial-88.jpg"]
-    },
-    "commercial-77": {
-      category: "상업공간",
-      label: "프라이빗 미팅 라운지",
-      title: "어두운 톤과 포인트 조명이 만드는 프라이빗 미팅 공간",
-      subtitle: "격식 있는 미팅이 자연스럽게 이어지도록 톤과 조도, 좌석 배치를 함께 설계한 사례입니다.",
-      hero: "./assets/images/commercial-77.webp",
-      area: "상업 22평",
-      duration: "3주",
-      cost: "총 공사비 4,180만원",
-      scope: "미팅룸, 라운지, 조명, 벽체, 가구",
-      estimateKey: "commercial",
-      description: "격식과 편안함을 동시에 담아야 하는 공간이라 톤 선택이 까다로웠습니다. 어두운 베이스 톤에 조명 포인트를 더해 대화에 집중할 수 있는 분위기를 만들었습니다.",
-      points: [
-        "테이블 위 조도만 살려 자연스럽게 시선이 모이도록 설계했습니다.",
-        "좌석 간격을 넉넉하게 잡아 격식 있는 미팅에도 부담이 없도록 했습니다.",
-        "짙은 톤과 따뜻한 소재를 함께 써 차갑지 않은 분위기를 유지했습니다."
-      ],
-      savingsHighlight: {
-        trade: "샤시(금속,유리)",
-        rate: 0.053,
-        amount: 2215000,
-        note: "실측 후 샤시(금속,유리) 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-77.webp", "./assets/images/commercial-33.jpg", "./assets/images/commercial-66.jpeg"]
-    },
-    "commercial-88": {
-      category: "상업공간",
-      label: "사내 카페테리아 공간",
-      title: "라운지와 미팅 기능을 함께 담은 오피스 카페테리아",
-      subtitle: "직원 휴게와 캐주얼 미팅이 한 공간에서 자연스럽게 오갈 수 있도록 구성한 사례입니다.",
-      hero: "./assets/images/commercial-88.jpg",
-      area: "상업 35평",
-      duration: "4주",
-      cost: "총 공사비 5,780만원",
-      scope: "카페테리아, 좌석 구성, 조명, 주방 존, 가구",
-      estimateKey: "commercial",
-      description: "휴게 공간이면서 동시에 캐주얼한 미팅 장소로도 쓰이는 공간이라 좌석 구성의 유연함이 중요했습니다. 크고 작은 테이블을 섞어 다양한 인원과 목적에 대응할 수 있도록 계획했습니다.",
-      points: [
-        "테이블 크기를 다양화해 혼자 쓰는 자리와 팀 미팅 자리를 함께 담았습니다.",
-        "주방 존과 좌석 존의 동선이 겹치지 않도록 배치를 정리했습니다.",
-        "밝고 편안한 톤으로 짧은 휴식 시간에도 리프레시되는 분위기를 만들었습니다."
-      ],
-      savingsHighlight: {
-        trade: "설비",
-        rate: 0.047,
-        amount: 2717000,
-        note: "실측 후 설비 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-88.jpg", "./assets/images/commercial-33.jpg", "./assets/images/commercial-77.webp"]
-    },
-    "commercial-99": {
-      category: "상업공간",
-      label: "브랜드 라운지 리뉴얼",
-      title: "체류 경험을 높이는 브랜드 라운지 리뉴얼",
-      subtitle: "공간 안에서 머무는 시간이 자연스럽게 늘어나도록 시선과 좌석 구성, 정원 뷰를 함께 설계한 사례입니다.",
-      hero: "./assets/images/commercial-99.webp",
-      area: "상업 30평",
-      duration: "3주",
-      cost: "총 공사비 5,250만원",
-      scope: "라운지, 창가 좌석, 조경 뷰, 조명, 가구",
-      estimateKey: "commercial",
-      description: "정적인 좌석 배치만으로는 라운지 경험이 살아나지 않을 수 있습니다. 이 프로젝트는 창 너머 보이는 풍경과 실내 좌석의 거리를 조절해 공간에 머무는 경험 자체가 더 편안하게 느껴지도록 만들었습니다.",
-      points: [
-        "창가와 좌석 사이 간격을 조정해 정원 뷰가 더 깊게 느껴지게 만들었습니다.",
-        "가구 배치와 시선 방향을 정리해 누구나 편하게 머물 수 있도록 구성했습니다.",
-        "조용한 분위기를 해치지 않으면서도 브랜드 이미지는 분명하게 보이도록 정리했습니다."
-      ],
-      savingsHighlight: {
-        trade: "사인물",
-        rate: 0.059,
-        amount: 3098000,
-        note: "실측 후 사인물 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-99.webp", "./assets/images/commercial-44.webp", "./assets/images/commercial-22.jpeg"]
-    },
-    "commercial-100": {
-      category: "상업공간",
-      label: "카페 인테리어 정산 사례",
-      title: "실제 정산 흐름을 그대로 공개한 카페 인테리어 사례",
-      subtitle: "계약금과 중도금, 인건비·자재비 지급까지 실제 정산 데이터를 기준으로 정리한 상업 공간 시공 사례입니다.",
-      hero: "./assets/images/commercial-11.jpg",
-      area: "상업 20평",
-      duration: "3주",
-      cost: "총 공사비 3,938만원",
-      scope: "카페 시공, 목공, 전기·조명, 자재 발주, 인건비 정산",
-      estimateKey: "commercial",
-      description: "계약금과 중도금 2회 지급, 목공·전기·조명 등 공정별 자재 발주, 작업자별 인건비 지급까지 실제 정산 흐름을 그대로 반영해 정리한 카페 인테리어 사례입니다. 공사 완료 후 실제 지출 내역을 기준으로 최종 정산을 투명하게 진행했습니다.",
-      points: [
-        "계약금과 중도금을 2회로 나눠 지급 부담을 분산했습니다.",
-        "목공, 전기·조명, 자재 발주 등 공정별 지출을 세분화해 정산했습니다.",
-        "공사 완료 후 실제 지출 내역을 기준으로 최종 정산을 투명하게 안내했습니다."
-      ],
-      savingsHighlight: {
-        trade: "목공",
-        rate: 0.043,
-        amount: 1693000,
-        note: "실측 후 목공 항목의 자재·공정 구성을 조정해 절감했습니다."
-      },
-      gallery: ["./assets/images/commercial-11.jpg", "./assets/images/commercial-55.webp", "./assets/images/commercial-22.jpeg"]
+      label: "레드망고 과천점",
+      title: "브랜드 톤을 살린 레드망고 과천점 매장 인테리어",
+      subtitle: "브랜드 컬러와 고객 동선을 고려해 완성한 디저트 매장 인테리어 사례입니다.",
+      popupImages: [
+        "./assets/images/commercial-redmango-gwacheon-01.jpg",
+        "./assets/images/commercial-redmango-gwacheon-02.jpg",
+        "./assets/images/commercial-redmango-gwacheon-03.jpg"
+      ]
     }
   }
 };

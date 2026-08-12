@@ -150,6 +150,25 @@
   }
 
   function renderCaseCard(slug, item, estimateTemplates) {
+    // 상업공간은 평형·업종별 편차가 커서 개별 견적표를 공개하지 않는다.
+    // 카드 클릭 시 포트폴리오 상세페이지 대신 사진 팝업 + 상담 유도 버튼으로 연결한다.
+    if (item.category === "상업공간") {
+      return `
+        <article class="case-card">
+          <button class="case-link case-link--popup" type="button" data-commercial-trigger="${slug}">
+            <div class="case-image">
+              <div class="img-fill img-${slug}"></div>
+              <div class="img-overlay"></div>
+              <span class="img-note">${categoryTag(item.category)}</span>
+              <span class="img-label">${item.label}</span>
+            </div>
+            <h3>${item.title}</h3>
+            <p>${item.subtitle}</p>
+          </button>
+        </article>
+      `;
+    }
+
     const estimate = buildEstimate(item, estimateTemplates);
 
     const costPreviewHtml = estimate.isCustom
@@ -353,6 +372,47 @@
     });
   }
 
+  function initCommercialModal(portfolioData) {
+    const modal = document.getElementById("commercialModal");
+    if (!modal || !portfolioData) return;
+
+    const mainEl = modal.querySelector("[data-commercial-modal-main]");
+    const thumbEls = Array.from(modal.querySelectorAll("[data-commercial-modal-thumb]"));
+    const titleEl = modal.querySelector("[data-commercial-modal-title]");
+    const subtitleEl = modal.querySelector("[data-commercial-modal-subtitle]");
+
+    document.addEventListener("click", (event) => {
+      const trigger = event.target.closest("[data-commercial-trigger]");
+      if (trigger) {
+        const slug = trigger.getAttribute("data-commercial-trigger");
+        const item = portfolioData.items[slug];
+        if (!item || !item.popupImages) return;
+
+        if (mainEl) mainEl.style.backgroundImage = `url('${item.popupImages[0]}')`;
+        thumbEls.forEach((el, i) => {
+          const src = item.popupImages[i + 1];
+          el.style.backgroundImage = src ? `url('${src}')` : "";
+          el.style.display = src ? "" : "none";
+        });
+        if (titleEl) titleEl.textContent = item.title;
+        if (subtitleEl) subtitleEl.textContent = item.subtitle;
+
+        openModal(modal);
+        return;
+      }
+
+      if (event.target.matches("[data-close-commercial-modal]") || event.target === modal) {
+        closeModal(modal);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal(modal);
+      }
+    });
+  }
+
   function initHeroRotator() {
     const rotator = document.querySelector("[data-hero-rotator]");
     if (!rotator) return;
@@ -406,6 +466,7 @@
     renderCostTable(data.costTable);
     renderSavingsTable(data.savingsTable, window.PORTFOLIO_DATA);
     renderCases(data.cases, window.PORTFOLIO_DATA);
+    initCommercialModal(window.PORTFOLIO_DATA);
     renderProcess(data.process);
     renderRecommend(data.recommend);
     renderFaq(data.faq);

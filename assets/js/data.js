@@ -67,7 +67,7 @@ window.SITE_DATA = {
       {
         number: "02",
         align: "right",
-        image: "./assets/images/commercial-11.jpg",
+        image: "./assets/images/commercial-redmango-gwacheon-01.jpg",
         title: "브랜드를 살리는 공간을 만듭니다",
         desc: "고객 동선과 운영 효율까지 함께 고려해, 매출로 이어지는 상업 공간을 설계합니다."
       }
@@ -117,10 +117,10 @@ window.SITE_DATA = {
     title: "원가 기준으로 확인한 비용 절감 사례입니다",
     rows: [
       {
-        slug: "commercial-22",
-        spaceType: "상업 공간",
-        point: "현장 실측 기준과 원가표를 비교하며 공정과 자재 항목을 다시 정리했습니다.",
-        detail: "중복 공정과 과하게 반영될 수 있는 자재 구성을 조정해 확정 견적을 원 검토 대비 슬림하게 만들었습니다."
+        slug: "residential-7777",
+        spaceType: "주거 공간",
+        point: "현장 재실측을 기준으로 공정별 구성을 다시 정리했습니다.",
+        detail: "중복 반영될 수 있는 자재·시공 범위를 조정해 원 검토 대비 확정 견적을 슬림하게 만들었습니다."
       },
       {
         slug: "residential-8888",
@@ -129,8 +129,8 @@ window.SITE_DATA = {
         detail: "상담 단계에서 필요 범위를 다시 정리해 원 검토 대비 비용을 줄인 사례입니다."
       },
       {
-        slug: "commercial-33",
-        spaceType: "상업 공간",
+        slug: "residential-9999",
+        spaceType: "주거 공간",
         point: "합리적인 견적과 공정 재검토를 통해 과하게 반영될 수 있는 요소를 줄였습니다.",
         detail: "공정 순서와 범위를 다시 나눠 원 검토 대비 예산을 효율적으로 배분한 사례입니다."
       },
@@ -141,9 +141,9 @@ window.SITE_DATA = {
         detail: "철거 범위와 자재 교체 범위를 줄여 원 검토 대비 비용을 조정한 사례입니다."
       },
       {
-        slug: "commercial-88",
-        spaceType: "상업 공간",
-        point: "운영 중 공사가 가능하도록 공정을 나누고 꼭 필요한 구간만 리뉴얼했습니다.",
+        slug: "residential-6666",
+        spaceType: "주거 공간",
+        point: "운영 동선을 고려해 공정을 나누고 꼭 필요한 구간만 리뉴얼했습니다.",
         detail: "공사 범위를 단계별로 나눠 원 검토 대비 예산 부담을 줄인 사례입니다."
       }
     ]
