@@ -374,12 +374,19 @@
 
   function initCommercialModal(portfolioData) {
     const modal = document.getElementById("commercialModal");
+    const inquiryModal = document.getElementById("commercialInquiryModal");
+    const inquirySuccessModal = document.getElementById("commercialInquirySuccessModal");
+    const inquiryForm = document.getElementById("commercialInquiryForm");
     if (!modal || !portfolioData) return;
 
     const mainEl = modal.querySelector("[data-commercial-modal-main]");
     const thumbEls = Array.from(modal.querySelectorAll("[data-commercial-modal-thumb]"));
     const titleEl = modal.querySelector("[data-commercial-modal-title]");
     const subtitleEl = modal.querySelector("[data-commercial-modal-subtitle]");
+    const inquiryTargetInput = document.getElementById("commercialInquiryTarget");
+    const inquirySubtitleEl = document.getElementById("commercialInquirySubtitle");
+
+    let currentItem = null;
 
     document.addEventListener("click", (event) => {
       const trigger = event.target.closest("[data-commercial-trigger]");
@@ -387,6 +394,8 @@
         const slug = trigger.getAttribute("data-commercial-trigger");
         const item = portfolioData.items[slug];
         if (!item || !item.popupImages) return;
+
+        currentItem = item;
 
         if (mainEl) mainEl.style.backgroundImage = `url('${item.popupImages[0]}')`;
         thumbEls.forEach((el, i) => {
@@ -404,11 +413,52 @@
       if (event.target.matches("[data-close-commercial-modal]") || event.target === modal) {
         closeModal(modal);
       }
+
+      if (event.target.matches("[data-open-commercial-inquiry]")) {
+        closeModal(modal);
+        if (inquiryTargetInput) inquiryTargetInput.value = currentItem ? currentItem.title : "";
+        if (inquirySubtitleEl) {
+          inquirySubtitleEl.textContent = currentItem
+            ? `${currentItem.label} 기준으로 상담을 남겨주시면 비슷한 방향으로 검토해드립니다.`
+            : "원하시는 업종·평형 정보를 남겨주시면 검토 후 빠르게 안내해드립니다.";
+        }
+        if (inquiryModal) openModal(inquiryModal);
+      }
+
+      if (event.target.matches("[data-close-commercial-inquiry]") || event.target === inquiryModal) {
+        closeModal(inquiryModal);
+      }
+
+      if (event.target.matches("[data-close-commercial-inquiry-success]") || event.target === inquirySuccessModal) {
+        closeModal(inquirySuccessModal);
+      }
     });
 
+    if (inquiryForm) {
+      inquiryForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("commercialInquiryName").value.trim();
+        const phone1 = document.getElementById("commercialPhone1").value.trim();
+        const phone2 = document.getElementById("commercialPhone2").value.trim();
+        const phone3 = document.getElementById("commercialPhone3").value.trim();
+        const agreed = document.getElementById("commercialPrivacyAgree").checked;
+
+        if (!name || !phone1 || !phone2 || !phone3 || !agreed) {
+          window.alert("성함, 연락처, 개인정보 동의를 확인해 주세요.");
+          return;
+        }
+
+        closeModal(inquiryModal);
+        inquiryForm.reset();
+        if (inquirySuccessModal) openModal(inquirySuccessModal);
+      });
+    }
+
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && modal.classList.contains("is-open")) {
-        closeModal(modal);
+      if (event.key === "Escape") {
+        if (modal.classList.contains("is-open")) closeModal(modal);
+        if (inquiryModal && inquiryModal.classList.contains("is-open")) closeModal(inquiryModal);
+        if (inquirySuccessModal && inquirySuccessModal.classList.contains("is-open")) closeModal(inquirySuccessModal);
       }
     });
   }

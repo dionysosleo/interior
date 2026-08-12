@@ -429,15 +429,15 @@ window.PORTFOLIO_DATA = {
         "./assets/images/commercial-namuegupgi-03.jpg"
       ]
     },
-    "commercial-redmango-gwacheon": {
+    "commercial-yogurt-icecream": {
       category: "상업공간",
-      label: "레드망고 과천점",
-      title: "브랜드 톤을 살린 레드망고 과천점 매장 인테리어",
+      label: "요거트 아이스크림 전문점",
+      title: "브랜드 톤을 살린 요거트 아이스크림 전문점 매장 인테리어",
       subtitle: "브랜드 컬러와 고객 동선을 고려해 완성한 디저트 매장 인테리어 사례입니다.",
       popupImages: [
-        "./assets/images/commercial-redmango-gwacheon-01.jpg",
-        "./assets/images/commercial-redmango-gwacheon-02.jpg",
-        "./assets/images/commercial-redmango-gwacheon-03.jpg"
+        "./assets/images/commercial-yogurt-icecream-01.jpg",
+        "./assets/images/commercial-yogurt-icecream-02.jpg",
+        "./assets/images/commercial-yogurt-icecream-03.jpg"
       ]
     }
   }

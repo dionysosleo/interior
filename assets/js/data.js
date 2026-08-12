@@ -67,7 +67,7 @@ window.SITE_DATA = {
       {
         number: "02",
         align: "right",
-        image: "./assets/images/commercial-redmango-gwacheon-01.jpg",
+        image: "./assets/images/commercial-yogurt-icecream-01.jpg",
         title: "브랜드를 살리는 공간을 만듭니다",
         desc: "고객 동선과 운영 효율까지 함께 고려해, 매출로 이어지는 상업 공간을 설계합니다."
       }
